@@ -1,0 +1,6 @@
+# Frontend-local ignores. The repo root .gitignore handles
+# node_modules, dist, etc.
+
+# Vitest coverage reports (added s28 v2.9). The HTML/JSON output
+# is large and noisy; CI uploads it as an artifact instead.
+coverage/

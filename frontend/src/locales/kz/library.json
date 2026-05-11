@@ -1,0 +1,18 @@
+{
+  "title": "Smart Кітапхана",
+  "subtitle": "Ресми ҰБТ оқулықтары",
+  "search_placeholder": "Оқулықтарды іздеу...",
+  "all_subjects": "Барлығы",
+  "loading": "Оқулықтар жүктелуде...",
+  "no_results": "Оқулықтар табылмады",
+  "no_results_desc": "Іздеуді немесе фильтрлерді өзгертіп көріңіз",
+  "grade": "Сынып",
+  "pages": "бет",
+  "books_found": "{{count}} кітап табылды",
+  "books_found_one": "{{count}} кітап табылды",
+  "books_found_few": "{{count}} кітап табылды",
+  "view_grid": "Тор",
+  "view_list": "Тізім",
+  "open_book": "Ашу",
+  "grade_label": "{{grade}}-сынып"
+}

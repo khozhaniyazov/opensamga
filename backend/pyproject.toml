@@ -1,0 +1,88 @@
+# Samga.ai backend tooling config.
+#
+# This file is NOT a build manifest — `pip install -r requirements.txt`
+# remains how the app is installed. It exists so ruff (and any future
+# lint/format tools) have a single project-rooted config that the
+# CI workflow + developer machines + the eventual pre-commit hook all
+# pick up without per-tool flags.
+#
+# Added 2026-04-29 (s28 v2.7) alongside the frontend ESLint rollout.
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = [
+    ".pytest_cache",
+    "alembic/versions",
+    "uploads",
+    "data",
+]
+
+[tool.ruff.lint]
+# Pragmatic starter set for an existing FastAPI codebase. We want the
+# bug-finders (E, F, B) and import hygiene (I) on; we explicitly skip
+# rules that would surface hundreds of stylistic choices on day 1
+# (D-docstring, ANN-typing-everywhere, COM-trailing-commas, etc).
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes (unused imports/vars, undefined names)
+    "B",   # flake8-bugbear (likely-bugs)
+    "I",   # isort (import order)
+    "UP",  # pyupgrade (dead py2 / pre-3.11 syntax)
+    "W",   # pycodestyle warnings
+    # v3.57: seal the print-sweep arc (v3.45-v3.56). T201/T203 catch any
+    # future ``print()`` or ``pprint`` regression in app code. The arc
+    # routed every hot-path / router / cron / GQG / RAG print() through
+    # the module logger; the per-file-ignores below allow-list the
+    # files that legitimately use stdout (CLI migration scripts +
+    # admin healthcheck entry point).
+    "T20",  # flake8-print
+]
+ignore = [
+    "E501",  # line-too-long — line-length=100 is a guideline, not a hard wall
+    "B008",  # function-call in default arg (FastAPI Depends() pattern)
+    # B904 (raise-without-from) removed from ignore in v4.18 (2026-05-08).
+    # The v4.1-v4.7 sweep arc classified every raise site under app/ as
+    # either `from None` (security/validation/coercion — intentionally
+    # drop chain) or `from exc` (logged paths / domain-signal exceptions).
+    # Full-tree `ruff check app/ --select B904` is clean. Keeping this
+    # rule enforced (alongside test_v410_router_b904_sweep.py +
+    # test_v440_b904_try400_stragglers.py + test_v470_b904_scripts_sweep.py)
+    # makes regressions fail at lint time, not just at unit-test time.
+    "UP038", # isinstance(x, (A, B)) — slower on hot paths than tuple form
+    "UP042", # str-enum replacement — codebase predates StrEnum, conversion is mass-cosmetic
+    "E712",  # `== True / == False` — used intentionally in SQLAlchemy filter expressions
+    "E741",  # ambiguous-variable-name — `l`/`I` show up in math-domain code legitimately
+    "E722",  # bare-except — used in best-effort ingestion paths; calls warrant ad-hoc fixes, not a blanket rule
+    "E402",  # module-import-not-at-top-of-file — codebase legitimately interleaves env-bootstrap helpers with imports
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Tests intentionally use bare-except, magic numbers, and re-import
+# names from fixtures. Don't lint-pollute them.
+"tests/**/*.py" = ["E402", "F401", "F811", "B011", "B017", "T201", "T203"]
+"alembic/versions/**/*.py" = ["E402", "F401", "I001"]
+# One-off scripts often need to mutate sys.path before imports work.
+# E402 (import-not-at-top-of-file) is the expected shape there. They
+# also legitimately use ``print()`` for CLI UX (progress, summaries,
+# rollback SQL, etc.) — that's the contract scripts/ exists for.
+"scripts/**/*.py" = ["E402", "T201", "T203"]
+# Ad-hoc CLI entry points inside app/ that pre-date scripts/. The
+# v3.57 print-sweep arc deliberately did NOT touch these because the
+# prefix-prints are intentional CLI/job UX:
+#   - migrations/* — one-shot data-migration scripts run with
+#     ``python -m app.migrations.X --live``; banner prints + per-row
+#     progress + rollback SQL are the operator's only window.
+#   - services/check_db.py — ``python -m app.services.check_db``
+#     healthcheck entry point.
+# The lone admin-script-style print in admin_upload_service.py and
+# utils/cache.py was swept to logger in v3.57 (they are imported as
+# library code, not CLI entry points).
+"app/migrations/**/*.py" = ["T201", "T203"]
+"app/services/check_db.py" = ["T201", "T203"]
+
+[tool.ruff.format]
+# Same defaults as `black` (which we don't otherwise use).
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"

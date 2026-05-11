@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Samga.ai">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#111827" />
+  <path d="M46 20c-3.5-3.4-9.2-5.3-15-5.3-7 0-12.4 3.6-12.4 9.2 0 11.8 19.7 7.2 19.7 14.1 0 2.3-2.4 3.9-6.2 3.9-4.1 0-8.1-1.7-11.1-4.4l-4.7 4.9C20 46.4 25.9 49 31.8 49c8 0 13.6-4 13.6-10.2 0-12.2-19.8-8-19.8-14.3 0-2.1 2-3.4 5.3-3.4 3.4 0 6.9 1.2 9.5 3.4L46 20Z" fill="url(#bg)" />
+  <circle cx="48" cy="47" r="4" fill="#fde68a" />
+</svg>

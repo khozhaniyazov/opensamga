@@ -1,0 +1,90 @@
+# Dependabot config — added 2026-04-29 (s28 v2.7).
+#
+# Three ecosystems (frontend npm, backend pip, repo-level GitHub Actions)
+# get grouped PRs. Grouping minor/patch updates means we don't
+# get N PRs at once, just one per ecosystem unless something
+# major rolls.
+#
+# Once a key rotation lands and the gitleaks allowlist is dropped, the
+# security workflow + dependabot's own vulnerability alerts cover the
+# CVE surface.
+#
+# v3.58 (2026-05-02): cadence dropped weekly -> monthly + open-PR
+# limits halved. Each dependabot PR triggers ~5 CI lanes; weekly was
+# costing ~$1.50/month in Actions burn for a private repo on the
+# free tier. Monthly cadence + smaller batch keeps us under quota
+# and still picks up CVE-relevant updates within ~30 days. For
+# urgent CVE bumps, manually open a PR or trigger
+# `gh workflow run dependabot.yml` (no manual lever exists yet —
+# acceptable trade-off; CVE alerts still fire in real time via
+# the security tab).
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/frontend"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      time: "06:00"
+      timezone: "Asia/Almaty"
+    open-pull-requests-limit: 3
+    labels:
+      - "dependencies"
+      - "frontend"
+    commit-message:
+      prefix: "deps(frontend)"
+    groups:
+      frontend-minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
+    ignore:
+      # Pin React 18 — runtime + types must stay aligned. v2.6 had to
+      # downgrade @types/react after npm pulled v19.x silently.
+      - dependency-name: "react"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "react-dom"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@types/react"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@types/react-dom"
+        update-types: ["version-update:semver-major"]
+
+  - package-ecosystem: "pip"
+    directory: "/backend"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      time: "06:00"
+      timezone: "Asia/Almaty"
+    open-pull-requests-limit: 3
+    labels:
+      - "dependencies"
+      - "backend"
+    commit-message:
+      prefix: "deps(backend)"
+    groups:
+      backend-minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      time: "06:00"
+      timezone: "Asia/Almaty"
+    open-pull-requests-limit: 2
+    labels:
+      - "dependencies"
+      - "ci"
+    commit-message:
+      prefix: "deps(ci)"
+    groups:
+      actions-minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"

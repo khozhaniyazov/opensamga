@@ -1,0 +1,722 @@
+[
+  {
+    "id": "bio-01",
+    "n_hits": 5,
+    "top1_subject": "Biology",
+    "top1_grade": 11,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets provide details on eukaryotic cells and their organelles but do not explicitly define a eukaryotic cell."
+    }
+  },
+  {
+    "id": "bio-02",
+    "n_hits": 5,
+    "top1_subject": "Biology",
+    "top1_grade": 11,
+    "judge": {
+      "score": 5,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "The retrieved snippets fully explain the process of photosynthesis and the role of chlorophyll using relevant biological concepts."
+    }
+  },
+  {
+    "id": "bio-03",
+    "n_hits": 5,
+    "top1_subject": "Biology",
+    "top1_grade": 8,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets contain relevant information but do not fully explain the differences between mitosis and meiosis."
+    }
+  },
+  {
+    "id": "bio-04",
+    "n_hits": 5,
+    "top1_subject": "Biology",
+    "top1_grade": 10,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets provide relevant information but could be more comprehensive on Mendel's laws and the specific roles of dominant and recessive alleles."
+    }
+  },
+  {
+    "id": "bio-05",
+    "n_hits": 5,
+    "top1_subject": "Biology",
+    "top1_grade": 10,
+    "judge": {
+      "score": 5,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "The retrieved snippets fully cover the structure and function of DNA and RNA, including key components like nucleotides."
+    }
+  },
+  {
+    "id": "bio-06",
+    "n_hits": 5,
+    "top1_subject": "Biology",
+    "top1_grade": 8,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets provide relevant information but do not fully cover the keyphrases"
+    }
+  },
+  {
+    "id": "bio-07",
+    "n_hits": 5,
+    "top1_subject": "Biology",
+    "top1_grade": 11,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets contain relevant information but lack a cohesive explanation of the catalytic process."
+    }
+  },
+  {
+    "id": "bio-08",
+    "n_hits": 5,
+    "top1_subject": "Biology",
+    "top1_grade": 9,
+    "judge": {
+      "score": 5,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "The retrieved snippets contain relevant information about natural selection and Darwin's theory of evolution within the expected subject area."
+    }
+  },
+  {
+    "id": "bio-09",
+    "n_hits": 5,
+    "top1_subject": "Biology",
+    "top1_grade": 11,
+    "judge": {
+      "score": 3,
+      "grounded": false,
+      "on_subject": true,
+      "reason": "Snippets discuss plant tissues but do not directly explain xylem and phloem."
+    }
+  },
+  {
+    "id": "bio-10",
+    "n_hits": 5,
+    "top1_subject": "Biology",
+    "top1_grade": 10,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "The retrieved snippets cover the structure and some aspects of bacteria, but lack detailed information on reproduction."
+    }
+  },
+  {
+    "id": "chem-01",
+    "n_hits": 5,
+    "top1_subject": "Chemistry",
+    "top1_grade": 10,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "All key phrases are present and the subject is correct, but there's a minor gap in fully explaining periodic law."
+    }
+  },
+  {
+    "id": "chem-02",
+    "n_hits": 5,
+    "top1_subject": "Chemistry",
+    "top1_grade": 10,
+    "judge": {
+      "score": 3,
+      "grounded": false,
+      "on_subject": true,
+      "reason": "Snippets mention chemical bonds but do not provide specific examples or a clear distinction between ionic and covalent bonds."
+    }
+  },
+  {
+    "id": "chem-03",
+    "n_hits": 5,
+    "top1_subject": "Chemistry",
+    "top1_grade": 10,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets contain relevant information on balancing redox reactions and oxidation states, but some details are repetitive or not directly answering the question."
+    }
+  },
+  {
+    "id": "chem-04",
+    "n_hits": 5,
+    "top1_subject": "Chemistry",
+    "top1_grade": 11,
+    "judge": {
+      "score": 5,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "The snippets directly address the calculation of pH and acid-base equilibrium, matching the keyphrases and subject."
+    }
+  },
+  {
+    "id": "chem-05",
+    "n_hits": 5,
+    "top1_subject": "Chemistry",
+    "top1_grade": 11,
+    "judge": {
+      "score": 3,
+      "grounded": false,
+      "on_subject": true,
+      "reason": "Snippets are on the subject of Chemistry but do not fully cover sp, sp2, sp3 hybridization."
+    }
+  },
+  {
+    "id": "chem-06",
+    "n_hits": 5,
+    "top1_subject": "Chemistry",
+    "top1_grade": 10,
+    "judge": {
+      "score": 3,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets contain information on isotopes but lack details on atomic mass number."
+    }
+  },
+  {
+    "id": "chem-07",
+    "n_hits": 5,
+    "top1_subject": "Chemistry",
+    "top1_grade": 11,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets contain key information about alkanes and hydrocarbons, but minor gaps in directly addressing the concept of a homologous series."
+    }
+  },
+  {
+    "id": "chem-08",
+    "n_hits": 5,
+    "top1_subject": "Chemistry",
+    "top1_grade": 10,
+    "judge": {
+      "score": 2,
+      "grounded": false,
+      "on_subject": true,
+      "reason": "Snippets do not provide direct information on electrolysis of water and electrode reactions."
+    }
+  },
+  {
+    "id": "chem-09",
+    "n_hits": 5,
+    "top1_subject": "Chemistry",
+    "top1_grade": 10,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets cover molar mass and stoichiometry but lack direct calculation examples"
+    }
+  },
+  {
+    "id": "chem-10",
+    "n_hits": 5,
+    "top1_subject": "Chemistry",
+    "top1_grade": 10,
+    "judge": {
+      "score": 5,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "The snippets directly discuss the Le Chatelier principle and chemical equilibrium, matching the expected keyphrases and subject."
+    }
+  },
+  {
+    "id": "hist-01",
+    "n_hits": 5,
+    "top1_subject": "History of Kazakhstan",
+    "top1_grade": 6,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets provide relevant information but do not fully cover the foundation details of the Kazakh Khanate by Kerey and Zhanibek."
+    }
+  },
+  {
+    "id": "hist-02",
+    "n_hits": 5,
+    "top1_subject": "History of Kazakhstan",
+    "top1_grade": 8,
+    "judge": {
+      "score": 3,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets contain relevant information but do not fully cover the expected keyphrases and are below the expected grade level."
+    }
+  },
+  {
+    "id": "hist-03",
+    "n_hits": 5,
+    "top1_subject": "History of Kazakhstan",
+    "top1_grade": 8,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets directly address the Virgin Lands Campaign under Khrushchev but lack some key details for a fully comprehensive answer."
+    }
+  },
+  {
+    "id": "hist-04",
+    "n_hits": 5,
+    "top1_subject": "History of Kazakhstan",
+    "top1_grade": 7,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "The retrieved snippets contain information about Abylai Khan and his unification efforts, but do not explicitly mention the zhuzes."
+    }
+  },
+  {
+    "id": "hist-05",
+    "n_hits": 5,
+    "top1_subject": "History of Kazakhstan",
+    "top1_grade": 11,
+    "judge": {
+      "score": 3,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets discuss collectivization and famine but do not provide a full answer to the question"
+    }
+  },
+  {
+    "id": "hist-06",
+    "n_hits": 5,
+    "top1_subject": "History of Kazakhstan",
+    "top1_grade": 8,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets provide relevant information but are from a lower grade level than expected."
+    }
+  },
+  {
+    "id": "hist-07",
+    "n_hits": 5,
+    "top1_subject": "History of Kazakhstan",
+    "top1_grade": 8,
+    "judge": {
+      "score": 3,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets contain relevant information but do not fully cover the keyphrases or reach the expected grade level."
+    }
+  },
+  {
+    "id": "hist-08",
+    "n_hits": 5,
+    "top1_subject": "History of Kazakhstan",
+    "top1_grade": 9,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets contain relevant information but do not fully address the independence event of 1991 and Nazarbayev's role in a cohesive manner."
+    }
+  },
+  {
+    "id": "hist-09",
+    "n_hits": 5,
+    "top1_subject": "History of Kazakhstan",
+    "top1_grade": 11,
+    "judge": {
+      "score": 3,
+      "grounded": false,
+      "on_subject": true,
+      "reason": "Snippets are on the correct subject but do not contain direct facts about Saka and Scythian cultures."
+    }
+  },
+  {
+    "id": "hist-10",
+    "n_hits": 5,
+    "top1_subject": "History of Kazakhstan",
+    "top1_grade": 6,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets provide relevant information but lack a comprehensive coverage of the Golden Horde and Mongol rule."
+    }
+  },
+  {
+    "id": "math-01",
+    "n_hits": 5,
+    "top1_subject": "Mathematics",
+    "top1_grade": 8,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "The snippets contain the discriminant formula and its use in solving quadratic equations, but lack a full explanation of the process."
+    }
+  },
+  {
+    "id": "math-02",
+    "n_hits": 5,
+    "top1_subject": "Mathematics",
+    "top1_grade": 10,
+    "judge": {
+      "score": 3,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets contain relevant information on derivatives and differentiation but do not fully cover the rules of differentiation for polynomials."
+    }
+  },
+  {
+    "id": "math-03",
+    "n_hits": 5,
+    "top1_subject": "Mathematics",
+    "top1_grade": 11,
+    "judge": {
+      "score": 5,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "The retrieved snippets directly explain the geometric meaning of a definite integral as the area under the curve, matching all keyphrases and subject."
+    }
+  },
+  {
+    "id": "math-04",
+    "n_hits": 5,
+    "top1_subject": "Mathematics",
+    "top1_grade": 11,
+    "judge": {
+      "score": 5,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "The snippets directly cover the properties of logarithms and the change of base formula as requested."
+    }
+  },
+  {
+    "id": "math-05",
+    "n_hits": 5,
+    "top1_subject": "Mathematics",
+    "top1_grade": 9,
+    "judge": {
+      "score": 3,
+      "grounded": false,
+      "on_subject": true,
+      "reason": "Snippets are on the subject but do not directly contain sum formulas for sin, cos, tan."
+    }
+  },
+  {
+    "id": "math-06",
+    "n_hits": 5,
+    "top1_subject": "Mathematics",
+    "top1_grade": 9,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets contain relevant information but are not fully focused on the nth term and sum of arithmetic and geometric progressions."
+    }
+  },
+  {
+    "id": "math-07",
+    "n_hits": 5,
+    "top1_subject": "Mathematics",
+    "top1_grade": 10,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets cover probability and events but not combinations."
+    }
+  },
+  {
+    "id": "math-08",
+    "n_hits": 5,
+    "top1_subject": "Mathematics",
+    "top1_grade": 9,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets contain relevant information on vectors, dot product, and magnitude but some are not directly related to the question."
+    }
+  },
+  {
+    "id": "math-09",
+    "n_hits": 5,
+    "top1_subject": "Mathematics",
+    "top1_grade": 9,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets cover the Pythagorean theorem and right triangles, but some are not directly about the key concepts."
+    }
+  },
+  {
+    "id": "math-10",
+    "n_hits": 5,
+    "top1_subject": "Mathematics",
+    "top1_grade": 9,
+    "judge": {
+      "score": 1,
+      "grounded": false,
+      "on_subject": true,
+      "reason": "Snippets do not directly address Gaussian elimination for solving systems of linear equations."
+    }
+  },
+  {
+    "id": "phys-01",
+    "n_hits": 5,
+    "top1_subject": "Physics",
+    "top1_grade": 9,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets cover Newton's laws but do not explicitly mention free body diagrams"
+    }
+  },
+  {
+    "id": "phys-02",
+    "n_hits": 5,
+    "top1_subject": "Physics",
+    "top1_grade": 9,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets contain kinematic equations but lack explicit mention of acceleration and velocity terms"
+    }
+  },
+  {
+    "id": "phys-03",
+    "n_hits": 5,
+    "top1_subject": "Physics",
+    "top1_grade": 10,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets contain relevant information but do not fully cover the keyphrases in the rubric."
+    }
+  },
+  {
+    "id": "phys-04",
+    "n_hits": 5,
+    "top1_subject": "Physics",
+    "top1_grade": 10,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets cover key concepts but are slightly below the expected grade level."
+    }
+  },
+  {
+    "id": "phys-05",
+    "n_hits": 5,
+    "top1_subject": "Physics",
+    "top1_grade": 8,
+    "judge": {
+      "score": 2,
+      "grounded": false,
+      "on_subject": true,
+      "reason": "Snippets are on the subject of Physics but do not directly answer the question about lens, refraction, and focal length."
+    }
+  },
+  {
+    "id": "phys-06",
+    "n_hits": 5,
+    "top1_subject": "Physics",
+    "top1_grade": 10,
+    "judge": {
+      "score": 5,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "The retrieved snippets directly cover the gas laws, Boyle's Law, and the ideal gas equation within the expected subject of Physics."
+    }
+  },
+  {
+    "id": "phys-07",
+    "n_hits": 5,
+    "top1_subject": "Physics",
+    "top1_grade": 10,
+    "judge": {
+      "score": 3,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets contain relevant information but are from a lower grade level than expected."
+    }
+  },
+  {
+    "id": "phys-08",
+    "n_hits": 4,
+    "top1_subject": "Physics",
+    "top1_grade": 9,
+    "judge": {
+      "score": 1,
+      "grounded": false,
+      "on_subject": true,
+      "reason": "Snippets do not contain information about the Bohr model or quantum numbers."
+    }
+  },
+  {
+    "id": "phys-09",
+    "n_hits": 5,
+    "top1_subject": "Physics",
+    "top1_grade": 11,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets cover types of radiation and half-life but lack explicit mention of the term 'radioactive decay'"
+    }
+  },
+  {
+    "id": "phys-10",
+    "n_hits": 5,
+    "top1_subject": "Physics",
+    "top1_grade": 9,
+    "judge": {
+      "score": 4,
+      "grounded": true,
+      "on_subject": true,
+      "reason": "Snippets contain relevant information but do not explicitly connect frequency, wavelength, and speed of mechanical waves in a clear formula."
+    }
+  },
+  {
+    "id": "geo-01",
+    "n_hits": 0,
+    "top1_subject": null,
+    "top1_grade": null,
+    "judge": {
+      "score": 0,
+      "grounded": false,
+      "on_subject": false,
+      "reason": "No snippets provided to answer the question"
+    }
+  },
+  {
+    "id": "geo-02",
+    "n_hits": 0,
+    "top1_subject": null,
+    "top1_grade": null,
+    "judge": {
+      "score": 0,
+      "grounded": false,
+      "on_subject": false,
+      "reason": "No snippets provided to answer the question or match the subject"
+    }
+  },
+  {
+    "id": "geo-03",
+    "n_hits": 0,
+    "top1_subject": null,
+    "top1_grade": null,
+    "judge": {
+      "score": 0,
+      "grounded": false,
+      "on_subject": false,
+      "reason": "No snippets provided to answer the question"
+    }
+  },
+  {
+    "id": "geo-04",
+    "n_hits": 0,
+    "top1_subject": null,
+    "top1_grade": null,
+    "judge": {
+      "score": 0,
+      "grounded": false,
+      "on_subject": false,
+      "reason": "No snippets provided to assess the content or subject matter"
+    }
+  },
+  {
+    "id": "geo-05",
+    "n_hits": 0,
+    "top1_subject": null,
+    "top1_grade": null,
+    "judge": {
+      "score": 0,
+      "grounded": false,
+      "on_subject": false,
+      "reason": "No snippets provided to evaluate the question"
+    }
+  },
+  {
+    "id": "geo-06",
+    "n_hits": 0,
+    "top1_subject": null,
+    "top1_grade": null,
+    "judge": {
+      "score": 0,
+      "grounded": false,
+      "on_subject": false,
+      "reason": "No snippets provided to answer the question"
+    }
+  },
+  {
+    "id": "geo-07",
+    "n_hits": 0,
+    "top1_subject": null,
+    "top1_grade": null,
+    "judge": {
+      "score": 0,
+      "grounded": false,
+      "on_subject": false,
+      "reason": "No snippets retrieved to assess the question"
+    }
+  },
+  {
+    "id": "geo-08",
+    "n_hits": 0,
+    "top1_subject": null,
+    "top1_grade": null,
+    "judge": {
+      "score": 0,
+      "grounded": false,
+      "on_subject": false,
+      "reason": "No snippets provided to answer the question"
+    }
+  },
+  {
+    "id": "geo-09",
+    "n_hits": 0,
+    "top1_subject": null,
+    "top1_grade": null,
+    "judge": {
+      "score": 0,
+      "grounded": false,
+      "on_subject": false,
+      "reason": "No snippets provided to answer the question or match the expected subject"
+    }
+  },
+  {
+    "id": "geo-10",
+    "n_hits": 0,
+    "top1_subject": null,
+    "top1_grade": null,
+    "judge": {
+      "score": 0,
+      "grounded": false,
+      "on_subject": false,
+      "reason": "No snippets provided to answer the question"
+    }
+  }
+]

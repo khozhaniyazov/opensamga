@@ -1,0 +1,557 @@
+@import "./fonts.css";
+@import "./tailwind.css";
+@import "./theme.css";
+
+/* Mobile keyboard handling - prevents iOS zoom and uses dynamic viewport */
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
+/* Mobile-safe full-height containers */
+.mobile-safe-height {
+  height: 100dvh;
+}
+
+/* Keep scroll behavior, remove visible scrollbar chrome across the app. */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+@keyframes samga-progress {
+  0% {
+    transform: translateX(-120%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(220%);
+  }
+}
+
+/* s32 (C4, 2026-04-27): step-numbering on math-solution ordered lists.
+   When AssistantMessage detects a numbered math solution, it wraps
+   the markdown in `.samga-math-solution[data-step-prefix="…"]`. Each
+   ordered-list item then renders a "Шаг N:" / "Қадам N:" label before
+   the marker, using a CSS counter so we don't need to walk the markdown
+   AST. The default decimal marker is hidden (the label already carries
+   the index). Nested lists keep their default style — the selector
+   only applies to the top-level `ol > li`. */
+.samga-math-solution[data-step-prefix] {
+  counter-reset: samga-step;
+}
+.samga-math-solution[data-step-prefix] > ol {
+  list-style: none;
+  padding-left: 0;
+}
+.samga-math-solution[data-step-prefix] > ol > li {
+  counter-increment: samga-step;
+  position: relative;
+  padding-left: 0;
+}
+.samga-math-solution[data-step-prefix] > ol > li::before {
+  content: attr(data-step-prefix) " " counter(samga-step) ":";
+  display: inline-block;
+  font-weight: 600;
+  color: #1f2937; /* zinc-800 — matches body */
+  margin-right: 0.4rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* s33 (H6, 2026-04-28): skip-link to composer.
+   Visually hidden by default, fully visible chip on focus so
+   Tab-from-page-top reveals it. */
+.samga-skip-link {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 100;
+  padding: 0.5rem 0.875rem;
+  background: #18181b; /* zinc-900 */
+  color: #fafafa; /* zinc-50 */
+  border-radius: 0.5rem;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  /* Visually hidden — clip rect + size 1px — but still focusable. */
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.samga-skip-link:focus,
+.samga-skip-link:focus-visible {
+  /* Reveal on focus. */
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  outline: 2px solid #fbbf24; /* amber-400 — matches brand accent */
+  outline-offset: 2px;
+}
+
+/* s33 (H4, 2026-04-28): High-contrast theme.
+   Body-level class toggled by HighContrastToggle. Bumps zinc-800
+   body text to zinc-950 (near-black) and tightens borders /
+   placeholder text on the chat surface. Scoped narrowly to chat
+   chrome so the rest of the app keeps the existing design.
+
+   We bump only the chat surface (under [data-chat-surface]) by
+   convention; ChatPage.tsx adds that data attribute on its outer
+   shell in s33. For now, body-wide bumps are safe given that the
+   chat is the primary surface.
+*/
+body.samga-high-contrast {
+  /* Body text bump: zinc-800 → zinc-950. */
+  color: #09090b;
+}
+body.samga-high-contrast .text-zinc-800 {
+  color: #09090b !important; /* zinc-950 */
+}
+body.samga-high-contrast .text-zinc-700,
+body.samga-high-contrast .text-zinc-600 {
+  color: #18181b !important; /* zinc-900 */
+}
+body.samga-high-contrast .text-zinc-500 {
+  color: #3f3f46 !important; /* zinc-700 — keeps hint text legible */
+}
+body.samga-high-contrast .text-zinc-400 {
+  color: #52525b !important; /* zinc-600 */
+}
+/* Borders: bump zinc-100/200 to zinc-300 for stronger separation. */
+body.samga-high-contrast .border-zinc-100,
+body.samga-high-contrast .border-zinc-200 {
+  border-color: #d4d4d8 !important; /* zinc-300 */
+}
+/* Placeholder text in composer + search inputs gets darker. */
+body.samga-high-contrast input::placeholder,
+body.samga-high-contrast textarea::placeholder {
+  color: #52525b !important; /* zinc-600 */
+}
+/* Subtle backgrounds (zinc-50/zinc-100) are nuked to white so
+   chip-on-bg contrast improves. */
+body.samga-high-contrast .bg-zinc-50 {
+  background-color: #ffffff !important;
+}
+
+/* s35 wave 33b (2026-04-28): modern chat-surface motion pass.
+   Each `samga-anim-*` class is referenced by `chatAnimationClass`
+   in chatAnimationClasses.ts so components don't hard-code names.
+   All animations are short (≤300ms), use cubic-bezier eases that
+   match Material 3 / iOS 17, and are double-gated against
+   `prefers-reduced-motion: reduce` at the bottom of this file. */
+
+/* Message bubble entrance — slide-up + fade. Used by AssistantMessage
+   and the user bubble wrapper on first paint. */
+@keyframes samga-msg-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.samga-anim-msg-enter {
+  animation: samga-msg-enter 280ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Disclosure expand — soft slide-down + fade. Used by ToolCallTimeline
+   row body, ReasoningPanel body, ThinkingBlock body, AnchoredToc
+   panel. */
+@keyframes samga-disclosure-expand {
+  0% {
+    opacity: 0;
+    transform: translateY(-4px);
+    max-height: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 9999px;
+  }
+}
+.samga-anim-disclosure-expand {
+  animation: samga-disclosure-expand 220ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Citation chip hover — translateY lift + box-shadow. Pure transition
+   (not animation) so the chip can settle on mouse-leave. */
+.samga-anim-chip-hover {
+  transition:
+    transform 160ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 160ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.samga-anim-chip-hover:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px -4px rgba(24, 24, 27, 0.12);
+}
+
+/* Send button press — scale-down then settle. Pure transition pair. */
+.samga-anim-send-press {
+  transition:
+    transform 140ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 140ms ease;
+}
+.samga-anim-send-press:active:not(:disabled) {
+  transform: scale(0.92);
+}
+
+/* Thread row hover — subtle x-translate to telegraph selectability. */
+.samga-anim-thread-row {
+  transition:
+    transform 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 180ms ease;
+}
+.samga-anim-thread-row:hover {
+  transform: translateX(2px);
+}
+
+/* Tool card mount — fade + scale-up from 0.97. */
+@keyframes samga-tool-card {
+  0% {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.samga-anim-tool-card {
+  animation: samga-tool-card 260ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Streaming caret — gentle pulse. Replaces tailwind's `animate-pulse`
+   with a softer 1.4s cycle that doesn't strobe. */
+@keyframes samga-caret {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+.samga-anim-caret {
+  animation: samga-caret 1400ms ease-in-out infinite;
+}
+
+/* Pill mount — fade + slide-down. Used by OutdatedDataPill,
+   InterruptedPill, RetryPill, etc. */
+@keyframes samga-pill {
+  0% {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.samga-anim-pill {
+  animation: samga-pill 200ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* s35 wave 34e (2026-04-28): composer shell focus-within glow.
+   The composer card carries this class; once the textarea inside
+   gains focus the wrapper grows a soft amber 2px ring so the
+   active surface telegraphs without shifting layout. */
+.samga-anim-composer-glow {
+  transition:
+    box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.samga-anim-composer-glow:focus-within {
+  box-shadow:
+    0 0 0 3px rgba(251, 191, 36, 0.18),
+    0 4px 12px -6px rgba(24, 24, 27, 0.08);
+  border-color: rgba(251, 191, 36, 0.5);
+}
+
+/* s35 wave 34f (2026-04-28): generic popover mount — fade + slight
+   slide-down. Used by SlashMenuPopover, FeedbackButtons reason
+   popover, citation preview popover, sources drawer header. */
+@keyframes samga-popover {
+  0% {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.samga-anim-popover {
+  animation: samga-popover 200ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  transform-origin: top center;
+}
+
+/* s35 wave 34g (2026-04-28): modal scrim fade-in. */
+@keyframes samga-modal-scrim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.samga-anim-modal-scrim {
+  animation: samga-modal-scrim 180ms ease-out both;
+}
+
+/* s35 wave 34g (2026-04-28): modal dialog mount — fade + scale-up. */
+@keyframes samga-modal {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+.samga-anim-modal {
+  animation: samga-modal 240ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* s35 wave 35a (2026-04-28): chevron rotation on disclosure
+   widgets. Apply to the chevron icon; the parent button signals
+   state via `aria-expanded` which we hook for the rotation.
+   Components that already use ChevronRight (90° rotation) are
+   served by the default; components using ChevronDown that should
+   flip 180° set `--samga-chevron-rotate: 180deg` inline. */
+.samga-anim-chevron,
+.samga-anim-chevron-target {
+  transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: center;
+}
+[aria-expanded="true"] > .samga-anim-chevron,
+[data-state="open"] > .samga-anim-chevron,
+[aria-expanded="true"] .samga-anim-chevron-target,
+.samga-anim-chevron[data-rotated="true"] {
+  transform: rotate(var(--samga-chevron-rotate, 90deg));
+}
+
+/* s35 wave 35b (2026-04-28): skeleton shimmer — modern gradient
+   sweep replacing the simple opacity pulse. Tinted with our
+   amber accent at low alpha to feel branded, not generic. */
+@keyframes samga-skeleton {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+.samga-anim-skeleton {
+  background-image: linear-gradient(
+    90deg,
+    rgba(228, 228, 231, 0) 0%,
+    rgba(251, 191, 36, 0.18) 50%,
+    rgba(228, 228, 231, 0) 100%
+  );
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  animation: samga-skeleton 1600ms linear infinite;
+}
+.dark .samga-anim-skeleton {
+  background-image: linear-gradient(
+    90deg,
+    rgba(63, 63, 70, 0) 0%,
+    rgba(251, 191, 36, 0.22) 50%,
+    rgba(63, 63, 70, 0) 100%
+  );
+}
+
+/* s35 wave 35c (2026-04-28): copy-success ✓ pop. */
+@keyframes samga-copy-success {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  35% {
+    opacity: 1;
+    transform: scale(1.18);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.samga-anim-copy-success {
+  animation: samga-copy-success 420ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* s35 wave 35d (2026-04-28): header usage-pill near-limit pulse. */
+@keyframes samga-usage-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.18);
+  }
+}
+.samga-anim-usage-pulse {
+  animation: samga-usage-pulse 2400ms ease-in-out infinite;
+}
+
+/* s35 wave 35e (2026-04-28): MessageActions toolbar reveal on
+   group-hover. The toolbar lives at opacity-0 by default and the
+   tailwind classes flip it to opacity-100 on group-hover /
+   focus-within. Without an animation, that opacity flip is an
+   abrupt 0→1 jump. We layer a transition on the target plus an
+   actual `samga-actions-reveal` keyframed mount when the parent
+   `.group` is hovered/focused, giving a smooth slide-up reveal. */
+@keyframes samga-actions-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.samga-anim-actions-reveal {
+  animation: samga-actions-reveal 220ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.samga-anim-actions-reveal-target {
+  transition:
+    opacity 220ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(0);
+}
+@media (min-width: 640px) {
+  .samga-anim-actions-reveal-target {
+    transform: translateY(4px);
+  }
+  .group:hover .samga-anim-actions-reveal-target,
+  .group:focus-within .samga-anim-actions-reveal-target {
+    transform: translateY(0);
+  }
+}
+
+/* s35 wave 35f (2026-04-28): backdrop blur for modal scrims. */
+.samga-anim-scrim-blur {
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+}
+
+/* s35 wave 36e (2026-04-28): FeedbackButtons "thank you" chip —
+   slides in from the LEFT (the chip sits to the right of the
+   pressed up/down button) + fades. Replaces the ad-hoc
+   `animate-in fade-in slide-in-from-left-1` tailwind chain. */
+@keyframes samga-feedback-thanks {
+  0% {
+    opacity: 0;
+    transform: translateX(-6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.samga-anim-feedback-thanks {
+  animation: samga-feedback-thanks 220ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* s35 wave 36f (2026-04-28): card hover-lift — translateY -1px +
+   soft shadow growth on hover, transition-only. Wired on
+   ChatEmptyState quick-prompt cards and template pills. */
+.samga-anim-card-lift {
+  transition:
+    transform 200ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.samga-anim-card-lift:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 2px 4px rgba(24, 24, 27, 0.04),
+    0 8px 20px -6px rgba(24, 24, 27, 0.1);
+}
+
+/* s35 wave 36g (2026-04-28): Material-style tap ripple. Subtle
+   scale-down on :active + brightness bump; no separate ripple
+   element required. Wired on send / new-thread / slash-menu
+   primary buttons. */
+.samga-anim-tap-ripple {
+  transition:
+    transform 140ms cubic-bezier(0.16, 1, 0.3, 1),
+    filter 140ms ease-out;
+}
+.samga-anim-tap-ripple:active {
+  transform: scale(0.96);
+  filter: brightness(0.96);
+}
+
+/* OS-level reduced-motion gate. The pure-helper layer
+   (`chatAnimationClass`) handles the JS-resolved preference (storage
+   + matchMedia composite); this CSS rule is the belt-and-braces
+   safety net for any element that picks up an animation class
+   without going through the helper. */
+@media (prefers-reduced-motion: reduce) {
+  .samga-anim-msg-enter,
+  .samga-anim-disclosure-expand,
+  .samga-anim-chip-hover,
+  .samga-anim-send-press,
+  .samga-anim-thread-row,
+  .samga-anim-tool-card,
+  .samga-anim-caret,
+  .samga-anim-pill,
+  .samga-anim-composer-glow,
+  .samga-anim-popover,
+  .samga-anim-modal-scrim,
+  .samga-anim-modal,
+  .samga-anim-chevron,
+  .samga-anim-skeleton,
+  .samga-anim-copy-success,
+  .samga-anim-usage-pulse,
+  .samga-anim-actions-reveal,
+  .samga-anim-actions-reveal-target,
+  .samga-anim-feedback-thanks,
+  .samga-anim-card-lift,
+  .samga-anim-tap-ripple {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+  .samga-anim-card-lift:hover,
+  .samga-anim-tap-ripple:active {
+    transform: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+  }
+  .samga-anim-chip-hover:hover,
+  .samga-anim-send-press:active,
+  .samga-anim-thread-row:hover,
+  .samga-anim-composer-glow:focus-within {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  [aria-expanded="true"] > .samga-anim-chevron,
+  [data-state="open"] > .samga-anim-chevron,
+  [aria-expanded="true"] .samga-anim-chevron-target,
+  .samga-anim-chevron[data-rotated="true"] {
+    transform: none !important;
+  }
+  .samga-anim-skeleton {
+    background-image: none !important;
+  }
+  .samga-anim-scrim-blur {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Умная библиотека",
+  "subtitle": "Официальные учебники ЕНТ",
+  "search_placeholder": "Поиск учебников...",
+  "all_subjects": "Все",
+  "loading": "Загрузка книг...",
+  "no_results": "Книги не найдены",
+  "no_results_desc": "Попробуйте изменить поиск или фильтры",
+  "grade": "Класс",
+  "pages": "стр.",
+  "books_found": "Найдено {{count}} книг",
+  "books_found_one": "Найдена {{count}} книга",
+  "books_found_few": "Найдено {{count}} книги",
+  "view_grid": "Сетка",
+  "view_list": "Список",
+  "open_book": "Открыть",
+  "grade_label": "{{grade}} класс"
+}

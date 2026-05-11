@@ -1,0 +1,92 @@
+# ---------------------------------------------------------------------------
+# Build + deps
+# ---------------------------------------------------------------------------
+node_modules/
+dist/
+.vite/
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+build/
+*.egg-info/
+
+# ---------------------------------------------------------------------------
+# Local config / secrets
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.docker.example
+!.env.example
+
+# Private agent-memory scratchpads (historical; keep them ignored)
+QWEN.md
+CLAUDE.local.md
+AGENTS.local.md
+
+# ---------------------------------------------------------------------------
+# Runtime data
+# ---------------------------------------------------------------------------
+backend/uploads/
+backend/.cache/
+backend/raw_library/
+frontend/public/raw_library/
+dataset/
+raw_library/
+textbooks_md/
+
+# ---------------------------------------------------------------------------
+# Logs / runtime
+# ---------------------------------------------------------------------------
+*.log
+*.out
+*.err
+*.pid
+*.stdout
+*.stdout.txt
+# But keep the one tracked helper:
+!backend/locustfile.py
+
+# ---------------------------------------------------------------------------
+# IDE / OS
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ---------------------------------------------------------------------------
+# Test output
+# ---------------------------------------------------------------------------
+test-results/
+playwright-report/
+frontend/test-results/
+frontend/playwright-report/
+frontend/reports/
+.pytest_cache/
+.ruff_cache/
+.coverage
+coverage/
+htmlcov/
+
+# ---------------------------------------------------------------------------
+# Large binary / scraped content (do not commit)
+# ---------------------------------------------------------------------------
+*.pdf
+*.mp4
+*.zip
+*.db
+*.sqlite
+*.sqlite3
+
+# ---------------------------------------------------------------------------
+# QA screenshots / one-off captures (regenerable)
+# ---------------------------------------------------------------------------
+/e2e-*.png
+/verify-*.png
+/hunt_*.png
+/snap-*.md
+/_hunt_*.log
+strategy-lab-*.png
+chat-*.png

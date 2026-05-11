@@ -1,0 +1,61 @@
+# Normalize line endings to LF for all text files.
+# Closes the CRLF root-cause from v4.4 audit (telemetry_console/{router,telemetry_client}.py
+# shipped CRLF and produced 314+/314- ruff --fix diffs until normalized).
+#
+# `text=auto` lets git auto-detect text vs binary on add; the per-extension rules
+# below pin LF for files we know must stay LF (Python, TS/JS, configs, shell).
+
+* text=auto eol=lf
+
+# Source code — pin LF
+*.py    text eol=lf
+*.pyi   text eol=lf
+*.ts    text eol=lf
+*.tsx   text eol=lf
+*.js    text eol=lf
+*.mjs   text eol=lf
+*.cjs   text eol=lf
+*.jsx   text eol=lf
+*.css   text eol=lf
+*.html  text eol=lf
+*.svg   text eol=lf
+
+# Configs / data — pin LF
+*.json  text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+*.toml  text eol=lf
+*.ini   text eol=lf
+*.cfg   text eol=lf
+*.conf  text eol=lf
+*.md    text eol=lf
+*.csv   text eol=lf
+*.txt   text eol=lf
+*.mako  text eol=lf
+
+# Shell / hooks — must be LF on POSIX
+*.sh           text eol=lf
+.husky/*       text eol=lf
+deploy.sh      text eol=lf
+Caddyfile      text eol=lf
+Dockerfile*    text eol=lf
+
+# Windows-only — keep CRLF
+*.bat   text eol=crlf
+*.cmd   text eol=crlf
+*.ps1   text eol=crlf
+
+# Binary — never touch
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.pdf   binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+*.eot   binary
+*.zip   binary
+*.gz    binary
+*.tar   binary

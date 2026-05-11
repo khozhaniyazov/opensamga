@@ -1,0 +1,79 @@
+name: Playwright (smoke)
+
+# Non-blocking E2E lane. Real Playwright coverage runs LOCAL
+# (`npx playwright test` inside frontend/). The point of this CI
+# job is so the harness doesn't rot — if `landing.spec.ts` stops
+# even loading the page, we want to know on a PR, not three months
+# from now when somebody finally re-runs it.
+#
+# `continue-on-error: true` keeps it advisory until we've seen a
+# few weeks of green and judged it stable enough to gate merges.
+#
+# v3.58 (2026-05-02): paths filter added. This is the most
+# expensive of our lanes (~3-4 min: npm ci + chromium download +
+# vite build + spec run). Backend-only PRs no longer trigger it.
+
+on:
+  push:
+    branches: [master, agent-harness]
+    paths:
+      - "frontend/**"
+      - ".github/workflows/playwright.yml"
+  pull_request:
+    branches: [master]
+    paths:
+      - "frontend/**"
+      - ".github/workflows/playwright.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    name: Playwright landing smoke (chromium only)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    continue-on-error: true
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install npm deps
+        run: npm ci
+
+      - name: Install Playwright browsers (chromium only)
+        run: npx playwright install --with-deps chromium
+
+      - name: Build
+        run: npm run build
+
+      - name: Run landing smoke
+        # The local dev server is started by playwright.config.ts
+        # via webServer.command. We pin to chromium to keep the
+        # job fast (Firefox/WebKit add ~2x).
+        run: |
+          npx playwright test \
+            --project=chromium \
+            tests/landing.spec.ts \
+            || true
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: playwright-report
+          path: frontend/playwright-report
+          if-no-files-found: ignore
+          retention-days: 7

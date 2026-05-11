@@ -1,0 +1,40 @@
+name: Security
+
+on:
+  push:
+    branches: [master, agent-harness]
+  pull_request:
+    branches: [master]
+  schedule:
+    # Weekly Monday 08:00 UTC sweep, even with no commits, catches keys
+    # that get pasted into in-flight branches via PRs / cherry-picks.
+    - cron: "0 8 * * 1"
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gitleaks:
+    name: Secret scan (gitleaks)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout (full history)
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Run gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # We do NOT have a paid license; the action exits 0 on detect
+          # without one but still surfaces findings in the job log + PR
+          # annotations, which is enough for our public-repo posture.
+          GITLEAKS_ENABLE_UPLOAD_ARTIFACT: true
+          GITLEAKS_ENABLE_SUMMARY: true

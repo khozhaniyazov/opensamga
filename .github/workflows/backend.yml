@@ -1,0 +1,160 @@
+name: Backend
+
+on:
+  push:
+    branches: [master, agent-harness]
+    paths:
+      - "backend/**"
+      - ".github/workflows/backend.yml"
+  pull_request:
+    branches: [master]
+    paths:
+      - "backend/**"
+      - ".github/workflows/backend.yml"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # Pure-python (no-DB) lane. Fast, deterministic, blocking.
+  pytest-smoke:
+    name: pytest (smoke, no-DB)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: backend
+    env:
+      TESTING: "true"
+      DATABASE_URL: "postgresql+asyncpg://postgres:postgres@localhost:5432/unt_advisor"
+      TEST_DATABASE_URL: "postgresql+asyncpg://postgres:postgres@localhost:5432/unt_advisor_test"
+      DASHSCOPE_API_KEY: "ci-noop"
+      KIMI_KEY: "ci-noop"
+      OPENAI_API_KEY: "ci-noop"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: backend/requirements.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          # v3.58: pyyaml is needed by test_v358_ci_cost_contract.py
+          # (parses .github/workflows/*.yml + dependabot.yml). Not a
+          # runtime dep so it goes here, not requirements.txt.
+          pip install pytest pytest-asyncio ruff==0.15.6 pyyaml
+
+      - name: Ruff (lint, prod-scope)
+        run: ruff check .
+
+      - name: Ruff format (check only)
+        run: ruff format --check .
+
+      - name: Pytest (collect-only sanity)
+        # v3.5 (2026-04-29): was `|| true` since the lane was
+        # introduced. A collection error means a test file is broken
+        # at import — that's exactly the kind of regression CI is
+        # supposed to catch, so it's now blocking.
+        run: pytest --collect-only -q
+
+      - name: Pytest (no-DB smoke subset)
+        # v3.5 (2026-04-29): also blocking. The smoke filter is
+        # deliberately broad (file-name keywords) and covers the
+        # contract-style tests that don't touch Postgres. If you add
+        # a new no-DB suite, append its file-stem keyword here so it
+        # gets exercised on every push.
+        # Pure-python tests that don't require a live Postgres.
+        run: |
+          pytest -q \
+            -k "watermark or banner_regex or format_compliance or import_surface or scrub or auth_surface or v33_security or v34_http_client or v36_audit_finishers or v37_alembic_baseline or v38_db_audit_p0 or v311_trust_signal_rollup or v312_image_ocr or v322_external_signal_policy or v323_weak_topic_mode or v325_profile_pair_simulator or v326_chat_tool_csv_split or v327_parent_report or v328_retake_guide or v329_universities_major_filter or v331_retake_guide_route_contract or v332_retake_guide_observability or v333_testing_kz_url_env_override or v334_admin_retake_guide_fetch_stats or v336_default_schedule_url_testcenter_kz or v338_db_audit_recheck or v340_testcenter_kz_month_parser or v341_month_parser_shadow_runner or v342_partial_ac_keyword_guard or v343_pr_title_guard_workflow or v344_year_first_and_noise_filter or v345_auth_logger_no_bare_except or v347_playwright_axe_blocking or v348_library_pdf_print_sweep or v349_services_print_sweep or v351_chat_router_print_sweep or v352_chat_services_print_sweep or v353_question_generator_print_sweep or v354_ai_retrieval_print_sweep or v355_notifications_print_sweep or v356_router_services_print_sweep or v357_ruff_t20_gate or v358_ci_cost_contract or ci_pgvector_baseline or ci_test_user_isolation or ci_pgvector_lane_blocking" \
+            --no-header
+
+  # DB-integration lane (s28 v2.7). Spins up a Postgres+pgvector
+  # service container so tests marked `pytest.mark.integration`
+  # can actually run. **BLOCKING** as of 2026-04-30 (chore on top
+  # of v3.20) after a four-fix arc closed the lane bugs that had
+  # kept it red since introduction:
+  #   - chore(ci) 87aa6aa: schema baseline (Base.metadata.create_all
+  #     in tests/conftest.py via session-scoped _ensure_schema).
+  #   - chore(tests) d3d0b3e: httpx 0.27 ASGITransport contract.
+  #   - chore(tests) 9140828: test_user fixture uniquification
+  #     (uuid-suffixed email/username).
+  #   - chore(tests) 3ffd855: app.dependency_overrides in
+  #     test_chat.py.
+  # See memory: project_session_2026-04-30_v319_chore_ci_baseline.md.
+  pytest-integration:
+    name: pytest (integration, pgvector)
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: backend
+    env:
+      TESTING: "true"
+      DATABASE_URL: "postgresql+asyncpg://postgres:postgres@localhost:5432/unt_advisor"
+      TEST_DATABASE_URL: "postgresql+asyncpg://postgres:postgres@localhost:5432/unt_advisor_test"
+      DASHSCOPE_API_KEY: "ci-noop"
+      KIMI_KEY: "ci-noop"
+      OPENAI_API_KEY: "ci-noop"
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: unt_advisor_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: backend/requirements.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest pytest-asyncio httpx
+
+      - name: Wait for Postgres
+        run: |
+          for i in $(seq 1 30); do
+            if pg_isready -h localhost -U postgres; then
+              echo "postgres is ready"; break
+            fi
+            sleep 2
+          done
+
+      - name: Enable pgvector extension
+        run: |
+          PGPASSWORD=postgres psql -h localhost -U postgres -d unt_advisor_test \
+            -c "CREATE EXTENSION IF NOT EXISTS vector;"
+
+      - name: Pytest (integration-marked subset)
+        # 2026-04-30: this lane is now blocking. See the comment
+        # block at the top of pytest-integration for the four
+        # chores that made it green. If you need to add new
+        # `@pytest.mark.integration` tests, run them locally
+        # against `unt_advisor_test` first — a CI-only failure
+        # here will block every PR.
+        run: |
+          pytest -q -m integration --no-header

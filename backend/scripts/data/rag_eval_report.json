@@ -1,0 +1,478 @@
+{
+  "queries": [
+    {
+      "id": "bio-01",
+      "subj_expected": "Biology",
+      "cosine_top1_subject": "Biology",
+      "cosine_top1_grade": 11,
+      "rerank_top1_subject": "Biology",
+      "rerank_top1_grade": 9,
+      "changed_top1": true
+    },
+    {
+      "id": "bio-02",
+      "subj_expected": "Biology",
+      "cosine_top1_subject": "Biology",
+      "cosine_top1_grade": 11,
+      "rerank_top1_subject": "Biology",
+      "rerank_top1_grade": 11,
+      "changed_top1": false
+    },
+    {
+      "id": "bio-03",
+      "subj_expected": "Biology",
+      "cosine_top1_subject": "Biology",
+      "cosine_top1_grade": 8,
+      "rerank_top1_subject": "Biology",
+      "rerank_top1_grade": 8,
+      "changed_top1": false
+    },
+    {
+      "id": "bio-04",
+      "subj_expected": "Biology",
+      "cosine_top1_subject": "Biology",
+      "cosine_top1_grade": 10,
+      "rerank_top1_subject": "Biology",
+      "rerank_top1_grade": 10,
+      "changed_top1": false
+    },
+    {
+      "id": "bio-05",
+      "subj_expected": "Biology",
+      "cosine_top1_subject": "Biology",
+      "cosine_top1_grade": 10,
+      "rerank_top1_subject": "Biology",
+      "rerank_top1_grade": 10,
+      "changed_top1": false
+    },
+    {
+      "id": "bio-06",
+      "subj_expected": "Biology",
+      "cosine_top1_subject": "Biology",
+      "cosine_top1_grade": 8,
+      "rerank_top1_subject": "Biology",
+      "rerank_top1_grade": 8,
+      "changed_top1": false
+    },
+    {
+      "id": "bio-07",
+      "subj_expected": "Biology",
+      "cosine_top1_subject": "Biology",
+      "cosine_top1_grade": 11,
+      "rerank_top1_subject": "Biology",
+      "rerank_top1_grade": 11,
+      "changed_top1": false
+    },
+    {
+      "id": "bio-08",
+      "subj_expected": "Biology",
+      "cosine_top1_subject": "Biology",
+      "cosine_top1_grade": 9,
+      "rerank_top1_subject": "Biology",
+      "rerank_top1_grade": 9,
+      "changed_top1": false
+    },
+    {
+      "id": "bio-09",
+      "subj_expected": "Biology",
+      "cosine_top1_subject": "Biology",
+      "cosine_top1_grade": 11,
+      "rerank_top1_subject": "Biology",
+      "rerank_top1_grade": 7,
+      "changed_top1": true
+    },
+    {
+      "id": "bio-10",
+      "subj_expected": "Biology",
+      "cosine_top1_subject": "Biology",
+      "cosine_top1_grade": 10,
+      "rerank_top1_subject": "Biology",
+      "rerank_top1_grade": 8,
+      "changed_top1": true
+    },
+    {
+      "id": "chem-01",
+      "subj_expected": "Chemistry",
+      "cosine_top1_subject": "Chemistry",
+      "cosine_top1_grade": 10,
+      "rerank_top1_subject": "Chemistry",
+      "rerank_top1_grade": 10,
+      "changed_top1": false
+    },
+    {
+      "id": "chem-02",
+      "subj_expected": "Chemistry",
+      "cosine_top1_subject": "Chemistry",
+      "cosine_top1_grade": 10,
+      "rerank_top1_subject": "Chemistry",
+      "rerank_top1_grade": 10,
+      "changed_top1": false
+    },
+    {
+      "id": "chem-03",
+      "subj_expected": "Chemistry",
+      "cosine_top1_subject": "Chemistry",
+      "cosine_top1_grade": 10,
+      "rerank_top1_subject": "Chemistry",
+      "rerank_top1_grade": 9,
+      "changed_top1": true
+    },
+    {
+      "id": "chem-04",
+      "subj_expected": "Chemistry",
+      "cosine_top1_subject": "Chemistry",
+      "cosine_top1_grade": 8,
+      "rerank_top1_subject": "Chemistry",
+      "rerank_top1_grade": 11,
+      "changed_top1": true
+    },
+    {
+      "id": "chem-05",
+      "subj_expected": "Chemistry",
+      "cosine_top1_subject": "Chemistry",
+      "cosine_top1_grade": 11,
+      "rerank_top1_subject": "Chemistry",
+      "rerank_top1_grade": 10,
+      "changed_top1": true
+    },
+    {
+      "id": "chem-06",
+      "subj_expected": "Chemistry",
+      "cosine_top1_subject": "Chemistry",
+      "cosine_top1_grade": 10,
+      "rerank_top1_subject": "Chemistry",
+      "rerank_top1_grade": 10,
+      "changed_top1": false
+    },
+    {
+      "id": "chem-07",
+      "subj_expected": "Chemistry",
+      "cosine_top1_subject": "Chemistry",
+      "cosine_top1_grade": 11,
+      "rerank_top1_subject": "Chemistry",
+      "rerank_top1_grade": 9,
+      "changed_top1": true
+    },
+    {
+      "id": "chem-08",
+      "subj_expected": "Chemistry",
+      "cosine_top1_subject": "Chemistry",
+      "cosine_top1_grade": 10,
+      "rerank_top1_subject": "Chemistry",
+      "rerank_top1_grade": 9,
+      "changed_top1": true
+    },
+    {
+      "id": "chem-09",
+      "subj_expected": "Chemistry",
+      "cosine_top1_subject": "Chemistry",
+      "cosine_top1_grade": 10,
+      "rerank_top1_subject": "Chemistry",
+      "rerank_top1_grade": 10,
+      "changed_top1": false
+    },
+    {
+      "id": "chem-10",
+      "subj_expected": "Chemistry",
+      "cosine_top1_subject": "Chemistry",
+      "cosine_top1_grade": 10,
+      "rerank_top1_subject": "Chemistry",
+      "rerank_top1_grade": 10,
+      "changed_top1": false
+    },
+    {
+      "id": "hist-01",
+      "subj_expected": "History of Kazakhstan",
+      "cosine_top1_subject": "History of Kazakhstan",
+      "cosine_top1_grade": 6,
+      "rerank_top1_subject": "History of Kazakhstan",
+      "rerank_top1_grade": 6,
+      "changed_top1": false
+    },
+    {
+      "id": "hist-02",
+      "subj_expected": "History of Kazakhstan",
+      "cosine_top1_subject": "History of Kazakhstan",
+      "cosine_top1_grade": 8,
+      "rerank_top1_subject": "History of Kazakhstan",
+      "rerank_top1_grade": 8,
+      "changed_top1": false
+    },
+    {
+      "id": "hist-03",
+      "subj_expected": "History of Kazakhstan",
+      "cosine_top1_subject": "History of Kazakhstan",
+      "cosine_top1_grade": 8,
+      "rerank_top1_subject": "History of Kazakhstan",
+      "rerank_top1_grade": 8,
+      "changed_top1": false
+    },
+    {
+      "id": "hist-04",
+      "subj_expected": "History of Kazakhstan",
+      "cosine_top1_subject": "History of Kazakhstan",
+      "cosine_top1_grade": 7,
+      "rerank_top1_subject": "History of Kazakhstan",
+      "rerank_top1_grade": 7,
+      "changed_top1": false
+    },
+    {
+      "id": "hist-05",
+      "subj_expected": "History of Kazakhstan",
+      "cosine_top1_subject": "History of Kazakhstan",
+      "cosine_top1_grade": 11,
+      "rerank_top1_subject": "History of Kazakhstan",
+      "rerank_top1_grade": 8,
+      "changed_top1": true
+    },
+    {
+      "id": "hist-06",
+      "subj_expected": "History of Kazakhstan",
+      "cosine_top1_subject": "History of Kazakhstan",
+      "cosine_top1_grade": 8,
+      "rerank_top1_subject": "History of Kazakhstan",
+      "rerank_top1_grade": 8,
+      "changed_top1": false
+    },
+    {
+      "id": "hist-07",
+      "subj_expected": "History of Kazakhstan",
+      "cosine_top1_subject": "History of Kazakhstan",
+      "cosine_top1_grade": 8,
+      "rerank_top1_subject": "History of Kazakhstan",
+      "rerank_top1_grade": 8,
+      "changed_top1": false
+    },
+    {
+      "id": "hist-08",
+      "subj_expected": "History of Kazakhstan",
+      "cosine_top1_subject": "History of Kazakhstan",
+      "cosine_top1_grade": 9,
+      "rerank_top1_subject": "History of Kazakhstan",
+      "rerank_top1_grade": 9,
+      "changed_top1": false
+    },
+    {
+      "id": "hist-09",
+      "subj_expected": "History of Kazakhstan",
+      "cosine_top1_subject": "History of Kazakhstan",
+      "cosine_top1_grade": 11,
+      "rerank_top1_subject": "History of Kazakhstan",
+      "rerank_top1_grade": 11,
+      "changed_top1": false
+    },
+    {
+      "id": "hist-10",
+      "subj_expected": "History of Kazakhstan",
+      "cosine_top1_subject": "History of Kazakhstan",
+      "cosine_top1_grade": 6,
+      "rerank_top1_subject": "History of Kazakhstan",
+      "rerank_top1_grade": 6,
+      "changed_top1": false
+    },
+    {
+      "id": "math-01",
+      "subj_expected": "Mathematics",
+      "cosine_top1_subject": "Mathematics",
+      "cosine_top1_grade": 8,
+      "rerank_top1_subject": "Mathematics",
+      "rerank_top1_grade": 8,
+      "changed_top1": false
+    },
+    {
+      "id": "math-02",
+      "subj_expected": "Mathematics",
+      "cosine_top1_subject": "Mathematics",
+      "cosine_top1_grade": 10,
+      "rerank_top1_subject": "Mathematics",
+      "rerank_top1_grade": 10,
+      "changed_top1": false
+    },
+    {
+      "id": "math-03",
+      "subj_expected": "Mathematics",
+      "cosine_top1_subject": "Mathematics",
+      "cosine_top1_grade": 11,
+      "rerank_top1_subject": "Mathematics",
+      "rerank_top1_grade": 11,
+      "changed_top1": false
+    },
+    {
+      "id": "math-04",
+      "subj_expected": "Mathematics",
+      "cosine_top1_subject": "Mathematics",
+      "cosine_top1_grade": 11,
+      "rerank_top1_subject": "Mathematics",
+      "rerank_top1_grade": 11,
+      "changed_top1": false
+    },
+    {
+      "id": "math-05",
+      "subj_expected": "Mathematics",
+      "cosine_top1_subject": "Mathematics",
+      "cosine_top1_grade": 9,
+      "rerank_top1_subject": "Mathematics",
+      "rerank_top1_grade": 11,
+      "changed_top1": true
+    },
+    {
+      "id": "math-06",
+      "subj_expected": "Mathematics",
+      "cosine_top1_subject": "Mathematics",
+      "cosine_top1_grade": 9,
+      "rerank_top1_subject": "Mathematics",
+      "rerank_top1_grade": 9,
+      "changed_top1": false
+    },
+    {
+      "id": "math-07",
+      "subj_expected": "Mathematics",
+      "cosine_top1_subject": "Mathematics",
+      "cosine_top1_grade": 10,
+      "rerank_top1_subject": "Mathematics",
+      "rerank_top1_grade": 10,
+      "changed_top1": false
+    },
+    {
+      "id": "math-08",
+      "subj_expected": "Mathematics",
+      "cosine_top1_subject": "Mathematics",
+      "cosine_top1_grade": 9,
+      "rerank_top1_subject": "Mathematics",
+      "rerank_top1_grade": 11,
+      "changed_top1": true
+    },
+    {
+      "id": "math-09",
+      "subj_expected": "Mathematics",
+      "cosine_top1_subject": "Mathematics",
+      "cosine_top1_grade": 9,
+      "rerank_top1_subject": "Mathematics",
+      "rerank_top1_grade": 8,
+      "changed_top1": true
+    },
+    {
+      "id": "math-10",
+      "subj_expected": "Mathematics",
+      "cosine_top1_subject": "Mathematics",
+      "cosine_top1_grade": 9,
+      "rerank_top1_subject": "Mathematics",
+      "rerank_top1_grade": 9,
+      "changed_top1": false
+    },
+    {
+      "id": "phys-01",
+      "subj_expected": "Physics",
+      "cosine_top1_subject": "Physics",
+      "cosine_top1_grade": 9,
+      "rerank_top1_subject": "Physics",
+      "rerank_top1_grade": 9,
+      "changed_top1": false
+    },
+    {
+      "id": "phys-02",
+      "subj_expected": "Physics",
+      "cosine_top1_subject": "Physics",
+      "cosine_top1_grade": 9,
+      "rerank_top1_subject": "Physics",
+      "rerank_top1_grade": 10,
+      "changed_top1": true
+    },
+    {
+      "id": "phys-03",
+      "subj_expected": "Physics",
+      "cosine_top1_subject": "Physics",
+      "cosine_top1_grade": 10,
+      "rerank_top1_subject": "Physics",
+      "rerank_top1_grade": 10,
+      "changed_top1": false
+    },
+    {
+      "id": "phys-04",
+      "subj_expected": "Physics",
+      "cosine_top1_subject": "Physics",
+      "cosine_top1_grade": 10,
+      "rerank_top1_subject": "Physics",
+      "rerank_top1_grade": 7,
+      "changed_top1": true
+    },
+    {
+      "id": "phys-05",
+      "subj_expected": "Physics",
+      "cosine_top1_subject": "Physics",
+      "cosine_top1_grade": 8,
+      "rerank_top1_subject": "Physics",
+      "rerank_top1_grade": 8,
+      "changed_top1": false
+    },
+    {
+      "id": "phys-06",
+      "subj_expected": "Physics",
+      "cosine_top1_subject": "Physics",
+      "cosine_top1_grade": 10,
+      "rerank_top1_subject": "Physics",
+      "rerank_top1_grade": 10,
+      "changed_top1": false
+    },
+    {
+      "id": "phys-07",
+      "subj_expected": "Physics",
+      "cosine_top1_subject": "Physics",
+      "cosine_top1_grade": 10,
+      "rerank_top1_subject": "Physics",
+      "rerank_top1_grade": 10,
+      "changed_top1": false
+    },
+    {
+      "id": "phys-08",
+      "subj_expected": "Physics",
+      "cosine_top1_subject": "Physics",
+      "cosine_top1_grade": 9,
+      "rerank_top1_subject": "Physics",
+      "rerank_top1_grade": 9,
+      "changed_top1": false
+    },
+    {
+      "id": "phys-09",
+      "subj_expected": "Physics",
+      "cosine_top1_subject": "Physics",
+      "cosine_top1_grade": 11,
+      "rerank_top1_subject": "Physics",
+      "rerank_top1_grade": 9,
+      "changed_top1": true
+    },
+    {
+      "id": "phys-10",
+      "subj_expected": "Physics",
+      "cosine_top1_subject": "Physics",
+      "cosine_top1_grade": 9,
+      "rerank_top1_subject": "Physics",
+      "rerank_top1_grade": 9,
+      "changed_top1": false
+    }
+  ],
+  "modes": {
+    "cosine": {
+      "n": 60,
+      "subj@1": 50,
+      "grade@1": 38,
+      "kp@1": 9,
+      "subj@5": 50,
+      "grade@5": 47,
+      "kp@5": 15,
+      "latency_sum_ms": 56424,
+      "empty": 10
+    },
+    "rerank": {
+      "n": 60,
+      "subj@1": 50,
+      "grade@1": 37,
+      "kp@1": 7,
+      "subj@5": 50,
+      "grade@5": 42,
+      "kp@5": 12,
+      "latency_sum_ms": 255163,
+      "empty": 10
+    }
+  }
+}

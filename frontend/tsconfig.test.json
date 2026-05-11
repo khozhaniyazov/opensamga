@@ -1,0 +1,20 @@
+{
+  // Test-scope typecheck: same strict rules as prod, but tests INCLUDED.
+  // tsconfig.json deliberately excludes __tests__/* from prod scope so
+  // a test mistake never blocks a Vite build. This config flips that.
+  // Run via: `npm run typecheck:test` (tsconfig.test.json).
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": ["vite/client", "vitest/globals", "node", "@testing-library/jest-dom"],
+    // Tests rely on `arr[0]`-style indexing into known-non-empty fixtures
+    // and on `screen.getAllByRole(...)[0]`. Enforcing
+    // `noUncheckedIndexedAccess` here would mean ~110 ergonomically-meaningless
+    // bang-asserts. Prod code IS gated on it (see base tsconfig); the
+    // safety value lives there.
+    "noUncheckedIndexedAccess": false
+  },
+  // `include: src` re-pulls in __tests__ that prod tsconfig excludes.
+  // Override `exclude` from base so test files actually compile here.
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}

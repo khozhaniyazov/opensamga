@@ -1,0 +1,21 @@
+{
+  "grant_probability": "Вероятность получения гранта",
+  "general_quota": "Общий конкурс",
+  "rural_quota": "Сельская квота",
+  "official_website": "Официальный сайт",
+  "students": "студентов",
+  "apply": "Подать заявку",
+  "status": "Статус",
+  "safe": "Безопасно",
+  "medium_risk": "Средний риск",
+  "risky": "Рискованно",
+  "grant_threshold": "Порог гранта",
+  "buffer": "Запас",
+  "points": "баллов",
+  "university_comparison": "Сравнение университетов",
+  "probability": "Вероятность",
+  "raw_data": "Исходные данные",
+  "code": "Код",
+  "no_data": "Нет данных для сравнения"
+}
+

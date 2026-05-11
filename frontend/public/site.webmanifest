@@ -1,0 +1,17 @@
+{
+  "name": "Samga.ai",
+  "short_name": "Samga.ai",
+  "description": "Адаптивная подготовка к ЕНТ и ҰБТ с AI-чатом и цитатами из учебников",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f59e0b",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/favicon.ico", "sizes": "48x48", "type": "image/x-icon" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "lang": "ru",
+  "dir": "ltr"
+}
