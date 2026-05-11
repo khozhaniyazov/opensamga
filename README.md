@@ -158,7 +158,9 @@ git history on this repo:
   your own OTel / Sentry client into the places that check
   `TELEMETRY_AVAILABLE`.
 - Scraped question banks (`database/` RU/KZ JSONs) and scanned library
-  content (`library/` textbook PDFs + scrapers).
+  content (`library/` textbook PDFs + scrapers). If you need the full
+  dataset for research or non-commercial use, email
+  [saparbayevskii@gmail.com](mailto:saparbayevskii@gmail.com).
 - Per-session contract-pin tests tied to internal workflow
   (`test_v342_*`, `test_v343_*`, `test_v357_*`, `test_v440_*`,
   `test_v460_*`). The general-purpose tests (auth, chat, billing,
