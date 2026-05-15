@@ -83,8 +83,13 @@ class _StubSeverity:
 SeverityLevel = _StubSeverity
 
 
-def init_telemetry_tables() -> None:  # type: ignore[no-redef]
-    """No-op in the open-source build."""
+async def init_telemetry_tables() -> None:  # type: ignore[no-redef]
+    """No-op in the open-source build.
+
+    Declared `async` because the upstream private surface is awaited at
+    module-load (`await init_telemetry_tables()`); a sync stub would raise
+    TypeError if anyone ever flipped `TELEMETRY_AVAILABLE = True`.
+    """
     return None
 
 

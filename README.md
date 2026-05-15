@@ -32,7 +32,7 @@ self-host it, fork it, study it, or build on top of it.
 | AI | OpenAI / Qwen (DashScope) / Moonshot (Kimi) — function-calling agent loop | `backend/app/services/chat/` |
 | Auth | JWT access + refresh, bcrypt, admin-gated routes | `backend/app/routers/auth.py` |
 | Retrieval | pgvector + embedding pipeline + citation guard | `backend/app/services/ai_orchestrator.py` |
-| Observability | Python logging with structured fields; per-provider HTTP client registry | `backend/app/utils/logging_config.py` |
+| Observability | Python logging with structured fields; per-provider HTTP client registry | `backend/app/logging_config.py` |
 | Tests | pytest (backend) · vitest (frontend) · Playwright + axe (E2E / a11y) | `backend/tests/`, `frontend/src/**/__tests__/`, `frontend/tests/` |
 
 ## Local dev quick start
@@ -42,8 +42,8 @@ Both stacks share one PostgreSQL database with the pgvector extension.
 ### Prerequisites
 
 - Python 3.12+
-- Node.js 22+ (pinned via `.nvmrc`)
-- PostgreSQL 15+ with the `pgvector` extension installed
+- Node.js 20+ (pinned via `.nvmrc`)
+- PostgreSQL 16+ with the `pgvector` extension installed
   (`CREATE EXTENSION vector;`)
 
 ### Backend

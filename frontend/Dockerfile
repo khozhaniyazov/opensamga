@@ -1,15 +1,14 @@
-FROM node:22-alpine as build
+FROM node:20-alpine as build
 
 WORKDIR /app
 
-# Build context is `./frontend` (see docker-compose.yml). Session 16
-# (2026-04-21) — drop the `frontend/` prefix; paths are relative to the
-# build context, not the repo root.
+# Build context is `./frontend`. Paths below are relative to that
+# context, not the repo root.
 COPY package*.json ./
 RUN npm ci
 COPY . ./
 
-ARG VITE_API_URL=http://localhost:8000
+ARG VITE_API_URL=http://localhost:8001
 ENV VITE_API_URL=$VITE_API_URL
 RUN npm run build
 

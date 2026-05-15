@@ -2,7 +2,7 @@
 
 Vite + React + TypeScript frontend for the Samga.ai platform.
 
-> Proprietary commercial software. See [`../LICENSE`](../LICENSE).
+> MIT-licensed. See [`../LICENSE`](../LICENSE).
 
 ## Local development
 

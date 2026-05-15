@@ -19,9 +19,9 @@ upstream author.
   public snapshot is a fresh single-commit tree and does not contain
   that history, but historical commits of the upstream private repo
   are not audited here.
-- That every dependency is current. `dependabot` is not configured on
-  the public fork by default; run your own dependency audit before
-  any production use (`npm audit`, `pip audit`).
+- That every dependency is current. Dependabot runs on a monthly
+  cadence here (`.github/dependabot.yml`); run your own audit between
+  cycles before any production use (`npm audit`, `pip audit`).
 - That all input paths are hardened against pathological adversarial
   student input. The code was written for a friendly student audience;
   self-hosters should review chat prompts, file-upload handlers, and

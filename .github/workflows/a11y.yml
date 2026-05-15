@@ -4,30 +4,19 @@ name: Accessibility (axe-core, public)
 # PUBLIC screens only (landing, login, register, 404, legal-*) —
 # the authenticated half of the a11y suite needs a real backend +
 # session and is exercised locally / in staging, not on PR CI.
-#
-# **Blocking as of v3.47 (2026-05-02).** Promoted after 28/28
-# green runs on master spanning v2.9 (2026-04-29) → v3.46
-# (2026-05-02). The public-screens surface is small, well-known,
-# and changes rarely; the `|| true` exit-swallow at the axe-core
-# step has been removed so any new public-screen a11y regression
-# fails the job. Original advisory window: v2.9 → v3.46.
 
 on:
   push:
-    branches: [master, agent-harness]
+    branches: [main]
     paths:
       - "frontend/**"
       - ".github/workflows/a11y.yml"
   pull_request:
-    branches: [master]
+    branches: [main]
     paths:
       - "frontend/**"
       - ".github/workflows/a11y.yml"
   workflow_dispatch:
-
-# v3.58 (2026-05-02): paths filter added. The public-screens a11y
-# surface is FE-only; a backend-only PR cannot regress it. Pre-v3.58
-# every backend ship ran this ~1m30s lane unnecessarily.
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -38,9 +27,6 @@ jobs:
     name: axe-core (public screens)
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    # v3.47: continue-on-error removed (was true). The lane is now
-    # blocking. If a new a11y violation lands, fix the violation;
-    # don't restore continue-on-error.
     defaults:
       run:
         working-directory: frontend
@@ -80,9 +66,6 @@ jobs:
           done
 
       - name: Run axe-core on public screens
-        # v3.47: `|| true` exit-swallow removed; failures now
-        # propagate so a new public-screen a11y violation fails
-        # the job.
         run: |
           npx playwright test \
             --config tests/a11y/a11y.config.ts \

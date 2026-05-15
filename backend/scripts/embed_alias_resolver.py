@@ -27,9 +27,9 @@ Strategy:
 All Cyrillic stays on disk; tool output is ASCII-flag summary only.
 """
 
-import os
 import asyncio
 import json
+import os
 import sys
 import time
 from pathlib import Path

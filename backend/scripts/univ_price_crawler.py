@@ -17,8 +17,8 @@ Writes tmp_scripts/session_2026-04-18/univision_prices.json with:
 ASCII-only.
 """
 
-import os
 import json
+import os
 import re
 import time
 from pathlib import Path

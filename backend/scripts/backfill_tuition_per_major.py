@@ -13,10 +13,10 @@ the right number per row.
 Run with --commit.
 """
 
-import os
 import argparse
 import asyncio
 import json
+import os
 import re
 import statistics
 import sys

@@ -2,9 +2,9 @@ name: Security
 
 on:
   push:
-    branches: [master, agent-harness]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
   schedule:
     # Weekly Monday 08:00 UTC sweep, even with no commits, catches keys
     # that get pasted into in-flight branches via PRs / cherry-picks.

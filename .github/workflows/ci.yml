@@ -1,28 +1,18 @@
 name: CI
 
-# v3.58 (2026-05-02): paths filter added to skip on backend-only PRs.
-# Pre-v3.58 every backend PR ran the full vitest+build+typecheck lane
-# (~4-5 min) on frontend/ code that hadn't changed. With the
-# print-sweep arc shipping 10 backend-only PRs in 36 hours that added
-# up to ~$3 of GitHub Actions burn from this workflow alone. Heavy-FE
-# lanes (this one + playwright.yml + a11y.yml) now mirror the
-# backend.yml convention: trigger only when FE-relevant paths change.
-#
-# **NOTE for branch protection:** if "Frontend (vitest + build)" is
-# in the required-checks list, a backend-only PR will register as
-# "Required check missing" rather than green. Either remove it from
-# branches/master required checks, or use admin-merge for backend-only
-# ships (v3.57 cadence).
+# Frontend lane: typecheck + lint + vitest + build + bundle-size.
+# Heavy lanes (this one + playwright.yml + a11y.yml) only trigger on
+# FE-relevant paths so backend-only PRs don't burn minutes here.
 
 on:
   push:
-    branches: [master, agent-harness]
+    branches: [main]
     paths:
       - "frontend/**"
       - ".github/workflows/ci.yml"
       - "package*.json"
   pull_request:
-    branches: [master]
+    branches: [main]
     paths:
       - "frontend/**"
       - ".github/workflows/ci.yml"
@@ -60,7 +50,7 @@ jobs:
 
       - name: Typecheck (tsc --noEmit, test scope)
         # Tests are excluded from prod tsconfig; this lane keeps test
-        # files honest (added s28 v2.9).
+        # files honest.
         run: npm run typecheck:test
 
       - name: Lint (eslint flat config, prod scope)

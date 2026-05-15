@@ -1,26 +1,18 @@
 name: Playwright (smoke)
 
-# Non-blocking E2E lane. Real Playwright coverage runs LOCAL
-# (`npx playwright test` inside frontend/). The point of this CI
-# job is so the harness doesn't rot — if `landing.spec.ts` stops
-# even loading the page, we want to know on a PR, not three months
-# from now when somebody finally re-runs it.
-#
-# `continue-on-error: true` keeps it advisory until we've seen a
-# few weeks of green and judged it stable enough to gate merges.
-#
-# v3.58 (2026-05-02): paths filter added. This is the most
-# expensive of our lanes (~3-4 min: npm ci + chromium download +
-# vite build + spec run). Backend-only PRs no longer trigger it.
+# Non-blocking E2E lane. Real Playwright coverage runs locally
+# (`npx playwright test` inside frontend/). This CI job exists so
+# the harness doesn't rot — if `landing.spec.ts` stops even loading
+# the page we want to know on a PR.
 
 on:
   push:
-    branches: [master, agent-harness]
+    branches: [main]
     paths:
       - "frontend/**"
       - ".github/workflows/playwright.yml"
   pull_request:
-    branches: [master]
+    branches: [main]
     paths:
       - "frontend/**"
       - ".github/workflows/playwright.yml"
