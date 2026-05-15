@@ -1,3 +1,4 @@
+import inspect
 import json
 import logging
 import os
@@ -9,6 +10,7 @@ import httpx
 from fastapi import APIRouter, Depends, File, HTTPException, Query, Request, UploadFile, status
 from pydantic import BaseModel
 from sqlalchemy import delete, func
+from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 
@@ -22,11 +24,13 @@ from ..constants.subjects import (
     normalize_subject_name,
 )
 from ..database import get_db
+from ..middleware.rate_limit import LIMIT_CHAT_OCR, LIMIT_CHAT_STREAM, limiter
 from ..models import (
     ActivityLog,
     ExamAttempt,
     FailedQuery,
     FailedQueryStatus,
+    MockQuestion,
     StudentProfile,
     UniversityDetail,
     User,
@@ -249,6 +253,8 @@ UNIVERSITY_OPTIONS_MARKERS = (
     "ұсын",
 )
 
+MCQ_OPTION_LINE_RE = re.compile(r"^\s*[A-EА-Е]\s*[\)\].:]\s+.+$", re.IGNORECASE)
+
 
 def should_use_library_context(text: str) -> bool:
     """Only retrieve textbook context for academic/source-seeking turns.
@@ -268,6 +274,88 @@ def should_use_library_context(text: str) -> bool:
         return False
 
     return True
+
+
+def _extract_practice_bank_question_stem(text: str) -> str:
+    """Return the stem before MCQ option lines, preserving user language."""
+    stem_lines: list[str] = []
+    for line in (text or "").splitlines():
+        stripped = line.strip()
+        if not stripped and not stem_lines:
+            continue
+        if MCQ_OPTION_LINE_RE.match(stripped):
+            break
+        if stripped:
+            stem_lines.append(stripped)
+    return re.sub(r"\s+", " ", " ".join(stem_lines)).strip()
+
+
+def _format_verified_practice_bank_answer(question: MockQuestion, language: str) -> str:
+    correct = (question.correct_answer or "").strip()
+    options = question.options if isinstance(question.options, dict) else {}
+    answer_text = options.get(correct.upper()) or correct
+    if correct and answer_text and answer_text != correct:
+        answer = f"{correct.upper()}) {answer_text}"
+    else:
+        answer = answer_text or correct
+
+    if language == "kz":
+        return f"Практика банкінде тексерілді.\n\nЖауап: {answer}"
+    return f"Проверено по банку практики.\n\nОтвет: {answer}"
+
+
+def _first_practice_bank_question(result: Any) -> MockQuestion | None:
+    scalars = result.scalars()
+    if inspect.isawaitable(scalars):
+        close = getattr(scalars, "close", None)
+        if callable(close):
+            close()
+        return None
+    first = scalars.first()
+    if inspect.isawaitable(first):
+        close = getattr(first, "close", None)
+        if callable(close):
+            close()
+        return None
+    return first
+
+
+async def _verified_practice_bank_answer(
+    db: AsyncSession,
+    text: str,
+    language: str,
+) -> tuple[str, int] | None:
+    """Answer exact practice-bank MCQs from verified answer keys."""
+    stem = _extract_practice_bank_question_stem(text)
+    if len(stem) < 12:
+        return None
+
+    try:
+        result = await db.execute(
+            select(MockQuestion)
+            .where(
+                func.lower(MockQuestion.question_text) == stem.lower(),
+                MockQuestion.language == language,
+            )
+            .order_by(MockQuestion.id.asc())
+            .limit(1)
+        )
+        question = _first_practice_bank_question(result)
+        if question is None:
+            result = await db.execute(
+                select(MockQuestion)
+                .where(func.lower(MockQuestion.question_text) == stem.lower())
+                .order_by(MockQuestion.id.asc())
+                .limit(1)
+            )
+            question = _first_practice_bank_question(result)
+    except (AttributeError, SQLAlchemyError) as exc:
+        logger.debug("practice-bank lookup skipped: %s", exc)
+        return None
+
+    if question is None:
+        return None
+    return _format_verified_practice_bank_answer(question, language), int(question.id)
 
 
 def infer_grade_from_query(text: str) -> int | None:
@@ -1568,6 +1656,7 @@ def _sse(event: dict) -> str:
 
 
 @router.post("/chat/stream")
+@limiter.limit(LIMIT_CHAT_STREAM)
 async def chat_stream_endpoint(
     request: ChatRequest,
     http_request: Request,
@@ -2052,6 +2141,33 @@ async def chat_endpoint(
                 )
             # v3.84: increment moved to AFTER the first model call.
         # -------------------------------------
+
+        verified_practice_answer = await _verified_practice_bank_answer(
+            db,
+            last_user_msg or "",
+            language,
+        )
+        if verified_practice_answer:
+            practice_content, practice_question_id = verified_practice_answer
+            await _quota_charge(counter=counter, db=db)
+            await save_chat_messages(
+                current_user,
+                last_user_msg,
+                practice_content,
+                db,
+                assistant_metadata={
+                    "practice_bank_question_id": practice_question_id,
+                    "chat_path": "practice_bank",
+                },
+                thread_id=effective_thread_id,
+            )
+            logger.info(
+                "chat_turn.completed path=practice_bank question_id=%s len=%d user_id=%s",
+                practice_question_id,
+                len(practice_content),
+                current_user.id if current_user else None,
+            )
+            return {"role": "assistant", "content": practice_content}
 
         profile_prompt_conflict = await detect_profile_prompt_conflict(
             current_user,
@@ -3347,7 +3463,9 @@ async def delete_chat_thread(
 
 
 @router.post("/chat/ocr")
+@limiter.limit(LIMIT_CHAT_OCR)
 async def chat_image_ocr(
+    request: Request,
     image: UploadFile = File(...),
     lang: str = Query("ru", pattern="^(ru|kz)$"),
     current_user: User = Depends(get_current_user),

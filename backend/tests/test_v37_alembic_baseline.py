@@ -126,6 +126,44 @@ def test_alembic_drift_check_is_wired_into_lifespan():
     )
 
 
+def test_alembic_env_bootstraps_empty_databases():
+    """Fresh deploys must no longer require a historical create_all/stamp dance."""
+    env_path = Path(__file__).resolve().parent.parent / "alembic" / "env.py"
+    src = env_path.read_text(encoding="utf-8")
+
+    assert "def _bootstrap_empty_database" in src
+    assert "CREATE EXTENSION IF NOT EXISTS vector" in src
+    assert "target_metadata.create_all(bind=connection)" in src
+    assert "_create_non_model_artifacts(connection)" in src
+    assert "_stamp_current_heads(connection)" in src
+
+
+def test_runtime_requirements_include_sync_postgres_driver():
+    """Alembic strips +asyncpg and therefore needs a sync psycopg driver."""
+    reqs = Path(__file__).resolve().parent.parent / "requirements.txt"
+    text = reqs.read_text(encoding="utf-8")
+    assert "psycopg2-binary" in text
+
+
+def test_env_example_uses_parseable_release_defaults():
+    env_example = Path(__file__).resolve().parent.parent / ".env.docker.example"
+    text = env_example.read_text(encoding="utf-8")
+
+    assert "OPENAI_API_KEY=sk-" not in text
+    assert 'ALLOWED_HOSTS=["localhost","127.0.0.1"]' in text
+    assert 'ALLOWED_ORIGINS=["http://localhost:5174","http://127.0.0.1:5174"]' in text
+    assert "CHAT_AGENT_LOOP=false" in text
+
+
+def test_models_keep_restore_compatibility_columns():
+    """Public data restores depend on these nullable compatibility columns."""
+    from app.models import MockQuestion, Textbook, User
+
+    assert hasattr(User, "phone")
+    assert hasattr(Textbook, "ocr_status")
+    assert hasattr(MockQuestion, "difficulty")
+
+
 @pytest.mark.asyncio
 async def test_drift_check_raises_in_production_when_version_mismatched():
     """The check must fail-fast in production if the live version

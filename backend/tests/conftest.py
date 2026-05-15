@@ -9,6 +9,13 @@ import pytest_asyncio
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 os.environ["TESTING"] = "true"
+os.environ.setdefault("OPENAI_API_KEY", "test-key")
+os.environ.setdefault("DASHSCOPE_API_KEY", "test-key")
+# opensamga round-4 (2026-05-15): keep slowapi off in unit tests; the
+# limiter integration is contract-tested directly in
+# tests/test_v40_round4_rate_limit.py via TestClient with
+# RATE_LIMIT_ENABLED=true.
+os.environ.setdefault("RATE_LIMIT_ENABLED", "false")
 
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 from sqlalchemy.pool import NullPool

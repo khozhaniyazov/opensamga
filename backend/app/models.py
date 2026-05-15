@@ -98,6 +98,7 @@ class User(Base):
 
     # Auth fields
     email = Column(String, unique=True, index=True, nullable=True)
+    phone = Column(String, nullable=True)
     hashed_password = Column(String, nullable=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     name = Column(String, nullable=True)
@@ -413,6 +414,7 @@ class MockQuestion(Base):
     question_text = Column(String)
     options = Column(JSON)
     correct_answer = Column(String)
+    difficulty = Column(String, default="MEDIUM")
     # 1024-d to match DashScope text-embedding-v4 (session 23c).
     question_embedding = Column(Vector(1024))
 
@@ -648,6 +650,7 @@ class Textbook(Base):
     file_name = Column(String, nullable=False)  # Just the filename
     total_pages = Column(Integer, nullable=False)
     total_chunks = Column(Integer, default=0)
+    ocr_status = Column(Text, nullable=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
 

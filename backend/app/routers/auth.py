@@ -25,6 +25,12 @@ from sqlalchemy.orm import selectinload
 
 from ..config import get_settings
 from ..database import get_db
+from ..middleware.rate_limit import (
+    LIMIT_AUTH_LOGIN,
+    LIMIT_AUTH_REFRESH,
+    LIMIT_AUTH_REGISTER,
+    limiter,
+)
 from ..models import LanguagePreference, User
 
 # v3.45 (2026-05-02): replaced four bare `print(f"ERROR …")` calls and
@@ -261,6 +267,7 @@ async def get_current_admin(
 
 # Endpoints
 @router.post("/register", response_model=Token)
+@limiter.limit(LIMIT_AUTH_REGISTER)
 async def register(
     user_data: UserCreate,
     request: Request,
@@ -308,8 +315,11 @@ async def register(
 
 
 @router.post("/token", response_model=Token)
+@limiter.limit(LIMIT_AUTH_LOGIN)
 async def login_for_access_token(
-    form_data: OAuth2PasswordRequestForm = Depends(), db: AsyncSession = Depends(get_db)
+    request: Request,
+    form_data: OAuth2PasswordRequestForm = Depends(),
+    db: AsyncSession = Depends(get_db),
 ):
     # OAuth2PasswordRequestForm expects 'username' field, we use it for email
     query = select(User).where(User.email == form_data.username)
@@ -341,7 +351,12 @@ async def login_for_access_token(
 
 
 @router.post("/login", response_model=Token)
-async def login_json(user_data: UserLogin, db: AsyncSession = Depends(get_db)):
+@limiter.limit(LIMIT_AUTH_LOGIN)
+async def login_json(
+    request: Request,
+    user_data: UserLogin,
+    db: AsyncSession = Depends(get_db),
+):
     query = select(User).where(User.email == user_data.email)
     result = await db.execute(query)
     user = result.scalars().first()
@@ -364,7 +379,12 @@ async def login_json(user_data: UserLogin, db: AsyncSession = Depends(get_db)):
 
 
 @router.post("/refresh", response_model=Token)
-async def refresh_access_token(payload: RefreshRequest, db: AsyncSession = Depends(get_db)):
+@limiter.limit(LIMIT_AUTH_REFRESH)
+async def refresh_access_token(
+    request: Request,
+    payload: RefreshRequest,
+    db: AsyncSession = Depends(get_db),
+):
     """Exchange a refresh token for a new access token.
 
     MVP: stateless JWT-based, no rotation / no revocation list yet.

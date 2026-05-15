@@ -89,3 +89,20 @@ def get_client_ip(request: Request) -> str:
 
 
 limiter = Limiter(key_func=get_client_ip, default_limits=[])
+
+
+# opensamga round-4 (2026-05-15) audit: centralised per-endpoint
+# rate-limit budgets, env-overridable. Centralising here keeps
+# router decorators short (`@limiter.limit(LIMIT_AUTH_LOGIN)`) and
+# lets ops tune deployments without touching code.
+def _env_limit(name: str, default: str) -> str:
+    value = os.getenv(f"RATE_LIMIT_{name}", default).strip()
+    return value or default
+
+
+LIMIT_AUTH_LOGIN = _env_limit("AUTH_LOGIN", "10/minute")
+LIMIT_AUTH_REGISTER = _env_limit("AUTH_REGISTER", "5/minute")
+LIMIT_AUTH_REFRESH = _env_limit("AUTH_REFRESH", "20/minute")
+LIMIT_CHAT_OCR = _env_limit("CHAT_OCR", "10/minute")
+LIMIT_CHAT_STREAM = _env_limit("CHAT_STREAM", "30/minute")
+LIMIT_ADMIN_UPLOAD = _env_limit("ADMIN_UPLOAD", "5/minute")

@@ -13,13 +13,14 @@ import os
 from datetime import UTC, datetime, timedelta
 from enum import Enum
 
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from pydantic import BaseModel, ConfigDict
 from sqlalchemy import func, or_, select, text
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import joinedload
 
 from ..database import get_db
+from ..middleware.rate_limit import LIMIT_ADMIN_UPLOAD, limiter
 from ..models import (
     AcceptanceScore,
     ExamQuestion,
@@ -675,7 +676,9 @@ def _sanitize_library_filename(raw: str) -> str:
 
 
 @router.post("/library/upload")
+@limiter.limit(LIMIT_ADMIN_UPLOAD)
 async def upload_library_book(
+    request: Request,
     background_tasks: BackgroundTasks,
     subject: str = Form(...),
     grade: int = Form(...),

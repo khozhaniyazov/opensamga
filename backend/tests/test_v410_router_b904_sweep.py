@@ -51,21 +51,24 @@ REWRITTEN_SITES: list[tuple[str, int, str | None]] = [
     # Line numbers below match AST `Raise.lineno` (start of the
     # `raise` statement, not the line of `from <X>`). Re-derive by
     # grepping `from None` / `from exc` in the source if ever drifted.
-    # auth.py — line numbers shifted by +5 in v4.17 (bcrypt 5.0
-    # 72-byte guard added 5 lines to UserCreate.validate_password_strength).
-    ("auth.py", 164, None),  # JWTError -> credentials_exception from None
-    ("auth.py", 172, "exc"),  # broad Exception (logged) -> from exc
-    ("auth.py", 196, "exc"),  # DB query failed (logged) -> from exc
-    ("auth.py", 380, None),  # refresh JWTError -> credentials_exc from None
+    # auth.py — line numbers shifted again in opensamga round-4 (rate-limit
+    # decorators + Request param added to /token, /login, /refresh shifted
+    # the lower raises). v4.17 +5 from bcrypt 72-byte guard still applies.
+    ("auth.py", 170, None),  # JWTError -> credentials_exception from None
+    ("auth.py", 178, "exc"),  # broad Exception (logged) -> from exc
+    ("auth.py", 202, "exc"),  # DB query failed (logged) -> from exc
+    ("auth.py", 400, None),  # refresh JWTError -> credentials_exc from None
     # chat.py — line numbers shifted by -3 in v4.4 (TRY400 sweep collapsed
-    # 4-line logger.error+format_exc block into 1-line logger.exception)
-    # then by -1 in opensamga round-2 audit (top-level error handler dropped
-    # the language-aware error_msg interpolation, removing one line).
-    ("chat.py", 2761, None),  # int(drop_last) ValueError -> from None
-    ("chat.py", 2883, "exc"),  # export-history broad except (logged)
-    ("chat.py", 3265, "exc"),  # create-thread broad except (logged)
-    ("chat.py", 3296, "exc"),  # rename-thread broad except (logged)
-    ("chat.py", 3341, "exc"),  # delete-thread broad except (logged)
+    # 4-line logger.error+format_exc block into 1-line logger.exception),
+    # by -1 in opensamga round-2 (top-level error handler dropped one line),
+    # then by +2 in opensamga round-4 (limiter import + chat/stream
+    # decorator), then by +91 in the release-readiness pass
+    # (practice-bank verified answer fast path).
+    ("chat.py", 2854, None),  # int(drop_last) ValueError -> from None
+    ("chat.py", 2976, "exc"),  # export-history broad except (logged)
+    ("chat.py", 3358, "exc"),  # create-thread broad except (logged)
+    ("chat.py", 3389, "exc"),  # rename-thread broad except (logged)
+    ("chat.py", 3434, "exc"),  # delete-thread broad except (logged)
     # dev_console.py
     ("dev_console.py", 170, None),  # LeagueTier ValueError -> from None
     # library.py

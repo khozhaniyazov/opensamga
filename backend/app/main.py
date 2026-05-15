@@ -20,7 +20,9 @@ from starlette.middleware.gzip import GZipMiddleware
 if sys.platform == "win32":
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
+from slowapi import _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
+from slowapi.middleware import SlowAPIMiddleware
 
 from .config import settings
 from .database import AsyncSessionLocal, engine
@@ -302,13 +304,26 @@ def create_app() -> FastAPI:
         redoc_url="/redoc" if os.getenv("DEBUG", "false").lower() == "true" else None,
     )
 
+    # opensamga round-4 (2026-05-15) audit: actually install the rate-limit
+    # middleware + handler. Round-3 hardened the IP-extraction logic
+    # (`get_client_ip` walks XFF only via TRUSTED_PROXIES) but never wired
+    # `SlowAPIMiddleware` into the app — every `@limiter.limit(...)`
+    # decorator was a no-op. Install order matters: SlowAPI middleware
+    # must run AFTER CORS so preflight requests are never throttled — see
+    # the `app.add_middleware(SlowAPIMiddleware)` call below the CORS
+    # middleware block.
     app.state.limiter = limiter
 
     @app.exception_handler(RateLimitExceeded)
     async def rate_limit_handler(request: Request, exc: RateLimitExceeded):
+        # Custom body; we reuse slowapi's Retry-After header propagation
+        # via the standard `_rate_limit_exceeded_handler`, then override
+        # the JSON body for UX consistency with the rest of the API.
+        response = _rate_limit_exceeded_handler(request, exc)
         return JSONResponse(
             status_code=429,
             content={"detail": "Rate limit exceeded. Please try again later."},
+            headers={"Retry-After": response.headers.get("Retry-After", "60")},
         )
 
     # CORS hardened per SEC-04 - no wildcards allowed
@@ -336,6 +351,11 @@ def create_app() -> FastAPI:
     # minimum_size=500: don't compress tiny responses (overhead > savings)
     app.add_middleware(BrotliMiddleware, quality=4, minimum_size=500)
     app.add_middleware(GZipMiddleware, minimum_size=500)
+
+    # opensamga round-4 (2026-05-15): install the slowapi middleware so
+    # decorators take effect. Tests can disable via RATE_LIMIT_ENABLED=false.
+    if os.getenv("RATE_LIMIT_ENABLED", "true").lower() != "false":
+        app.add_middleware(SlowAPIMiddleware)
 
     @app.middleware("http")
     async def log_requests(request: Request, call_next: Callable) -> Response:
