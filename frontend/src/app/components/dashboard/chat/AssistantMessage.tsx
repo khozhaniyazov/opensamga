@@ -245,11 +245,14 @@ const markdownComponents = {
     </strong>
   ),
   a: ({ children, ...props }: any) => (
+    // Spread `props` first so the explicit `target` / `rel` literals below
+    // win — never let LLM/tool-supplied markdown override `target="_blank"`
+    // or downgrade `rel` away from `noopener noreferrer`.
     <a
+      {...props}
       className="font-medium text-amber-700 underline decoration-amber-300 underline-offset-2 transition-colors hover:text-amber-800"
       target="_blank"
-      rel="noreferrer"
-      {...props}
+      rel="noopener noreferrer"
     >
       {children}
     </a>

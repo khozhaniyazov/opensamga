@@ -62,34 +62,23 @@ def upgrade() -> None:
     op.create_index(op.f('ix_exam_questions_id'), 'exam_questions', ['id'], unique=False)
     op.create_index(op.f('ix_exam_questions_source_id'), 'exam_questions', ['source_id'], unique=True)
     op.create_index(op.f('ix_exam_questions_subject'), 'exam_questions', ['subject'], unique=False)
-    op.drop_index(op.f('ix_cmetadata_gin'), table_name='langchain_pg_embedding', postgresql_ops={'cmetadata': 'jsonb_path_ops'}, postgresql_using='gin')
-    op.drop_table('langchain_pg_embedding')
-    op.drop_index(op.f('ix_telemetry_logs_component'), table_name='telemetry_logs')
-    op.drop_index(op.f('ix_telemetry_logs_created_at'), table_name='telemetry_logs')
-    op.drop_index(op.f('ix_telemetry_logs_id'), table_name='telemetry_logs')
-    op.drop_index(op.f('ix_telemetry_logs_level'), table_name='telemetry_logs')
-    op.drop_index(op.f('ix_telemetry_logs_user_id'), table_name='telemetry_logs')
-    op.drop_table('telemetry_logs')
-    op.drop_index(op.f('ix_student_profile_id'), table_name='student_profile')
-    op.drop_table('student_profile')
-    op.drop_index(op.f('ix_telemetry_errors_category'), table_name='telemetry_errors')
-    op.drop_index(op.f('ix_telemetry_errors_created_at'), table_name='telemetry_errors')
-    op.drop_index(op.f('ix_telemetry_errors_id'), table_name='telemetry_errors')
-    op.drop_index(op.f('ix_telemetry_errors_severity'), table_name='telemetry_errors')
-    op.drop_index(op.f('ix_telemetry_errors_user_id'), table_name='telemetry_errors')
-    op.drop_table('telemetry_errors')
-    op.drop_index(op.f('ix_telemetry_bugs_created_at'), table_name='telemetry_bugs')
-    op.drop_index(op.f('ix_telemetry_bugs_id'), table_name='telemetry_bugs')
-    op.drop_index(op.f('ix_telemetry_bugs_severity'), table_name='telemetry_bugs')
-    op.drop_index(op.f('ix_telemetry_bugs_status'), table_name='telemetry_bugs')
-    op.drop_table('telemetry_bugs')
-    op.drop_index(op.f('ix_telemetry_requests_created_at'), table_name='telemetry_requests')
-    op.drop_index(op.f('ix_telemetry_requests_id'), table_name='telemetry_requests')
-    op.drop_index(op.f('ix_telemetry_requests_path'), table_name='telemetry_requests')
-    op.drop_index(op.f('ix_telemetry_requests_status_code'), table_name='telemetry_requests')
-    op.drop_index(op.f('ix_telemetry_requests_user_id'), table_name='telemetry_requests')
-    op.drop_table('telemetry_requests')
-    op.drop_table('langchain_pg_collection')
+    # Legacy-table cleanup. The auto-generated `drop_table` / `drop_index`
+    # calls below assume the upstream private DB still has these tables from
+    # an earlier langchain + telemetry_console era. On a fresh open-source
+    # install (and on any DB that already migrated past these tables) they
+    # don't exist, so we use `DROP TABLE IF EXISTS … CASCADE` which also
+    # drops dependent indexes — replacing what would otherwise be 28
+    # individual `drop_index` calls that fail on a fresh DB.
+    for legacy_table in (
+        "langchain_pg_embedding",
+        "telemetry_logs",
+        "student_profile",
+        "telemetry_errors",
+        "telemetry_bugs",
+        "telemetry_requests",
+        "langchain_pg_collection",
+    ):
+        op.execute(f'DROP TABLE IF EXISTS "{legacy_table}" CASCADE')
     op.add_column('mock_questions', sa.Column('subject', sa.String(), nullable=True))
     op.alter_column('mock_questions', 'topic_tag',
                existing_type=sa.VARCHAR(),

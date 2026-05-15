@@ -58,12 +58,14 @@ REWRITTEN_SITES: list[tuple[str, int, str | None]] = [
     ("auth.py", 196, "exc"),  # DB query failed (logged) -> from exc
     ("auth.py", 380, None),  # refresh JWTError -> credentials_exc from None
     # chat.py — line numbers shifted by -3 in v4.4 (TRY400 sweep collapsed
-    # 4-line logger.error+format_exc block into 1-line logger.exception).
-    ("chat.py", 2762, None),  # int(drop_last) ValueError -> from None
-    ("chat.py", 2884, "exc"),  # export-history broad except (logged)
-    ("chat.py", 3266, "exc"),  # create-thread broad except (logged)
-    ("chat.py", 3297, "exc"),  # rename-thread broad except (logged)
-    ("chat.py", 3342, "exc"),  # delete-thread broad except (logged)
+    # 4-line logger.error+format_exc block into 1-line logger.exception)
+    # then by -1 in opensamga round-2 audit (top-level error handler dropped
+    # the language-aware error_msg interpolation, removing one line).
+    ("chat.py", 2761, None),  # int(drop_last) ValueError -> from None
+    ("chat.py", 2883, "exc"),  # export-history broad except (logged)
+    ("chat.py", 3265, "exc"),  # create-thread broad except (logged)
+    ("chat.py", 3296, "exc"),  # rename-thread broad except (logged)
+    ("chat.py", 3341, "exc"),  # delete-thread broad except (logged)
     # dev_console.py
     ("dev_console.py", 170, None),  # LeagueTier ValueError -> from None
     # library.py
@@ -77,12 +79,15 @@ REWRITTEN_SITES: list[tuple[str, int, str | None]] = [
     ("portfolio.py", 410, "exc"),  # portfolio race -> from exc
     # practice.py
     ("practice.py", 314, "exc"),  # generate_question broad except (logged)
-    # strategy.py
+    # strategy.py — opensamga round-2 audit added structured-extra logger
+    # call inside the broad except, shifting raises by +5 lines.
     ("strategy.py", 229, "exc"),  # profile-pair ValueError -> from exc
-    ("strategy.py", 234, "exc"),  # profile-pair broad -> from exc
-    ("strategy.py", 269, "exc"),  # retake-guide broad -> from exc
-    # users.py
-    ("users.py", 156, None),  # int(score) ValueError -> from None
+    ("strategy.py", 238, "exc"),  # profile-pair broad -> from exc
+    ("strategy.py", 273, "exc"),  # retake-guide broad -> from exc
+    # users.py — opensamga round-2 audit hoisted MAX_AVATAR_BYTES /
+    # _CONTENT_TYPE_TO_EXT constants above the schemas, shifting raises by
+    # +8 lines.
+    ("users.py", 164, None),  # int(score) ValueError -> from None
 ]
 
 

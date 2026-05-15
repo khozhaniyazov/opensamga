@@ -15,6 +15,7 @@ import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { useSearchParams } from "react-router";
 import { useLang } from "../LanguageContext";
 import { apiGet } from "../../lib/api";
+import { safeHttpHref } from "../../lib/safeHref";
 import { useDocumentTitle } from "../../hooks/useDocumentTitle";
 import {
   buildUniversitiesQuery,
@@ -949,18 +950,21 @@ function UniversityCard({
                 {detail.city ? (
                   <SoftTag label={`${labels.city}: ${detail.city}`} />
                 ) : null}
-                {detail.website ? (
-                  <a
-                    href={detail.website}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-zinc-700 transition-colors hover:border-zinc-300 hover:bg-zinc-50"
-                    style={{ fontSize: 12, fontWeight: 650 }}
-                  >
-                    <ExternalLink size={13} className="text-zinc-700" />
-                    {labels.website}
-                  </a>
-                ) : null}
+                {(() => {
+                  const safe = safeHttpHref(detail.website);
+                  return safe ? (
+                    <a
+                      href={safe}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-zinc-700 transition-colors hover:border-zinc-300 hover:bg-zinc-50"
+                      style={{ fontSize: 12, fontWeight: 650 }}
+                    >
+                      <ExternalLink size={13} className="text-zinc-700" />
+                      {labels.website}
+                    </a>
+                  ) : null;
+                })()}
               </div>
 
               <div>

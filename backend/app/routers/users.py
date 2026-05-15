@@ -9,8 +9,6 @@ Includes:
 """
 
 import logging
-import os
-import shutil
 import time
 from pathlib import Path
 
@@ -49,6 +47,16 @@ VALID_PROFILE_SUBJECTS = set(get_profile_subjects())
 # No need for manual mapping anymore
 
 ALLOWED_IMAGE_TYPES = {"image/jpeg", "image/png", "image/jpg"}
+# Map content-type to a safe extension; we never trust the user-supplied
+# filename's extension for the persisted name.
+_CONTENT_TYPE_TO_EXT = {
+    "image/jpeg": ".jpg",
+    "image/jpg": ".jpg",
+    "image/png": ".png",
+}
+# Hard cap on avatar uploads (5 MiB); enforced on the streamed read so a
+# malicious client cannot fill the disk with a single chunked-encoded POST.
+MAX_AVATAR_BYTES = 5 * 1024 * 1024
 
 # --- PYDANTIC SCHEMAS ---
 
@@ -395,15 +403,34 @@ async def upload_avatar(
 
     # 2. Prepare Path
     upload_dir = get_upload_path()
-    file_extension = os.path.splitext(file.filename)[1]
+    # Pin the extension from the validated content-type, NOT from the
+    # user-supplied filename — `filename="x.phtml"` with `Content-Type:
+    # image/jpeg` would otherwise persist as `<id>_<ts>.phtml`.
+    file_extension = _CONTENT_TYPE_TO_EXT[file.content_type]
     # Unique filename: user_id + timestamp
     new_filename = f"{current_user.id}_{int(time.time())}{file_extension}"
     file_path = upload_dir / new_filename
 
-    # 3. Save File
+    # 3. Save File with a streaming size cap so a chunked-encoded POST cannot
+    #    fill the disk.
     try:
+        bytes_written = 0
         with open(file_path, "wb") as buffer:
-            shutil.copyfileobj(file.file, buffer)
+            while True:
+                chunk = await file.read(64 * 1024)
+                if not chunk:
+                    break
+                bytes_written += len(chunk)
+                if bytes_written > MAX_AVATAR_BYTES:
+                    buffer.close()
+                    file_path.unlink(missing_ok=True)
+                    raise HTTPException(
+                        status_code=413,
+                        detail="Файл слишком большой. Максимум — 5 МБ.",
+                    )
+                buffer.write(chunk)
+    except HTTPException:
+        raise
     except Exception as e:
         logger.exception(
             "avatar save failed user_id=%s path=%s",

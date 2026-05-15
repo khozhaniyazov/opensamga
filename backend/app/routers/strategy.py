@@ -231,9 +231,13 @@ async def get_profile_pair_simulator(
             detail=str(exc),
         ) from exc
     except Exception as exc:
+        logger.exception(
+            "profile-pair simulator failed",
+            extra={"subject1": subject1, "subject2": subject2},
+        )
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Failed to build profile-pair simulator: {exc}",
+            detail="Failed to build profile-pair simulator.",
         ) from exc
 
 

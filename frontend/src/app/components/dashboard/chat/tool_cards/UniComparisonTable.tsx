@@ -25,6 +25,7 @@ import {
 import { ToolCardShell } from "./CardShell";
 import type { UniComparisonData, UniComparisonRow } from "./types";
 import { useLang } from "../../../LanguageContext";
+import { safeHttpHref } from "../../../../lib/safeHref";
 import { uniComparisonTableCaption } from "./uniComparisonTableAria";
 
 interface Props {
@@ -123,20 +124,22 @@ export function UniComparisonTable({ data }: Props) {
       label: "Сайт",
       icon: <Globe size={13} className="text-indigo-500" />,
       read: (u) => u.website,
-      format: (v) =>
-        typeof v === "string" && v.length > 0 ? (
+      format: (v) => {
+        const safe = typeof v === "string" ? safeHttpHref(v) : undefined;
+        return safe ? (
           <a
-            href={v}
+            href={safe}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-1 rounded-md bg-zinc-50 px-1.5 py-0.5 text-[11px] font-medium text-amber-700 hover:bg-amber-50 hover:text-amber-800"
           >
-            {v.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+            {String(v).replace(/^https?:\/\//, "").replace(/\/$/, "")}
             <span className="opacity-70">↗</span>
           </a>
         ) : (
           <span className="text-zinc-300">—</span>
-        ),
+        );
+      },
     },
   ];
 

@@ -8,19 +8,12 @@ Handles Data Access (Search) and Data Ingestion (Admin).
 """
 
 import logging
-
-from fastapi import APIRouter, Depends, HTTPException
-
-logger = logging.getLogger(__name__)
-import os
 from typing import Any
 
-import httpx
+from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 from sqlalchemy import or_, select
 from sqlalchemy.ext.asyncio import AsyncSession
-
-from app.services.openai_failover import AsyncOpenAIFailoverClient as AsyncOpenAI
 
 from ..database import get_db
 from ..models import (
@@ -38,15 +31,9 @@ from ..services.university_data_confidence import (
 )
 from .admin import require_admin
 
+logger = logging.getLogger(__name__)
+
 router = APIRouter(prefix="/data", tags=["data"])
-
-# Initialize OpenAI for Embeddings
-# v3.4 (2026-04-29): register the http_client so the lifespan shutdown
-# in app/main.py can aclose() it. Audit finding #5.
-from ..utils.http_client_registry import register_http_client  # noqa: E402
-
-http_client = register_http_client(httpx.AsyncClient())
-client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"), http_client=http_client)
 
 # --- PYDANTIC SCHEMAS ---
 

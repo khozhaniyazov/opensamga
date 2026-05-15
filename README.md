@@ -41,7 +41,7 @@ Both stacks share one PostgreSQL database with the pgvector extension.
 
 ### Prerequisites
 
-- Python 3.12+
+- Python 3.11+ (CI is pinned to 3.11; 3.12 also works)
 - Node.js 20+ (pinned via `.nvmrc`)
 - PostgreSQL 16+ with the `pgvector` extension installed
   (`CREATE EXTENSION vector;`)
@@ -57,6 +57,9 @@ cp .env.docker.example .env  # fill in OPENAI_API_KEY etc.
 alembic upgrade head
 uvicorn app.main:app --reload --port 8001
 ```
+
+> Note: `requirements.txt` covers the runtime; for tests install
+> `pytest pytest-asyncio pytest-cov` separately (matches CI).
 
 ### Frontend
 
@@ -84,12 +87,17 @@ variables:
 | Variable | What for |
 |---|---|
 | `OPENAI_API_KEY` | Fallback chat / OCR (chat.py, convert_scanned_book.py, openai_failover.py) |
-| `DASHSCOPE_API_KEY` | Qwen / Alibaba chat backend |
-| `KIMI_API_KEY` / `MOONSHOT_API_KEY` | Moonshot chat backend |
+| `OPENAI_BASE_URL` | Optional; defaults to DashScope's OpenAI-compatible endpoint. Set to `https://api.openai.com/v1` if you want to use a real OpenAI key. |
+| `OPENAI_MODEL` | Defaults to `qwen-max` (DashScope). Switch to `gpt-4o-mini` etc. when pointing at OpenAI. |
+| `DASHSCOPE_API_KEY` | Qwen / Alibaba chat backend (used by OCR + reranker) |
+| `EMBEDDING_API_KEY` / `EMBEDDING_BASE_URL` | Optional override for the embedding provider; defaults to DashScope. |
+| `MINIMAX_API_KEY` / `MINIMAX_BASE_URL` | Optional MiniMax backend used by the failover chain. |
 | `DATABASE_URL` | `postgresql+asyncpg://user:pass@host:5432/db` |
 | `SECRET_KEY` | JWT signing — **must** be set in production |
+| `ALLOWED_ORIGINS` / `ALLOWED_HOSTS` | Comma-separated. CORS rejects `*` in production. |
 | `BILLING_WEBHOOK_SECRET` | HMAC for billing provider webhooks |
 | `TESTING_KZ_SCHEDULE_URL` | Optional override for the retake-schedule scraper target |
+| `RAG_ADMIN_EMAILS` | Comma-separated allowlist for the admin / data-confidence dashboard. |
 
 The backend refuses to start in `ENVIRONMENT=production` if the
 default dev secret is still in place — see `validate_settings()` in

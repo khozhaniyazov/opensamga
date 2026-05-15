@@ -413,7 +413,16 @@ def create_app() -> FastAPI:
     @app.exception_handler(Exception)
     async def global_exception_handler(request: Request, exc: Exception):
 
-        logger.error(f"Unhandled exception at {request.url}: {exc}", exc_info=True)
+        # Log the path WITHOUT query string. Library + WS endpoints accept a
+        # short-lived JWT in `?token=` (see app/routers/library.py); leaking
+        # that to logs / Sentry breadcrumbs would be a credential disclosure.
+        logger.error(
+            "Unhandled exception at %s %s: %s",
+            request.method,
+            request.url.path,
+            exc,
+            exc_info=True,
+        )
 
         if TELEMETRY_AVAILABLE and telemetry_client:
             try:

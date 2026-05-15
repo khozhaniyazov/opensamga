@@ -250,22 +250,12 @@ export function isUserOnboardingComplete(user: AuthUser | null): boolean {
   return hasRequiredProfileData;
 }
 
-function frontendAdminEmails(): Set<string> {
-  const raw = import.meta.env.VITE_RAG_ADMIN_EMAILS || "";
-  return new Set(
-    String(raw)
-      .split(",")
-      .map((email) => email.trim().toLocaleLowerCase())
-      .filter(Boolean),
-  );
-}
-
 export function isSamgaAdminUser(user: AuthUser | null): boolean {
   if (!user) return false;
+  // Admin status comes from the backend only. Earlier private builds also
+  // consulted a build-time `VITE_RAG_ADMIN_EMAILS` allowlist; in a public
+  // bundle that list ships to every visitor as recoverable plaintext, so
+  // we trust `user.is_admin` / `user.role` exclusively.
   const role = String(user.role || "").toLocaleLowerCase();
-  if (user.is_admin === true || role === "admin" || role === "ops") {
-    return true;
-  }
-  const email = String(user.email || "").toLocaleLowerCase();
-  return Boolean(email && frontendAdminEmails().has(email));
+  return user.is_admin === true || role === "admin" || role === "ops";
 }

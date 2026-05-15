@@ -2659,18 +2659,17 @@ async def chat_endpoint(
         # Preserve FastAPI's native error handling (e.g. 422 empty input)
         raise
     except Exception as e:  # noqa: BLE001 — broad: top-level chat handler must always return a user-visible body
-        error_type = type(e).__name__
-        error_msg = str(e)
         # logger.exception attaches the traceback automatically; no manual format_exc needed.
         logger.exception(
-            "Error in chat_endpoint: %s: %s",
-            error_type,
-            error_msg,
+            "Error in chat_endpoint: %s",
+            type(e).__name__,
         )
 
-        # Language-aware error message
-        error_msg_ru = f"Извините, произошла ошибка: {error_type}: {error_msg[:100]}"
-        error_msg_kz = f"Кешіріңіз, қате орын алды: {error_type}: {error_msg[:100]}"
+        # Language-aware error message — never interpolate exception text into
+        # the user-visible body; upstream driver errors routinely carry SQL
+        # fragments / parameter values.
+        error_msg_ru = "Извините, произошла внутренняя ошибка. Повторите запрос позже."
+        error_msg_kz = "Кешіріңіз, ішкі қате орын алды. Сұранысты кейінірек қайталаңыз."
         # Try to get language from request if available
         try:
             lang = request.language if hasattr(request, "language") else "ru"

@@ -46,21 +46,26 @@ depends_on: Union[str, Sequence[str], None] = None
 
 
 UPGRADE_SQL = """
--- Guarded drops. Embedding table + student_profile must be empty;
--- the langchain_pg_collection table may carry one vestigial
--- 'textbook_library' container row that pre-dates the session-22c audit
--- and has no paired embeddings (the embedding table is empty). Any
--- unexpected state raises and aborts cleanly.
+-- Guarded drops. The `to_regclass` checks make the COUNT(*) safety
+-- assertions skip cleanly on a fresh open-source install where these
+-- legacy tables never existed in the first place; on the upstream
+-- private DB they still run and abort if the tables carry data.
 DO $$
 BEGIN
-    IF (SELECT COUNT(*) FROM langchain_pg_embedding) > 0 THEN
-        RAISE EXCEPTION 'langchain_pg_embedding is not empty; aborting drop';
+    IF to_regclass('public.langchain_pg_embedding') IS NOT NULL THEN
+        IF (SELECT COUNT(*) FROM langchain_pg_embedding) > 0 THEN
+            RAISE EXCEPTION 'langchain_pg_embedding is not empty; aborting drop';
+        END IF;
     END IF;
-    IF (SELECT COUNT(*) FROM langchain_pg_collection) > 1 THEN
-        RAISE EXCEPTION 'langchain_pg_collection has > 1 row; aborting drop';
+    IF to_regclass('public.langchain_pg_collection') IS NOT NULL THEN
+        IF (SELECT COUNT(*) FROM langchain_pg_collection) > 1 THEN
+            RAISE EXCEPTION 'langchain_pg_collection has > 1 row; aborting drop';
+        END IF;
     END IF;
-    IF (SELECT COUNT(*) FROM student_profile) > 0 THEN
-        RAISE EXCEPTION 'student_profile is not empty; aborting drop';
+    IF to_regclass('public.student_profile') IS NOT NULL THEN
+        IF (SELECT COUNT(*) FROM student_profile) > 0 THEN
+            RAISE EXCEPTION 'student_profile is not empty; aborting drop';
+        END IF;
     END IF;
 END$$;
 

@@ -74,15 +74,21 @@ async def test_close_all_does_not_propagate_individual_failures():
 
 
 def test_originally_leaking_modules_register_at_import():
-    """Each of the five modules called out in audit finding #5 must
-    funnel its httpx.AsyncClient through `register_http_client`. Catches
-    a future "while we're at it" refactor that drops the registration."""
+    """Each of the modules called out in audit finding #5 must funnel its
+    httpx.AsyncClient through `register_http_client`. Catches a future
+    "while we're at it" refactor that drops the registration.
+
+    Note: opensamga round-2 audit (2026-05-15) removed the dead
+    ``client = AsyncOpenAI(...)`` from ``app/routers/data.py`` (the symbol
+    was never referenced) along with its ``httpx.AsyncClient`` and the
+    associated ``register_http_client`` call. The data.py target therefore
+    no longer applies; the remaining four modules still own a live client.
+    """
     from pathlib import Path
 
     backend_app = Path(reg.__file__).parent.parent  # backend/app/
 
     targets = [
-        backend_app / "routers" / "data.py",
         backend_app / "routers" / "chat.py",
         backend_app / "routers" / "chat_websocket.py",
         backend_app / "services" / "feedback_loop.py",
@@ -95,6 +101,13 @@ def test_originally_leaking_modules_register_at_import():
             "app.utils.http_client_registry.register_http_client. "
             "Audit finding #5 (v3.4)."
         )
+
+    # data.py must NOT re-acquire an unregistered client.
+    data_text = (backend_app / "routers" / "data.py").read_text(encoding="utf-8")
+    assert "httpx.AsyncClient" not in data_text, (
+        "app/routers/data.py owned a dead httpx.AsyncClient (never referenced) "
+        "that round-2 audit removed; do not reintroduce it."
+    )
 
 
 def test_lifespan_shutdown_calls_close_all_http_clients():
