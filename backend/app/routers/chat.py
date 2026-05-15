@@ -10,7 +10,6 @@ import httpx
 from fastapi import APIRouter, Depends, File, HTTPException, Query, Request, UploadFile, status
 from pydantic import BaseModel
 from sqlalchemy import delete, func
-from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 
@@ -349,7 +348,7 @@ async def _verified_practice_bank_answer(
                 .limit(1)
             )
             question = _first_practice_bank_question(result)
-    except (AttributeError, SQLAlchemyError) as exc:
+    except Exception as exc:  # noqa: BLE001 - best-effort lookup must fail open.
         logger.debug("practice-bank lookup skipped: %s", exc)
         return None
 

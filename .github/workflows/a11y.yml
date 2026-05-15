@@ -51,14 +51,14 @@ jobs:
         run: npm run build
 
       - name: Start preview server (background)
-        # `vite preview` defaults to port 4173. We rebind to 5173
+        # `vite preview` defaults to port 4173. We rebind to 5174
         # because the a11y config + spec helpers all assume that
         # baseURL.
         run: |
-          npx vite preview --host 127.0.0.1 --port 5173 &
+          npx vite preview --host 127.0.0.1 --port 5174 --strictPort &
           # Wait up to 60s for the server to come up.
           for i in $(seq 1 60); do
-            if curl -fsS http://127.0.0.1:5173 > /dev/null; then
+            if curl -fsS http://127.0.0.1:5174 > /dev/null; then
               echo "Preview server is up."
               break
             fi

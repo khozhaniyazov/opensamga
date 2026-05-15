@@ -29,32 +29,15 @@ from unittest.mock import AsyncMock, MagicMock, patch
 import pytest
 from fastapi.testclient import TestClient
 
+from app.database import get_db
 from app.main import app
-from app.models import LanguagePreference, StudentProfile, User
+from app.routers.auth import get_current_user_optional
 from app.routers.chat import _empty_response_fallback
 
 # Same integration marker as test_chat.py: the chat endpoint touches
 # save_chat_messages / get_db indirectly even when mocked; keep out of
 # the default laptop run.
 pytestmark = pytest.mark.integration
-
-
-def _mock_user() -> User:
-    user = User(
-        id=1,
-        email="test@example.com",
-        username="testuser",
-        full_name="Test User",
-        language_preference=LanguagePreference.RU,
-    )
-    user.profile = StudentProfile(
-        user_id=1,
-        current_grade=11,
-        chosen_subjects=["Physics"],
-        target_majors=["Physics"],
-        target_universities=[1],
-    )
-    return user
 
 
 def _blank_openai_response() -> MagicMock:
@@ -89,6 +72,10 @@ async def _async_noop_get_db():
     yield AsyncMock()
 
 
+async def _async_anonymous_user():
+    return None
+
+
 def _patches_common(*, prefetch_hit: bool, recovery_returns: str):
     """Bundle of patches shared across the three tests."""
     consult_mock = AsyncMock(return_value=_fake_library_hit() if prefetch_hit else [])
@@ -109,19 +96,18 @@ def _patches_common(*, prefetch_hit: bool, recovery_returns: str):
             personal_mock,
         ),
         patch("app.routers.chat.save_chat_messages", save_mock),
-        patch("app.routers.chat.get_db", _async_noop_get_db),
-        patch(
-            "app.routers.auth.get_current_user_optional",
-            lambda *a, **kw: _mock_user(),
-        ),
     ]
 
 
 def _enter_all(patches):
-    return [p.__enter__() for p in patches]
+    entered = [p.__enter__() for p in patches]
+    app.dependency_overrides[get_db] = _async_noop_get_db
+    app.dependency_overrides[get_current_user_optional] = _async_anonymous_user
+    return entered
 
 
 def _exit_all(patches):
+    app.dependency_overrides.clear()
     for p in reversed(patches):
         p.__exit__(None, None, None)
 
