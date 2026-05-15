@@ -1,0 +1,12 @@
+{
+  "unt_exam_schema_version": "2025_2026",
+  "subjects": [
+    {
+      "subject_id": "profile_russian_lit_01",
+      "subject_name_kz": "Орыс тілі мен әдебиеті",
+      "subject_name_ru": "Русский язык и литература",
+      "questions": [],
+      "context_clusters": []
+    }
+  ]
+}

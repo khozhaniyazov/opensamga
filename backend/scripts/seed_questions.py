@@ -1,7 +1,9 @@
 """
-UNT Platform — Database Seeder
-===============================
-Seeds exam questions from JSON files in /database directory.
+OpenSamga question seeder
+=========================
+Seeds exam questions from JSON files in /database and mirrors eligible
+single-answer rows into mock_questions for exact-answer practice-bank
+lookups.
 Run AFTER `alembic upgrade head`.
 
 Usage:
@@ -10,6 +12,7 @@ Usage:
 """
 
 import asyncio
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -21,7 +24,7 @@ from sqlalchemy import select
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from app.database import AsyncSessionLocal
-from app.models import ExamQuestion
+from app.models import ExamQuestion, MockQuestion
 
 # ─── File → Subject mapping ────────────────────────────────────────────────
 
@@ -753,23 +756,86 @@ def question_to_row(subject: str, q: dict[str, Any]) -> ExamQuestion:
     )
 
 
+def _option_letter(index: int) -> str:
+    return chr(ord("A") + index)
+
+
+def _mock_question_text(q: dict[str, Any], language: str) -> str:
+    question = q.get(f"question_text_{language}") or q.get("question_text_ru") or ""
+    stimulus = q.get(f"context_stimulus_{language}") or q.get("context_stimulus_ru")
+    if stimulus:
+        return f"{stimulus}\n\n{question}".strip()
+    return str(question).strip()
+
+
+def question_to_mock_rows(subject: str, q: dict[str, Any]) -> list[MockQuestion]:
+    """Mirror single-answer seed exam questions into the exact-answer bank."""
+    correct_indices = q.get("correct_answers_indices") or []
+    if len(correct_indices) != 1:
+        return []
+
+    try:
+        correct_index = int(correct_indices[0])
+    except (TypeError, ValueError):
+        return []
+
+    rows: list[MockQuestion] = []
+    for language in ("ru", "kz"):
+        text = _mock_question_text(q, language)
+        options_list = q.get(f"options_{language}") or q.get("options_ru") or []
+        if not text or correct_index < 0 or correct_index >= len(options_list):
+            continue
+
+        options = {_option_letter(index): str(option) for index, option in enumerate(options_list)}
+        content_key = "|".join(
+            [
+                "opensamga_seed",
+                language,
+                str(q.get("question_id") or ""),
+                text,
+            ]
+        )
+        rows.append(
+            MockQuestion(
+                subject=subject,
+                language=language,
+                source="opensamga_seed",
+                content_hash=hashlib.sha256(content_key.encode("utf-8")).hexdigest(),
+                topic_tag=subject,
+                question_text=text,
+                options=options,
+                correct_answer=_option_letter(correct_index),
+                difficulty="MEDIUM",
+            )
+        )
+    return rows
+
+
 async def seed_questions(dry_run: bool = True):
-    print("\n=== UNT Platform — Question Seeder ===\n")
+    print("\n=== OpenSamga question seeder ===\n")
     print(f"Database dir: {DATABASE_DIR}")
     print(f"Mode: {'DRY RUN' if dry_run else 'COMMIT'}\n")
 
     subject_questions = load_json_files()
 
     total = sum(len(qs) for qs in subject_questions.values())
+    mock_total = sum(
+        len(question_to_mock_rows(subject, q))
+        for subject, questions in subject_questions.items()
+        for q in questions
+    )
     print(f"\nTotal subjects: {len(subject_questions)}")
     print(f"Total questions: {total}")
+    print(f"Exact-answer mock-bank rows: {mock_total}")
 
     if dry_run:
         print("\n[DRY RUN] No data written. Run with --commit to write.")
         return
 
     inserted = 0
+    inserted_mock = 0
     skipped_existing = 0
+    skipped_existing_mock = 0
     async with AsyncSessionLocal() as session:
         for subject, questions in subject_questions.items():
             for q in questions:
@@ -784,16 +850,29 @@ async def seed_questions(dry_run: bool = True):
                 existing = result.scalar_one_or_none()
                 if existing:
                     skipped_existing += 1
-                    continue  # Skip duplicates
+                else:
+                    row = question_to_row(subject, q)
+                    session.add(row)
+                    inserted += 1
 
-                row = question_to_row(subject, q)
-                session.add(row)
-                inserted += 1
+                for mock_row in question_to_mock_rows(subject, q):
+                    mock_result = await session.execute(
+                        select(MockQuestion).where(
+                            MockQuestion.content_hash == mock_row.content_hash
+                        )
+                    )
+                    existing_mock = mock_result.scalar_one_or_none()
+                    if existing_mock:
+                        skipped_existing_mock += 1
+                        continue
+                    session.add(mock_row)
+                    inserted_mock += 1
 
         await session.commit()
+        print(f"\n[DONE] Inserted {inserted} exam questions ({skipped_existing} already existed).")
         print(
-            f"\n[DONE] Inserted {inserted} questions into the database "
-            f"({skipped_existing} already existed)."
+            f"[DONE] Inserted {inserted_mock} exact-answer mock-bank rows "
+            f"({skipped_existing_mock} already existed)."
         )
 
 

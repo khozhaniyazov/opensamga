@@ -1,0 +1,2001 @@
+[
+  {
+    "id": 1,
+    "full_name": "Актюбинский региональный университет имени К.Жубанова",
+    "university_code": "005",
+    "website": "http://arsu.kz",
+    "total_students": 10611,
+    "grant_students": 5012,
+    "paid_students": 5599,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Актюбинская область | Актобе",
+      "Код ВУЗа - 005",
+      "http://arsu.kz"
+    ],
+    "source_url": "https://univision.kz/univ/5-aktyubinskiy-gosudarstvennyy-regionalnyy-universitet-imeni-k-zhubanova/",
+    "search_keywords": "005, arsu, аркж",
+    "short_name": "АктРУ"
+  },
+  {
+    "id": 2,
+    "full_name": "Баишев Университет",
+    "university_code": "416",
+    "website": "http://vuzbaishev.kz",
+    "total_students": 1657,
+    "grant_students": 68,
+    "paid_students": 1587,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Актюбинская область | Актобе"
+    ],
+    "source_url": "https://univision.kz/univ/6-baishev-universitet/",
+    "search_keywords": "416, vuzbaishev",
+    "short_name": "Ун. Баишева"
+  },
+  {
+    "id": 3,
+    "full_name": "Алматинский гуманитарно-экономический университет",
+    "university_code": "154",
+    "website": "https://www.aesa.kz",
+    "total_students": 7651,
+    "grant_students": 19,
+    "paid_students": 7628,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Алматинская область | Алматы"
+    ],
+    "source_url": "https://univision.kz/univ/7-almatinskaya-akademiya-ekonomiki-i-statistiki/",
+    "search_keywords": "154, aesa, агэ",
+    "short_name": "АГЭУ"
+  },
+  {
+    "id": 4,
+    "full_name": "Алматинский технологический университет",
+    "university_code": "053",
+    "website": "http://www.atu.kz",
+    "total_students": 6810,
+    "grant_students": 3873,
+    "paid_students": 2937,
+    "military_chair": "False",
+    "has_dorm": "True",
+    "contacts_raw": [
+      "Алматинская область | Алматы"
+    ],
+    "source_url": "https://univision.kz/univ/8-almatinskiy-tehnologicheskiy-universitet/",
+    "search_keywords": "053, atu, ат",
+    "short_name": "АТУ"
+  },
+  {
+    "id": 5,
+    "full_name": "Алматинский университет энергетики и связи имени Гумарбека Даукеева",
+    "university_code": "057",
+    "website": "https://aues.edu.kz",
+    "total_students": 4303,
+    "grant_students": 3658,
+    "paid_students": 645,
+    "military_chair": "False",
+    "has_dorm": "True",
+    "contacts_raw": [
+      "Алматинская область | Алматы",
+      "Код ВУЗа - 057",
+      "aues.edu.kz",
+      "http://aues.edu.kz/ru",
+      "https://vk.com/aues_university",
+      "https://facebook.com/aues.university"
+    ],
+    "source_url": "https://univision.kz/univ/9-almatinskiy-universitet-energetiki-i-svyazi/",
+    "search_keywords": "057, edu, аэисгд",
+    "short_name": "АУЭС"
+  },
+  {
+    "id": 6,
+    "full_name": "Алматы менеджмент университет",
+    "university_code": "083",
+    "website": "http://www.almau.edu.kz",
+    "total_students": 3961,
+    "grant_students": 727,
+    "paid_students": 3217,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Алматинская область | Алматы",
+      "Код ВУЗа - 083",
+      "almau.edu.kz",
+      "http://www.almau.edu.kz",
+      "https://vk.com/almau_edu",
+      "https://twitter.com/almau_edu",
+      "https://facebook.com/almau.edu"
+    ],
+    "source_url": "https://univision.kz/univ/10-almaty-menedzhment-universitet/",
+    "search_keywords": "083, edu, ам",
+    "short_name": "AlmaU"
+  },
+  {
+    "id": 7,
+    "full_name": "Атырауский университет имени Х.Досмухамедова",
+    "university_code": "010",
+    "website": "https://asu.edu.kz/",
+    "total_students": 6048,
+    "grant_students": 1919,
+    "paid_students": 4129,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Атырауская область | Атырау",
+      "Код ВУЗа - 010",
+      "https://asu.edu.kz/",
+      "http://asu.edu.kz"
+    ],
+    "source_url": "https://univision.kz/univ/12-atyrauskiy-universitet-imeni-halela-dosmuhamedova/",
+    "search_keywords": "010, edu, ахд",
+    "short_name": "АтырУ"
+  },
+  {
+    "id": 8,
+    "full_name": "Атырауский университет нефти и газа имени С. Утебаева",
+    "university_code": "009",
+    "website": "https://www.aogu.edu.kz",
+    "total_students": 2253,
+    "grant_students": 728,
+    "paid_students": 1525,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Атырауская область | Атырау",
+      "Код ВУЗа - 009",
+      "Национальный | Университет",
+      "https://aogu.edu.kz",
+      "http://www.aogu.edu.kz",
+      "https://facebook.com/utebayev"
+    ],
+    "source_url": "https://univision.kz/univ/14-atyrauskiy-universitet-nefti-i-gaza-imeni-s-utebaeva/",
+    "search_keywords": "009, edu, анигсу",
+    "short_name": "АтырУНГ"
+  },
+  {
+    "id": 9,
+    "full_name": "Восточно-Казахстанский технический университет имени Д. Серикбаева",
+    "university_code": "012",
+    "website": "https://ektu.kz",
+    "total_students": 3699,
+    "grant_students": 1892,
+    "paid_students": 1807,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Восточно-Казахстанская область | Усть-Каменогорск",
+      "Код ВУЗа - 012",
+      "http://ektu.kz",
+      "https://vk.com/sdi_people"
+    ],
+    "source_url": "https://univision.kz/univ/15-vostochno-kazahstanskiy-gosudarstvennyy-tehnicheskiy-universitet-imeni-d-serikbaeva/",
+    "search_keywords": "012, ektu, вктдс",
+    "short_name": "ВКТУ"
+  },
+  {
+    "id": 10,
+    "full_name": "Восточно-Казахстанский университет имени Сарсена Аманжолова",
+    "university_code": "011",
+    "website": "https://vkgu.kz",
+    "total_students": 6045,
+    "grant_students": 0,
+    "paid_students": 0,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Восточно-Казахстанская область | Усть-Каменогорск",
+      "Код ВУЗа - 011",
+      "http://vkgu.kz",
+      "https://vk.com/vkgu_imidzh",
+      "https://twitter.com/_3744022489972",
+      "https://facebook.com/687004481431232"
+    ],
+    "source_url": "https://univision.kz/univ/16-vostochno-kazahstanskiy-gosudarstvennyy-universitet-imeni-s-amanzholova/",
+    "search_keywords": "011, vkgu, вкса",
+    "short_name": "ВКУ"
+  },
+  {
+    "id": 11,
+    "full_name": "Медицинский университет Семей",
+    "university_code": "041",
+    "website": "https://ssmu.kz",
+    "total_students": 4797,
+    "grant_students": 1678,
+    "paid_students": 3119,
+    "military_chair": "False",
+    "has_dorm": "True",
+    "contacts_raw": [
+      "Абайская область | Семей"
+    ],
+    "source_url": "https://univision.kz/univ/17-meditsinskiy-universitet-semey/",
+    "search_keywords": "041, ssmu, мс",
+    "short_name": "МУ Семей"
+  },
+  {
+    "id": 12,
+    "full_name": "Университет имени Шакарима города Семей",
+    "university_code": "042",
+    "website": "https://semgu.kz",
+    "total_students": 4596,
+    "grant_students": 2808,
+    "paid_students": 1788,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Абайская область | Семей"
+    ],
+    "source_url": "https://univision.kz/univ/18-universitet-imeni-shakarima-goroda-semey/",
+    "search_keywords": "042, semgu, шгс",
+    "short_name": "СемУ"
+  },
+  {
+    "id": 13,
+    "full_name": "Университет Кунаева",
+    "university_code": "200",
+    "website": "https://www.vuzkunaeva.kz",
+    "total_students": 1907,
+    "grant_students": 4,
+    "paid_students": 1903,
+    "military_chair": "False",
+    "has_dorm": "True",
+    "contacts_raw": [
+      "Алматинская область | Алматы"
+    ],
+    "source_url": "https://univision.kz/univ/21-evraziyskaya-yuridicheskaya-akademiya-imeni-d-kunaeva/",
+    "search_keywords": "200, vuzkunaeva",
+    "short_name": "УнКунаева"
+  },
+  {
+    "id": 14,
+    "full_name": "Евразийский национальный университет им. Л.Н. Гумилева",
+    "university_code": "013",
+    "website": "https://www.enu.kz",
+    "total_students": 20350,
+    "grant_students": 16588,
+    "paid_students": 3604,
+    "military_chair": "True",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Астана",
+      "Код ВУЗа - 013",
+      "http://www.enu.kz"
+    ],
+    "source_url": "https://univision.kz/univ/23-evraziyskiy-natsionalnyy-universitet-im-l-n-gumileva/",
+    "search_keywords": "013, enu, елнг, эну, gumilyov, гумилев",
+    "short_name": "ЕНУ"
+  },
+  {
+    "id": 15,
+    "full_name": "Евразийский технологический университет",
+    "university_code": "160",
+    "website": "http://www.etu.edu.kz",
+    "total_students": 1046,
+    "grant_students": 426,
+    "paid_students": 620,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Алматинская область | Алматы",
+      "Код ВУза - 160",
+      "http://www.etu.edu.kz",
+      "https://vk.com/etu_edu",
+      "https://facebook.com/etu.almaty"
+    ],
+    "source_url": "https://univision.kz/univ/24-evraziyskiy-tehnicheskiy-universitet/",
+    "search_keywords": "160, edu, ет",
+    "short_name": "ЕТУ"
+  },
+  {
+    "id": 16,
+    "full_name": "Египетский университет исламской культуры «Нур-Мубарак»",
+    "university_code": "503",
+    "website": "https://nmu.kz",
+    "total_students": 1847,
+    "grant_students": 770,
+    "paid_students": 1077,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Алматинская область | Алматы"
+    ],
+    "source_url": "https://univision.kz/univ/25-egipetskiy-universitet-islamskoy-kultury-nur-mubarak/",
+    "search_keywords": "503, nmu, еикнм",
+    "short_name": "Нур-Мубарак"
+  },
+  {
+    "id": 17,
+    "full_name": "Жезказганский университет им. О.А.Байконурова",
+    "university_code": "014",
+    "website": "https://zhezu.kz/",
+    "total_students": 940,
+    "grant_students": 133,
+    "paid_students": 807,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Карагандинская область | Жезказган"
+    ],
+    "source_url": "https://univision.kz/univ/27-zhezkazganskiy-universitet-imeni-o-baykonurova/",
+    "search_keywords": "014, zhezu, жоаб | Жезказганский университет имени О.А.Байконурова (ЖезУ им. Байконурова) | Жезказганский университет имени О.А.Байконурова",
+    "short_name": "ЖезУн"
+  },
+  {
+    "id": 18,
+    "full_name": "Жетысуский университет имени Ильяса Жансугурова",
+    "university_code": "015",
+    "website": "https://zhgu.edu.kz",
+    "total_students": 3908,
+    "grant_students": 1401,
+    "paid_students": 2507,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Алматинская область | Талдыкорган"
+    ],
+    "source_url": "https://univision.kz/univ/28-zhetysuskiy-gosudarstvennyy-universitet-imeni-ilyasa-zhansugurova/",
+    "search_keywords": "015, edu, жиж",
+    "short_name": "ЖетУ"
+  },
+  {
+    "id": 19,
+    "full_name": "Западно-Казахстанский аграрно-технический университет имени Жангир-хана",
+    "university_code": "501",
+    "website": "https://wkau.kz",
+    "total_students": 2945,
+    "grant_students": 1909,
+    "paid_students": 1035,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Западно-Казахстанская область | Уральск",
+      "Код ВУЗа - 501",
+      "http://wkau.kz",
+      "https://vk.com/wkau_kz",
+      "https://facebook.com/wkau.kz"
+    ],
+    "source_url": "https://univision.kz/univ/29-zapadno-kazahstanskiy-agrarno-tehnicheskiy-universitet-imeni-zhangir-hana/",
+    "search_keywords": "501, wkau, зкатжх | Западно-Казахстанский аграрно-технический университет имени Жангир хана (ЗКАТУ) | Западно-Казахстанский аграрно-технический университет имени Жангир хана",
+    "short_name": "ЗКАТУ"
+  },
+  {
+    "id": 20,
+    "full_name": "Западно-Казахстанский медицинский университет имени Марата Оспанова",
+    "university_code": "004",
+    "website": "http://zkgmu.kz",
+    "total_students": 6549,
+    "grant_students": 2011,
+    "paid_students": 4538,
+    "military_chair": "False",
+    "has_dorm": "True",
+    "contacts_raw": [
+      "Актюбинская область | Актобе",
+      "Код ВУЗа - 004",
+      "http://zkgmu.kz",
+      "https://vk.com/public144288486",
+      "https://facebook.com/zkgmu.kz"
+    ],
+    "source_url": "https://univision.kz/univ/30-zapadno-kazahstanskiy-gosudarstvennyy-meditsinskiy-universitet-imeni-m-ospanova/",
+    "search_keywords": "004, zkgmu, зкммо",
+    "short_name": "ЗКГМУ"
+  },
+  {
+    "id": 21,
+    "full_name": "Западно-Казахстанский университет им. М.Утемисова",
+    "university_code": "016",
+    "website": "http://wksu.kz",
+    "total_students": 4981,
+    "grant_students": 2128,
+    "paid_students": 2842,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Западно-Казахстанская область | Уральск"
+    ],
+    "source_url": "https://univision.kz/univ/31-zapadno-kazahstanskiy-gosudarstvennyy-universitet-imeni-m-utemisova/",
+    "search_keywords": "016, wksu, зкму | Западно-Казахстанский университет имени Махамбета Утемисова (ЗКГУ им. М. Утемисова) | Западно-Казахстанский университет имени Махамбета Утемисова",
+    "short_name": "ЗКУ"
+  },
+  {
+    "id": 22,
+    "full_name": "Западно-Казахстанский инновационно-технологический университет",
+    "university_code": "198",
+    "website": "https://wkitu.kz",
+    "total_students": 6777,
+    "grant_students": 312,
+    "paid_students": 6465,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Западно-Казахстанская область | Уральск"
+    ],
+    "source_url": "https://univision.kz/univ/32-zapadno-kazahstanskiy-innovatsionno-tehnologicheskiy-universitet/",
+    "search_keywords": "198, wkitu, зкит",
+    "short_name": "ЗКИТУ"
+  },
+  {
+    "id": 23,
+    "full_name": "Инновационный Евразийский университет",
+    "university_code": "146",
+    "website": "https://www.ineu.edu.kz",
+    "total_students": 656,
+    "grant_students": 26,
+    "paid_students": 630,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Павлодарская область | Павлодар",
+      "Код ВУЗа - 146",
+      "http://www.ineu.edu.kz",
+      "http://ineu.kz",
+      "https://vk.com/pvlineu",
+      "https://twitter.com/cpinineu"
+    ],
+    "source_url": "https://univision.kz/univ/33-innovatsionnyy-evraziyskiy-universitet/",
+    "search_keywords": "146, edu, ие",
+    "short_name": "ИнЕУ"
+  },
+  {
+    "id": 24,
+    "full_name": "Академия логистики и транспорта",
+    "university_code": "019",
+    "website": "https://alt.edu.kz",
+    "total_students": 4541,
+    "grant_students": 3748,
+    "paid_students": 793,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Алматинская область | Алматы",
+      "Код ВУЗа - 019",
+      "Национальный | Университет",
+      "https://alt.edu.kz",
+      "https://twitter.com/kazatk_academy",
+      "https://instagram.com/altedukz"
+    ],
+    "source_url": "https://univision.kz/univ/36-kazahskaya-akademiya-transporta-i-kommunikatsii-im-m-tynyshbaeva/",
+    "search_keywords": "019, edu, лит",
+    "short_name": "АЛТ"
+  },
+  {
+    "id": 25,
+    "full_name": "Казахский агротехнический университет имени С.Сейфуллина",
+    "university_code": "002",
+    "website": "https://kazatu.kz",
+    "total_students": 10392,
+    "grant_students": 8627,
+    "paid_students": 1691,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Астана",
+      "Код ВУЗа - 002",
+      "http://kazatu.kz",
+      "https://facebook.com/kazatukzkz"
+    ],
+    "source_url": "https://univision.kz/univ/41-kazahskiy-agrotehnicheskiy-universitet-imeni-s-seyfullina/",
+    "search_keywords": "002, kazatu, касс | Казахский агротехнический исследовательский университет имени С.Сейфуллина | Казахский агротехнический исследовательский университет имени С.Сейфуллина (КазАТУ им. Сейфуллина)",
+    "short_name": "КазАТУ"
+  },
+  {
+    "id": 26,
+    "full_name": "Казахский национальный женский педагогический университет",
+    "university_code": "025",
+    "website": "https://kazmkpu.kz",
+    "total_students": 9805,
+    "grant_students": 8871,
+    "paid_students": 934,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "ул. Гоголя, 114, Алматы, Алматинская область"
+    ],
+    "source_url": "https://univision.kz/univ/42-kazahskiy-natsionalnyy-zhenskiy-pedagogicheskiy-universitet/",
+    "search_keywords": "025, kazmkpu, кжп",
+    "short_name": "КазНацЖенПУ"
+  },
+  {
+    "id": 27,
+    "full_name": "Alikhan Bokeikhan University",
+    "university_code": "141",
+    "website": "https://kazguiu.kz",
+    "total_students": 4889,
+    "grant_students": 711,
+    "paid_students": 4178,
+    "military_chair": "True",
+    "has_dorm": "True",
+    "contacts_raw": [
+      "Абайская область | Семей"
+    ],
+    "source_url": "https://univision.kz/univ/43-kazahskiy-gumanitarno-yuridicheskiy-innovatsionnyy-universitet/",
+    "search_keywords": "141, kazguiu, abu",
+    "short_name": "AlikhanBU"
+  },
+  {
+    "id": 28,
+    "full_name": "Университет КАЗГЮУ имени М.С. Нарикбаева",
+    "university_code": "174",
+    "website": "https://kazguu.kz",
+    "total_students": 6028,
+    "grant_students": 1831,
+    "paid_students": 4197,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Астана",
+      "Код ВУЗа - 174",
+      "https://kazguu.kz",
+      "http://kazguu.kz",
+      "https://vk.com/vkazguu",
+      "https://twitter.com/kazguu",
+      "https://facebook.com/kazguukz"
+    ],
+    "source_url": "https://univision.kz/univ/44-universitet-kazgyuu-imeni-m-s-narikbaeva/",
+    "search_keywords": "174, kazguu, кмсн",
+    "short_name": "КазГЮУ"
+  },
+  {
+    "id": 29,
+    "full_name": "Казахский медицинский университет непрерывного образования",
+    "university_code": "050",
+    "website": "https://www.kazmuno.kz",
+    "total_students": null,
+    "grant_students": null,
+    "paid_students": null,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Манаса, 34",
+      "mail@univision.kz"
+    ],
+    "source_url": "https://univision.kz/univ/45-kazahskiy-meditsinskiy-universitet-nepreryvnogo-obrazovaniya/",
+    "search_keywords": "050, kazmuno, кмно",
+    "short_name": "КазМУНО"
+  },
+  {
+    "id": 30,
+    "full_name": "Казахский национальный аграрный университет",
+    "university_code": "024",
+    "website": "http://www.kaznau.kz",
+    "total_students": 4604,
+    "grant_students": 3395,
+    "paid_students": 1198,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Алматинская область | Алматы"
+    ],
+    "source_url": "https://univision.kz/univ/46-kazahskiy-natsionalnyy-agrarnyy-universitet/",
+    "search_keywords": "024, kaznau, ка | Казахский национальный аграрный исследовательский университет (КазНАУ) | Казахский национальный аграрный исследовательский университет",
+    "short_name": "КазНАИУ"
+  },
+  {
+    "id": 31,
+    "full_name": "Казахский национальный исследовательский технический университет имени К.И.Сатпаева",
+    "university_code": "029",
+    "website": "https://satbayev.university",
+    "total_students": 11473,
+    "grant_students": 9140,
+    "paid_students": 2333,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Алматинская область | Алматы",
+      "Код ВУЗа - 029",
+      "http://satbayev.university",
+      "https://vk.com/satbayevuniversity",
+      "https://facebook.com/satbayevuniversity"
+    ],
+    "source_url": "https://univision.kz/univ/47-kazahskiy-natsionalnyy-issledovatelskiy-tehnicheskiy-universitet-imeni-k-i-satpaeva/",
+    "search_keywords": "029, satbayev, киткис, satpaev, политех, казниту, kaznrtu",
+    "short_name": "КазНИТУ"
+  },
+  {
+    "id": 32,
+    "full_name": "Казахский национальный медицинский университет имени С.Д.Асфендиярова",
+    "university_code": "026",
+    "website": "http://www.kaznmu.kz",
+    "total_students": 13452,
+    "grant_students": 5375,
+    "paid_students": 8076,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Алматинская область | Алматы"
+    ],
+    "source_url": "https://univision.kz/univ/48-kazahskiy-natsionalnyy-meditsinskiy-universitet-imeni-s-d-asfendiyarova/",
+    "search_keywords": "026, kaznmu, кмсда",
+    "short_name": "КазНМУ"
+  },
+  {
+    "id": 33,
+    "full_name": "Казахский национальный университет искусств",
+    "university_code": "018",
+    "website": "https://kaznui.kz",
+    "total_students": 1574,
+    "grant_students": 1017,
+    "paid_students": 557,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Астана",
+      "Код ВУЗа - 018",
+      "http://kaznui.kz",
+      "https://facebook.com/kaznuikz"
+    ],
+    "source_url": "https://univision.kz/univ/49-kazahskiy-natsionalnyy-universitet-iskusstv/",
+    "search_keywords": "018, kaznui, ки",
+    "short_name": "КазНУИ"
+  },
+  {
+    "id": 34,
+    "full_name": "Казахский национальный университет имени аль-Фараби",
+    "university_code": "027",
+    "website": "https://www.kaznu.kz",
+    "total_students": 5000,
+    "grant_students": 0,
+    "paid_students": 0,
+    "military_chair": "False",
+    "has_dorm": "True",
+    "contacts_raw": [
+      "Алматинская область | Алматы",
+      "Код ВУЗа - 027",
+      "http://www.kaznu.kz",
+      "https://vk.com/kazuniversity",
+      "https://facebook.com/kazakhnationaluniversity",
+      "https://twitter.com/kaznu_official"
+    ],
+    "source_url": "https://univision.kz/univ/50-kazahskiy-natsionalnyy-universitet-imeni-al-farabi/",
+    "search_keywords": "027, kaznu, каф, казну, al-farabi, аль-фараби",
+    "short_name": "КазНУ"
+  },
+  {
+    "id": 35,
+    "full_name": "Казахский университет международных отношений и мировых языков имени Абылай хана",
+    "university_code": "023",
+    "website": "https://www.ablaikhan.kz",
+    "total_students": 4320,
+    "grant_students": 638,
+    "paid_students": 3681,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Алматинская область | Алматы",
+      "Код ВУЗа - 023",
+      "http://www.ablaikhan.kz",
+      "https://vk.com/kazumo23"
+    ],
+    "source_url": "https://univision.kz/univ/51-kazahskiy-universitet-mezhdunarodnyh-otnosheniy-i-mirovyh-yazykov-imeni-abylay-hana/",
+    "search_keywords": "023, ablaikhan, кмоимяах",
+    "short_name": "КазУМОиМЯ"
+  },
+  {
+    "id": 36,
+    "full_name": "Казахский университет путей сообщений",
+    "university_code": "162",
+    "website": "http://kups.edu.kz",
+    "total_students": null,
+    "grant_students": null,
+    "paid_students": null,
+    "military_chair": "False",
+    "has_dorm": "True",
+    "contacts_raw": [
+      "Жетысу 1-й микрорайон, 32а",
+      "7 (727) 299-49-69",
+      "7 (727) 376-74-78",
+      "Жетысу 1-й микрорайон, 32г",
+      "Мамыр 1-й микрорайон, 21/1"
+    ],
+    "source_url": "https://univision.kz/univ/52-kazahskiy-universitet-putey-soobshcheniy/",
+    "search_keywords": "162, edu, кпс | Казахский университет путей сообщения (КУПС)",
+    "short_name": "МТГУ"
+  },
+  {
+    "id": 37,
+    "full_name": "Казахский университет технологии и бизнеса имени К. Кулажанова",
+    "university_code": "182",
+    "website": "http://www.kazutb.kz",
+    "total_students": 4157,
+    "grant_students": 893,
+    "paid_students": 3264,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Астана"
+    ],
+    "source_url": "https://univision.kz/univ/53-kazahskiy-universitet-tehnologii-i-biznesa/",
+    "search_keywords": "182, kazutb, ктибкк",
+    "short_name": "КазУТБ"
+  },
+  {
+    "id": 38,
+    "full_name": "Esil University",
+    "university_code": "173",
+    "website": "https://kuef.kz",
+    "total_students": 2418,
+    "grant_students": 257,
+    "paid_students": 2161,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Астана",
+      "http://kuef.kz",
+      "https://vk.com/kuef_kz",
+      "https://facebook.com/kzkuefmt.kz",
+      "https://twitter.com/kuef_kz"
+    ],
+    "source_url": "https://univision.kz/univ/54-kazahskiy-universitet-ekonomiki-finansov-i-mezhdunarodnoy-torgovli/",
+    "search_keywords": "173, kuef, eu | Q University",
+    "short_name": "Esil"
+  },
+  {
+    "id": 39,
+    "full_name": "Казахский национальный педагогический университет имени Абая",
+    "university_code": "007",
+    "website": "https://www.kaznpu.kz",
+    "total_students": 12843,
+    "grant_students": 9210,
+    "paid_students": 3633,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Алматинская область | Алматы"
+    ],
+    "source_url": "https://univision.kz/univ/55-kazahskiy-natsionalnyy-pedagogicheskiy-universitet-imeni-abaya/",
+    "search_keywords": "007, kaznpu, кпа",
+    "short_name": "КазНПУ"
+  },
+  {
+    "id": 40,
+    "full_name": "Казахско-Русский международный университет",
+    "university_code": "103",
+    "website": "http://krmu.kz",
+    "total_students": 1274,
+    "grant_students": 0,
+    "paid_students": 1274,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Актюбинская область | Актобе",
+      "Код ВУЗа - 103",
+      "http://krmu.kz",
+      "https://vk.com/krmu_nur"
+    ],
+    "source_url": "https://univision.kz/univ/56-kazahsko-russkiy-mezhdunarodnyy-universitet/",
+    "search_keywords": "103, krmu, крм",
+    "short_name": "КРМУ-103"
+  },
+  {
+    "id": 41,
+    "full_name": "Университет Дружбы Народов имени академика А.Куатбекова",
+    "university_code": "202",
+    "website": "https://udn.edu.kz",
+    "total_students": 10346,
+    "grant_students": 27,
+    "paid_students": 10279,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Туркестанская область | Шымкент",
+      "Код ВУЗа - 202",
+      "udn.edu.kz",
+      "https://vk.com/kipudn_kudn"
+    ],
+    "source_url": "https://univision.kz/univ/57-universitet-druzhby-narodov-imeni-akademika-a-kuatbekova/",
+    "search_keywords": "202, edu, днаак",
+    "short_name": "УДН"
+  },
+  {
+    "id": 42,
+    "full_name": "Международный инженерно-технологический университет",
+    "university_code": "049",
+    "website": "http://www.kazetu.kz",
+    "total_students": 2403,
+    "grant_students": 920,
+    "paid_students": 1483,
+    "military_chair": "False",
+    "has_dorm": "True",
+    "contacts_raw": [
+      "Алматинская область | Алматы",
+      "Код ВУЗа - 049",
+      "http://www.kazetu.kz",
+      "https://vk.com/kazetu",
+      "https://facebook.com/kazetu"
+    ],
+    "source_url": "https://univision.kz/univ/58-kazahstanskiy-inzhenerno-tehnologicheskiy-universitet/",
+    "search_keywords": "049, kazetu, мит",
+    "short_name": "МИТУ"
+  },
+  {
+    "id": 43,
+    "full_name": "Казахстанский медицинский университет «ВШОЗ»",
+    "university_code": "908",
+    "website": "https://ksph.kz",
+    "total_students": 251,
+    "grant_students": 70,
+    "paid_students": 181,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Алматинская область | Алматы"
+    ],
+    "source_url": "https://univision.kz/univ/60-kazahstanskiy-meditsinskiy-universitet-vshoz/",
+    "search_keywords": "908, ksph, кмв",
+    "short_name": "ВШОЗ"
+  },
+  {
+    "id": 44,
+    "full_name": "Казахстанский университет инновационных и телекоммуникационных систем",
+    "university_code": "199",
+    "website": "http://kazuits.kz",
+    "total_students": 3033,
+    "grant_students": 9,
+    "paid_students": 3024,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Западно-Казахстанская область | Уральск"
+    ],
+    "source_url": "https://univision.kz/univ/61-kazahstanskiy-universitet-innovatsionnyh-i-telekommunikatsionnyh-sistem/",
+    "search_keywords": "199, kazuits, киитс",
+    "short_name": "КазУИиТС"
+  },
+  {
+    "id": 45,
+    "full_name": "Казахстанско-Американский свободный университет",
+    "university_code": "153",
+    "website": "https://kafu.kz",
+    "total_students": 2512,
+    "grant_students": 150,
+    "paid_students": 2362,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Восточно-Казахстанская область | Усть-Каменогорск"
+    ],
+    "source_url": "https://univision.kz/univ/62-kazahstansko-amerikanskiy-svobodnyy-universitet/",
+    "search_keywords": "153, kafu, кас",
+    "short_name": "КАСУ"
+  },
+  {
+    "id": 46,
+    "full_name": "Казахстанско-Британский технический университет",
+    "university_code": "421",
+    "website": "https://www.kbtu.kz",
+    "total_students": 6182,
+    "grant_students": 4774,
+    "paid_students": 1408,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Алматинская область | Алматы",
+      "Код ВУЗа - 421",
+      "http://www.kbtu.kz",
+      "http://www.ise.ac",
+      "https://vk.com/kbtu_group",
+      "https://facebook.com/groups/kbtuofficialgroup"
+    ],
+    "source_url": "https://univision.kz/univ/63-kazahstansko-britanskiy-tehnicheskiy-universitet/",
+    "search_keywords": "421, kbtu, кбт",
+    "short_name": "КБТУ"
+  },
+  {
+    "id": 47,
+    "full_name": "Казахстанско-Немецкий университет",
+    "university_code": "082",
+    "website": "https://www.dku.kz",
+    "total_students": 484,
+    "grant_students": 74,
+    "paid_students": 410,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Алматинская область | Алматы",
+      "Код ВУЗа - 082",
+      "http://www.dku.kz",
+      "http://dku.kz",
+      "http://academic-waters.org",
+      "https://vk.com/dku_stura",
+      "https://facebook.com/DKUKZ"
+    ],
+    "source_url": "https://univision.kz/univ/64-kazahstansko-nemetskiy-universitet/",
+    "search_keywords": "082, dku, кн",
+    "short_name": "КНУ (ДКУ)"
+  },
+  {
+    "id": 48,
+    "full_name": "Казахстанско-Российский медицинский университет",
+    "university_code": "080",
+    "website": "https://medkrmu.kz",
+    "total_students": 5916,
+    "grant_students": 2044,
+    "paid_students": 3872,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Алматинская область | Алматы",
+      "Код ВУЗа - 080",
+      "http://medkrmu.kz",
+      "https://vk.com/medkrmu",
+      "https://facebook.com/medkrmu"
+    ],
+    "source_url": "https://univision.kz/univ/65-kazahstansko-rossiyskiy-meditsinskiy-universitet/",
+    "search_keywords": "080, medkrmu, крм",
+    "short_name": "КРМУ"
+  },
+  {
+    "id": 49,
+    "full_name": "Карагандинский индустриальный университет",
+    "university_code": "033",
+    "website": "http://www.kgiu.kz",
+    "total_students": 1771,
+    "grant_students": 993,
+    "paid_students": 777,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Карагандинская область | Темиртау"
+    ],
+    "source_url": "https://univision.kz/univ/66-karagandinskiy-gosudarstvennyy-industrialnyy-universitet/",
+    "search_keywords": "033, kgiu, ки",
+    "short_name": "КИУ"
+  },
+  {
+    "id": 50,
+    "full_name": "Карагандинский медицинский университет",
+    "university_code": "030",
+    "website": "https://kgmu.kz",
+    "total_students": 7336,
+    "grant_students": 3610,
+    "paid_students": 3726,
+    "military_chair": "False",
+    "has_dorm": "True",
+    "contacts_raw": [
+      "Карагандинская область | Караганда",
+      "Код ВУЗа - 030",
+      "kgmu.kz",
+      "http://kgmu.kz",
+      "https://vk.com/news_kgmu"
+    ],
+    "source_url": "https://univision.kz/univ/67-karagandinskiy-gosudarstvennyy-meditsinskiy-universitet/",
+    "search_keywords": "030, kgmu, км",
+    "short_name": "МУ Караганды"
+  },
+  {
+    "id": 51,
+    "full_name": "Карагандинский технический университет им. А.Сагинова",
+    "university_code": "032",
+    "website": "https://kstu.kz",
+    "total_students": 6159,
+    "grant_students": 4317,
+    "paid_students": 1842,
+    "military_chair": "True",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Карагандинская область | Караганда"
+    ],
+    "source_url": "https://univision.kz/univ/68-karagandinskiy-gosudarstvennyy-tehnicheskiy-universitet/",
+    "search_keywords": "032, kstu, ктас | Карагандинский технический университет имени Абылкаса Сагинова (КарТУ) | Карагандинский технический университет имени Абылкаса Сагинова",
+    "short_name": "КарТУ"
+  },
+  {
+    "id": 52,
+    "full_name": "Карагандинский Университет имени академика Е.А.Букетова",
+    "university_code": "031",
+    "website": "http://www.ksu.kz",
+    "total_students": 104,
+    "grant_students": 0,
+    "paid_students": 0,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Карагандинская область | Караганда",
+      "Код ВУЗа - 031",
+      "http://www.ksu.kz",
+      "https://vk.com/ksu_press_kz",
+      "https://ok.ru/profile/565349432989",
+      "https://twitter.com/press_ksu",
+      "https://facebook.com/press.ksu.kz"
+    ],
+    "source_url": "https://univision.kz/univ/69-karagandinskiy-gosudarstvennyy-universitet-imeni-akademika-e-buketova/",
+    "search_keywords": "031, ksu, каеаб",
+    "short_name": "КарУ"
+  },
+  {
+    "id": 53,
+    "full_name": "Карагандинский университет Казпотребсоюза",
+    "university_code": "122",
+    "website": "https://www.keu.kz",
+    "total_students": 2957,
+    "grant_students": 332,
+    "paid_students": 2612,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Карагандинская область | Караганда",
+      "Код ВУЗа - 122",
+      "http://www.keu.kz",
+      "https://vk.com/vst_keu",
+      "https://facebook.com/keukz"
+    ],
+    "source_url": "https://univision.kz/univ/70-karagandinskiy-ekonomicheskiy-universitet-kazpotrebsoyuza/",
+    "search_keywords": "122, keu, кк",
+    "short_name": "КарЭУ"
+  },
+  {
+    "id": 54,
+    "full_name": "Каспийский университет технологии и инжиниринга имени Ш.Есенова",
+    "university_code": "003",
+    "website": "https://yu.edu.kz",
+    "total_students": 9000,
+    "grant_students": 0,
+    "paid_students": 0,
+    "military_chair": "False",
+    "has_dorm": "True",
+    "contacts_raw": [
+      "Мангистауская область | Актау",
+      "Код ВУЗа - 003",
+      "http://yu.edu.kz",
+      "https://vk.com/yessenovuniversity",
+      "https://facebook.com/YessenovUniversity",
+      "https://twitter.com/yessenov_u"
+    ],
+    "source_url": "https://univision.kz/univ/71-kaspiyskiy-gosudarstvennyy-universitet-tehnologii-i-inzhiniringa-imeni-sh-esenova/",
+    "search_keywords": "003, edu, ктиише",
+    "short_name": "КУТИЕсенова"
+  },
+  {
+    "id": 55,
+    "full_name": "Каспийский университет",
+    "university_code": "079",
+    "website": "https://cu.edu.kz",
+    "total_students": 3450,
+    "grant_students": 196,
+    "paid_students": 3251,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Алматинская область | Алматы",
+      "Код ВУЗа - 079",
+      "http://cu.edu.kz",
+      "https://vk.com/caspian.university"
+    ],
+    "source_url": "https://univision.kz/univ/72-kaspiyskiy-universitet/",
+    "search_keywords": "079, edu",
+    "short_name": "КОУ"
+  },
+  {
+    "id": 56,
+    "full_name": "Кокшетауский университет имени Ш.Уалиханова",
+    "university_code": "035",
+    "website": "http://www.kgu.kz",
+    "total_students": 5773,
+    "grant_students": 3407,
+    "paid_students": 2365,
+    "military_chair": "False",
+    "has_dorm": "True",
+    "contacts_raw": [
+      "Акмолинская область | Кокшетау",
+      "Код ВУЗа - 035",
+      "http://www.kgu.kz",
+      "kgu.kz"
+    ],
+    "source_url": "https://univision.kz/univ/73-kokshetauskiy-gosudarstvennyy-universitet-imeni-sh-ualihanova/",
+    "search_keywords": "035, kgu, кшу",
+    "short_name": "КокУ"
+  },
+  {
+    "id": 57,
+    "full_name": "Кокшетауский университет им. А.Мырзахметова",
+    "university_code": "158",
+    "website": "https://kuam.kz",
+    "total_students": 2300,
+    "grant_students": 210,
+    "paid_students": 2090,
+    "military_chair": "False",
+    "has_dorm": "True",
+    "contacts_raw": [
+      "Акмолинская область | Кокшетау"
+    ],
+    "source_url": "https://univision.kz/univ/74-kokshetauskiy-universitet-imeni-a-myrzahmetova/",
+    "search_keywords": "158, kuam, кам | Кокшетауский университет имени Абая Мырзахметова | Кокшетауский университет имени Абая Мырзахметова (КУАМ)",
+    "short_name": "КокУМыр"
+  },
+  {
+    "id": 58,
+    "full_name": "Костанайский региональный университет имени Ахмет Байтұрсынұлы",
+    "university_code": "036",
+    "website": "https://ksu.edu.kz",
+    "total_students": 6050,
+    "grant_students": 2774,
+    "paid_students": 3276,
+    "military_chair": "False",
+    "has_dorm": "True",
+    "contacts_raw": [
+      "Костанайская область | Костанай"
+    ],
+    "source_url": "https://univision.kz/univ/76-kostanayskiy-gosudarstvennyy-universitet-imeni-a-baytursynova/",
+    "search_keywords": "036, edu, краб",
+    "short_name": "КостРУ"
+  },
+  {
+    "id": 59,
+    "full_name": "Костанайский инженерно-экономический университет им. М. Дулатова",
+    "university_code": "140",
+    "website": "http://kineu.kz",
+    "total_students": 1583,
+    "grant_students": 94,
+    "paid_students": 1470,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Костанайская область | Костанай"
+    ],
+    "source_url": "https://univision.kz/univ/77-kostanayskiy-inzhenerno-ekonomicheskiy-universitet-imeni-m-dulatova/",
+    "search_keywords": "140, kineu, киэмд",
+    "short_name": "КИНЭУ"
+  },
+  {
+    "id": 60,
+    "full_name": "Костанайский социально-технический университет имени З.Алдамжара",
+    "university_code": "145",
+    "website": "http://kosstu.kz",
+    "total_students": 1934,
+    "grant_students": 7,
+    "paid_students": 1880,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Костанайская область | Костанай"
+    ],
+    "source_url": "https://univision.kz/univ/78-kostanayskiy-sotsialno-tehnicheskiy-universitet-imeni-z-aldamzhara/",
+    "search_keywords": "145, kosstu, кстза | Костанайский социально-технический университет имени академика Зулкарнай Алдамжара (КСТУ им. З. Алдамжар) | Костанайский социально-технический университет имени академика Зулкарнай Алдамжара",
+    "short_name": "КосСТУ"
+  },
+  {
+    "id": 61,
+    "full_name": "Кызылординский университет имени Коркыт Ата",
+    "university_code": "034",
+    "website": "https://korkyt.kz",
+    "total_students": 7515,
+    "grant_students": 3972,
+    "paid_students": 3543,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Кызылординская область | Кызылорда"
+    ],
+    "source_url": "https://univision.kz/univ/79-kyzylordinskiy-gosudarstvennyy-universitet-imeni-korkyt-ata/",
+    "search_keywords": "034, korkyt, кка",
+    "short_name": "КызУ"
+  },
+  {
+    "id": 62,
+    "full_name": "Актауский гуманитарно-технический университет",
+    "university_code": "195",
+    "website": "https://mgtu-aktau.kz",
+    "total_students": null,
+    "grant_students": null,
+    "paid_students": null,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "3б мкр, 9 здан",
+      "+7 (7292) 50 50 20",
+      "mail@univision.kz"
+    ],
+    "source_url": "https://univision.kz/univ/80-aktauskiy-gumanitarno-tehnicheskiy-universitet/",
+    "search_keywords": "195, mgtu-aktau, агт",
+    "short_name": "АктГТУ"
+  },
+  {
+    "id": 63,
+    "full_name": "Медицинский университет Астана",
+    "university_code": "001",
+    "website": "https://www.amu.kz",
+    "total_students": 9712,
+    "grant_students": 5575,
+    "paid_students": 4091,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Астана",
+      "Код ВУЗа - 001",
+      "http://www.amu.kz",
+      "https://facebook.com/MeduniverAstana"
+    ],
+    "source_url": "https://univision.kz/univ/81-meditsinskiy-universitet-astana/",
+    "search_keywords": "001, amu, ма",
+    "short_name": "МУ Астана"
+  },
+  {
+    "id": 64,
+    "full_name": "Международный казахско-турецкий университет имени Х.А.Ясави",
+    "university_code": "037",
+    "website": "https://ayu.edu.kz",
+    "total_students": 7479,
+    "grant_students": 4043,
+    "paid_students": 3436,
+    "military_chair": "False",
+    "has_dorm": "True",
+    "contacts_raw": [
+      "Туркестанская область | Туркестан"
+    ],
+    "source_url": "https://univision.kz/univ/84-mezhdunarodnyy-kazahsko-turetskiy-universitet-imeni-hodzhi-ahmeda-yasavi/",
+    "search_keywords": "037, edu, мктхая",
+    "short_name": "МКТУ"
+  },
+  {
+    "id": 65,
+    "full_name": "Международный университет информационных технологий",
+    "university_code": "190",
+    "website": "http://www.iitu.kz",
+    "total_students": 4584,
+    "grant_students": 4023,
+    "paid_students": 561,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Алматинская область | Алматы",
+      "Код ВУЗа - 190",
+      "http://www.iitu.kz",
+      "https://vk.com/iitu_kz"
+    ],
+    "source_url": "https://univision.kz/univ/85-mezhdunarodnyy-universitet-informatsionnyh-tehnologiy/",
+    "search_keywords": "190, iitu, мит",
+    "short_name": "МУИТ"
+  },
+  {
+    "id": 67,
+    "full_name": "Павлодарский педагогический университет",
+    "university_code": "517",
+    "website": "https://ppi.kz",
+    "total_students": 2879,
+    "grant_students": 1573,
+    "paid_students": 1304,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Павлодарская область | Павлодар"
+    ],
+    "source_url": "https://univision.kz/univ/87-pavlodarskiy-pedagogicheskiy-universitet/",
+    "search_keywords": "517, ppi, пп",
+    "short_name": "ПГПУ"
+  },
+  {
+    "id": 68,
+    "full_name": "Торайгыров университет",
+    "university_code": "038",
+    "website": "http://psu.kz",
+    "total_students": 6161,
+    "grant_students": 2624,
+    "paid_students": 3537,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Павлодарская область | Павлодар",
+      "Код ВУЗа - 038",
+      "http://psu.kz",
+      "https://vk.com/psukz",
+      "https://facebook.com/storajgyrov",
+      "https://ok.ru/profile/564614424926",
+      "https://twitter.com/psu_kz"
+    ],
+    "source_url": "https://univision.kz/univ/88-pavlodarskiy-gosudarstvennyy-universitet-imeni-s-toraygyrova/",
+    "search_keywords": "038, psu",
+    "short_name": "ПГУ"
+  },
+  {
+    "id": 69,
+    "full_name": "Региональный социально-инновационный университет",
+    "university_code": "203",
+    "website": "http://www.rsiu.kz",
+    "total_students": null,
+    "grant_students": null,
+    "paid_students": null,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Тамерлановское шоссе, 1а/10",
+      "Терешковой, 14а",
+      "Дауренбека Курманбекова, 4Б",
+      "Рыскулова, 27/2",
+      "mail@univision.kz",
+      "7 (7252) 53-85-70",
+      "7 (7252) 53-89-22"
+    ],
+    "source_url": "https://univision.kz/univ/89-regionalnyy-sotsialno-innovatsionnyy-universitet/",
+    "search_keywords": "203, rsiu, рси | Региональный инновационный университет",
+    "short_name": "РСИУ"
+  },
+  {
+    "id": 70,
+    "full_name": "Рудненский индустриальный университет",
+    "university_code": "039",
+    "website": "https://rii.kz",
+    "total_students": 940,
+    "grant_students": 166,
+    "paid_students": 774,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Костанайская область | Рудный"
+    ],
+    "source_url": "https://univision.kz/univ/90-rudnenskiy-industrialnyy-institut/",
+    "search_keywords": "039, rii, ри",
+    "short_name": "РИУ"
+  },
+  {
+    "id": 71,
+    "full_name": "Северо-Казахстанский университет имени М.Козыбаева",
+    "university_code": "040",
+    "website": "https://nkzu.kz",
+    "total_students": 4252,
+    "grant_students": 2798,
+    "paid_students": 1454,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Северо-Казахстанская область | Петропавловск"
+    ],
+    "source_url": "https://univision.kz/univ/91-severo-kazahstanskiy-gosudarstvennyy-universitet-imeni-manasha-kozybaeva/",
+    "search_keywords": "040, nkzu, скмк",
+    "short_name": "СКУ"
+  },
+  {
+    "id": 72,
+    "full_name": "Таразский государственный педагогический университет",
+    "university_code": "515",
+    "website": "https://tarmpi.kz",
+    "total_students": null,
+    "grant_students": null,
+    "paid_students": null,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "ул.Толе би 62",
+      "8(7262)432637",
+      "mail@univision.kz"
+    ],
+    "source_url": "https://univision.kz/univ/92-tarazskiy-gosudarstvennyy-pedagogicheskiy-institut/",
+    "search_keywords": "515, tarmpi, тгп",
+    "short_name": "ТарГПУ"
+  },
+  {
+    "id": 73,
+    "full_name": "Таразский университет имени М.Х.Дулати",
+    "university_code": "043",
+    "website": "https://tarsu.kz",
+    "total_students": 8277,
+    "grant_students": 2919,
+    "paid_students": 5335,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Жамбылская область | Тараз"
+    ],
+    "source_url": "https://univision.kz/univ/93-tarazskiy-regionalnyy-universitet-imeni-m-h-dulati/",
+    "search_keywords": "043, tarsu, тмхд",
+    "short_name": "ТарРУ"
+  },
+  {
+    "id": 74,
+    "full_name": "Университет \"Алматы\"",
+    "university_code": "161",
+    "website": "http://almaty-university.kz",
+    "total_students": null,
+    "grant_students": null,
+    "paid_students": null,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Кунаева, 43, 7 (727) 313-21-40, 7 (727) 313-21-50",
+      "Аксай 3-й микрорайон, 36, 7 (727) 248-57-48, 7 (727) 248-56-58, 7 (727) 248-56-46"
+    ],
+    "source_url": "https://univision.kz/univ/95-universitet-almaty/",
+    "search_keywords": "161, almaty-university",
+    "short_name": "УнАлматы"
+  },
+  {
+    "id": 75,
+    "full_name": "Университет \"Астана\"",
+    "university_code": "194",
+    "website": "https://astanauniver.kz/",
+    "total_students": null,
+    "grant_students": null,
+    "paid_students": null,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Абай проспект, 15",
+      "7 (7172) 76-98-98",
+      "7-701-995-87-87",
+      "mail@univision.kz"
+    ],
+    "source_url": "https://univision.kz/univ/96-universitet-astana/",
+    "search_keywords": "194, astanauniver",
+    "short_name": "УнАстана"
+  },
+  {
+    "id": 76,
+    "full_name": "Кызылординский Университет \"Болашак\"",
+    "university_code": "305",
+    "website": "https://bolashak-edu.kz",
+    "total_students": 3250,
+    "grant_students": 18,
+    "paid_students": 3232,
+    "military_chair": "False",
+    "has_dorm": "True",
+    "contacts_raw": [
+      "Кызылординская область | Кызылорда"
+    ],
+    "source_url": "https://univision.kz/univ/97-kyzylordinskiy-universitet-bolashak/",
+    "search_keywords": "305, bolashak-edu, кб",
+    "short_name": "Болашак-Кз"
+  },
+  {
+    "id": 77,
+    "full_name": "Университет «Мирас»",
+    "university_code": "133",
+    "website": "https://www.miras.edu.kz",
+    "total_students": 5471,
+    "grant_students": 0,
+    "paid_students": 5471,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Туркестанская область | Шымкент",
+      "Код ВУЗа - 133",
+      "http://www.miras.edu.kz",
+      "https://vk.com/mirasuniversity"
+    ],
+    "source_url": "https://univision.kz/univ/100-universitet-miras/",
+    "search_keywords": "133, edu",
+    "short_name": "Мирас"
+  },
+  {
+    "id": 78,
+    "full_name": "Университет \"Сырдария\"",
+    "university_code": "143",
+    "website": "https://sirdariya.kz",
+    "total_students": 9377,
+    "grant_students": 142,
+    "paid_students": 9227,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Туркестанская область | Шымкент"
+    ],
+    "source_url": "https://univision.kz/univ/101-universitet-syrdariya/",
+    "search_keywords": "143, sirdariya",
+    "short_name": "УЖТ"
+  },
+  {
+    "id": 79,
+    "full_name": "Университет \"Туран\"",
+    "university_code": "093",
+    "website": "https://www.turan-edu.kz",
+    "total_students": 4089,
+    "grant_students": 685,
+    "paid_students": 3404,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Алматинская область | Алматы",
+      "Код ВУЗа - 093",
+      "http://www.turan-edu.kz",
+      "https://vk.com/univer_turan",
+      "https://facebook.com/university.turan"
+    ],
+    "source_url": "https://univision.kz/univ/102-universitet-turan/",
+    "search_keywords": "093, turan-edu | Университет «Туран»",
+    "short_name": "Туран"
+  },
+  {
+    "id": 80,
+    "full_name": "Университет «Туран-Астана»",
+    "university_code": "184",
+    "website": "https://www.tau-edu.kz",
+    "total_students": 2214,
+    "grant_students": 405,
+    "paid_students": 1809,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Астана",
+      "Код ВУЗа - 184",
+      "tau-edu.kz",
+      "http://www.tau-edu.kz",
+      "https://vk.com/turanastana01",
+      "https://facebook.com/587482538058208"
+    ],
+    "source_url": "https://univision.kz/univ/103-universitet-turan-astana/",
+    "search_keywords": "184, tau-edu, та",
+    "short_name": "Туран-Астана"
+  },
+  {
+    "id": 81,
+    "full_name": "Университет имени Сулеймана Демиреля",
+    "university_code": "302",
+    "website": "https://sdu.edu.kz",
+    "total_students": 6991,
+    "grant_students": 5082,
+    "paid_students": 1909,
+    "military_chair": "False",
+    "has_dorm": "True",
+    "contacts_raw": [
+      "Алматинская область | Каскелен"
+    ],
+    "source_url": "https://univision.kz/univ/104-universitet-imeni-suleymana-demirelya/",
+    "search_keywords": "302, edu, сд, sdu, сду, demirel, демирель, демирел, kaskelen, каскелен",
+    "short_name": "СДУ"
+  },
+  {
+    "id": 82,
+    "full_name": "Университет иностранных языков и деловой карьеры",
+    "university_code": "419",
+    "website": "http://ydu.kz",
+    "total_students": null,
+    "grant_students": null,
+    "paid_students": null,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Казыбек би, 168",
+      "7 (727) 379-78-96",
+      "7 (727) 379-78-93",
+      "mail@univision.kz"
+    ],
+    "source_url": "https://univision.kz/univ/105-universitet-inostrannyh-yazykov-i-delovoy-karery/",
+    "search_keywords": "419, ydu, ияидк",
+    "short_name": "УнИЯДК"
+  },
+  {
+    "id": 83,
+    "full_name": "Университет международного бизнеса",
+    "university_code": "069",
+    "website": "http://www.uib.kz",
+    "total_students": 3154,
+    "grant_students": 509,
+    "paid_students": 2645,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Алматинская область | Алматы",
+      "Код ВУЗа - 069",
+      "http://www.uib.kz",
+      "http://uib.kz",
+      "https://facebook.com/uib.almaty",
+      "https://twitter.com/uib_official"
+    ],
+    "source_url": "https://univision.kz/univ/106-universitet-mezhdunarodnogo-biznesa/",
+    "search_keywords": "069, uib, мб, умб, uib university",
+    "short_name": "УМБ"
+  },
+  {
+    "id": 84,
+    "full_name": "Университет Нархоз",
+    "university_code": "021",
+    "website": "https://www.narxoz.kz",
+    "total_students": 5475,
+    "grant_students": 3761,
+    "paid_students": 1698,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Алматинская область | Алматы",
+      "Код ВУЗа - 021",
+      "http://www.narxoz.kz",
+      "https://vk.com/narxoz_official",
+      "https://twitter.com/narxoz_official",
+      "https://facebook.com/narxozkz"
+    ],
+    "source_url": "https://univision.kz/univ/107-universitet-narhoz/",
+    "search_keywords": "021, narxoz, нархоз",
+    "short_name": "Нархоз"
+  },
+  {
+    "id": 85,
+    "full_name": "Центрально-Азиатский университет",
+    "university_code": "096",
+    "website": "http://www.cau.kz",
+    "total_students": null,
+    "grant_students": null,
+    "paid_students": null,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Жандосова, 60",
+      "7 (727) 275-57-70",
+      "7 (727) 274-38-66",
+      "7 (727) 275-44-36",
+      "7 (727) 274-78-40",
+      "mail@univision.kz"
+    ],
+    "source_url": "https://univision.kz/univ/109-tsentralno-aziatskiy-universitet/",
+    "search_keywords": "096, cau, ца",
+    "short_name": "ЦАУ"
+  },
+  {
+    "id": 86,
+    "full_name": "Шымкентский университет",
+    "university_code": "414",
+    "website": "http://univershu.kz",
+    "total_students": 6745,
+    "grant_students": 15,
+    "paid_students": 6730,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Туркестанская область | Шымкент"
+    ],
+    "source_url": "https://univision.kz/univ/111-shymkentskiy-universitet/",
+    "search_keywords": "414, univershu",
+    "short_name": "ШымкУ"
+  },
+  {
+    "id": 87,
+    "full_name": "Южно-Казахстанский педагогический университет",
+    "university_code": "196",
+    "website": "http://okmpi.kz/ru",
+    "total_students": 5773,
+    "grant_students": 3243,
+    "paid_students": 2527,
+    "military_chair": "False",
+    "has_dorm": "True",
+    "contacts_raw": [
+      "Туркестанская область | Шымкент",
+      "Код ВУЗа - 196",
+      "http://okmpi.kz/ru",
+      "http://okmpi.kz"
+    ],
+    "source_url": "https://univision.kz/univ/113-yuzhno-kazahstanskiy-gosudarstvennyy-pedagogicheskiy-institut/",
+    "search_keywords": "196, okmpi, юкп",
+    "short_name": "ЮКГПУ"
+  },
+  {
+    "id": 88,
+    "full_name": "Южно-Казахстанский университет имени М. Ауэзова",
+    "university_code": "045",
+    "website": "http://ukgu.kz",
+    "total_students": 17007,
+    "grant_students": 9671,
+    "paid_students": 7295,
+    "military_chair": "False",
+    "has_dorm": "True",
+    "contacts_raw": [
+      "Туркестанская область | Шымкент"
+    ],
+    "source_url": "https://univision.kz/univ/114-yuzhno-kazahstanskiy-gosudarstvennyy-universitet-imeni-m-auezova/",
+    "search_keywords": "045, ukgu, юкма",
+    "short_name": "ЮКУ"
+  },
+  {
+    "id": 89,
+    "full_name": "Центрально-Азиатский Инновационный Университет",
+    "university_code": "526",
+    "website": "http://msi-edu.kz",
+    "total_students": 12475,
+    "grant_students": 0,
+    "paid_students": 12475,
+    "military_chair": "False",
+    "has_dorm": "True",
+    "contacts_raw": [
+      "Туркестанская область | Шымкент"
+    ],
+    "source_url": "https://univision.kz/univ/115-centralno-aziatskij-innovacionnyj-universitet/",
+    "search_keywords": "526, msi-edu, цаи",
+    "short_name": "ЦАИУ"
+  },
+  {
+    "id": 90,
+    "full_name": "Международный университет Silkway",
+    "university_code": "186",
+    "website": "http://swiu.kz",
+    "total_students": null,
+    "grant_students": null,
+    "paid_students": null,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Жангельдина, 13, 7 (7252) 31-03-32",
+      "Токаева, 27а, 7 (7252) 53-71-52",
+      "mail@univision.kz"
+    ],
+    "source_url": "https://univision.kz/univ/116-mezhdunarodnyy-universitet-silkway/",
+    "search_keywords": "186, swiu, мs",
+    "short_name": "Silkway"
+  },
+  {
+    "id": 91,
+    "full_name": "Astana IT University",
+    "university_code": "522",
+    "website": "https://astanait.edu.kz",
+    "total_students": 4616,
+    "grant_students": 4279,
+    "paid_students": 337,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Астана",
+      "Код ВУЗа - 522",
+      "http://astanait.edu.kz",
+      "https://www.instagram.com/astana_it_university/"
+    ],
+    "source_url": "https://univision.kz/univ/119-astana-it-university/",
+    "search_keywords": "522, edu, aiu, aitu, аиту, astana it, астана ит",
+    "short_name": "AITU"
+  },
+  {
+    "id": 92,
+    "full_name": "Международный университет Астана",
+    "university_code": "185",
+    "website": "https://www.aiu.kz",
+    "total_students": 6978,
+    "grant_students": 2540,
+    "paid_students": 4438,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Астана"
+    ],
+    "source_url": "https://univision.kz/univ/120-mezhdunarodnyy-universitet-astana/",
+    "search_keywords": "185, aiu, ма",
+    "short_name": "МежУАст"
+  },
+  {
+    "id": 93,
+    "full_name": "Международный университет туризма и гостеприимства",
+    "university_code": "523",
+    "website": "https://iuth.edu.kz/",
+    "total_students": 2257,
+    "grant_students": 2087,
+    "paid_students": 170,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Туркестанская область | Туркестан",
+      "Код ВУЗа - 523",
+      "https://iuth.edu.kz/",
+      "https://www.instagram.com/tourism_university/",
+      "https://www.facebook.com/profile.php?id=100054784756938"
+    ],
+    "source_url": "https://univision.kz/univ/121-mezhdunarodnyy-universitet-turizma-i-gostepriimstva/",
+    "search_keywords": "523, edu, мтиг",
+    "short_name": "МУТиГ"
+  },
+  {
+    "id": 94,
+    "full_name": "De Montfort University Kazakhstan",
+    "university_code": "000_93",
+    "website": null,
+    "total_students": 2854,
+    "grant_students": 2025,
+    "paid_students": 829,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [],
+    "source_url": "https://univision.kz/univ/122-de-montfort-university-kazakhstan/",
+    "search_keywords": null,
+    "short_name": "DMU-KZ"
+  },
+  {
+    "id": 95,
+    "full_name": "Международный транспортно-гуманитарный университет",
+    "university_code": "048",
+    "website": "https://univision.kz/",
+    "total_students": 5148,
+    "grant_students": 107,
+    "paid_students": 5041,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Алматинская область | Алматы"
+    ],
+    "source_url": "https://univision.kz/univ/123-mezhdunarodnyy-transportno-gumanitarnyy-universitet/",
+    "search_keywords": "048, univision, мтг",
+    "short_name": "МТГУ-48"
+  },
+  {
+    "id": 96,
+    "full_name": "Кызылординский открытый университет",
+    "university_code": "528",
+    "website": "https://univision.kz/",
+    "total_students": 2498,
+    "grant_students": 0,
+    "paid_students": 2498,
+    "military_chair": "False",
+    "has_dorm": "False",
+    "contacts_raw": [
+      "Кызылординская область | Кызылорда"
+    ],
+    "source_url": "https://univision.kz/univ/124-mezhdunarodnyy-transportno-gumanitarnyy-universitet/",
+    "search_keywords": "528, univision, ко",
+    "short_name": "КОУ-Кызылорда"
+  },
+  {
+    "id": 98,
+    "full_name": "Казахская академия спорта и туризма",
+    "university_code": "020",
+    "website": null,
+    "total_students": null,
+    "grant_students": null,
+    "paid_students": null,
+    "military_chair": null,
+    "has_dorm": null,
+    "contacts_raw": null,
+    "source_url": "pdf:2025_data.pdf:appendix_roster",
+    "search_keywords": "казахская академия спорта и туризма | казаст | 020",
+    "short_name": "КазАСТ"
+  },
+  {
+    "id": 99,
+    "full_name": "Международная образовательная корпорация",
+    "university_code": "022",
+    "website": null,
+    "total_students": null,
+    "grant_students": null,
+    "paid_students": null,
+    "military_chair": null,
+    "has_dorm": null,
+    "contacts_raw": null,
+    "source_url": "pdf:2025_data.pdf:appendix_roster",
+    "search_keywords": "международная образовательная корпорация | мок | 022",
+    "short_name": "МОК"
+  },
+  {
+    "id": 100,
+    "full_name": "Южно-Казахстанская медицинская академия",
+    "university_code": "044",
+    "website": null,
+    "total_students": null,
+    "grant_students": null,
+    "paid_students": null,
+    "military_chair": null,
+    "has_dorm": null,
+    "contacts_raw": null,
+    "source_url": "pdf:2025_data.pdf:appendix_roster",
+    "search_keywords": "южно-казахстанская медицинская академия | юкма | 044",
+    "short_name": "ЮКМА"
+  },
+  {
+    "id": 101,
+    "full_name": "Евразийский гуманитарный институт имени А.К. Кусаинова",
+    "university_code": "047",
+    "website": null,
+    "total_students": null,
+    "grant_students": null,
+    "paid_students": null,
+    "military_chair": null,
+    "has_dorm": null,
+    "contacts_raw": null,
+    "source_url": "pdf:2025_data.pdf:appendix_roster",
+    "search_keywords": "евразийский гуманитарный институт имени а.к. кусаинова | еврги | 047",
+    "short_name": "ЕврГИ"
+  },
+  {
+    "id": 102,
+    "full_name": "Казахская автомобильно-дорожная академия",
+    "university_code": "078",
+    "website": null,
+    "total_students": null,
+    "grant_students": null,
+    "paid_students": null,
+    "military_chair": null,
+    "has_dorm": null,
+    "contacts_raw": null,
+    "source_url": "pdf:2025_data.pdf:appendix_roster",
+    "search_keywords": "казахская автомобильно-дорожная академия | казади | 078",
+    "short_name": "КазАДИ"
+  },
+  {
+    "id": 103,
+    "full_name": "Q University",
+    "university_code": "089",
+    "website": null,
+    "total_students": null,
+    "grant_students": null,
+    "paid_students": null,
+    "military_chair": null,
+    "has_dorm": null,
+    "contacts_raw": null,
+    "source_url": "pdf:2025_data.pdf:appendix_roster",
+    "search_keywords": "q university | quni | 089",
+    "short_name": "QUni"
+  },
+  {
+    "id": 104,
+    "full_name": "Академия «Bolashaq»",
+    "university_code": "116",
+    "website": null,
+    "total_students": null,
+    "grant_students": null,
+    "paid_students": null,
+    "military_chair": null,
+    "has_dorm": null,
+    "contacts_raw": null,
+    "source_url": "pdf:2025_data.pdf:appendix_roster",
+    "search_keywords": "академия «bolashaq» | «bolashaq» | 116",
+    "short_name": "Bolashaq"
+  },
+  {
+    "id": 105,
+    "full_name": "Экибастузский инженерно-технический институт им. академика К. Сатпаева",
+    "university_code": "147",
+    "website": null,
+    "total_students": null,
+    "grant_students": null,
+    "paid_students": null,
+    "military_chair": null,
+    "has_dorm": null,
+    "contacts_raw": null,
+    "source_url": "pdf:2025_data.pdf:appendix_roster",
+    "search_keywords": "экибастузский инженерно-технический институт им. академика к. сатпаева | екибити | 147",
+    "short_name": "ЕкибИТИ"
+  },
+  {
+    "id": 106,
+    "full_name": "Академия Гражданской авиации",
+    "university_code": "157",
+    "website": null,
+    "total_students": null,
+    "grant_students": null,
+    "paid_students": null,
+    "military_chair": null,
+    "has_dorm": null,
+    "contacts_raw": null,
+    "source_url": "pdf:2025_data.pdf:appendix_roster",
+    "search_keywords": "академия гражданской авиации | акграв | 157",
+    "short_name": "АкГрАв"
+  },
+  {
+    "id": 107,
+    "full_name": "Международный Таразский университет имени Шерхана Муртазы",
+    "university_code": "223",
+    "website": null,
+    "total_students": null,
+    "grant_students": null,
+    "paid_students": null,
+    "military_chair": null,
+    "has_dorm": null,
+    "contacts_raw": null,
+    "source_url": "pdf:2025_data.pdf:appendix_roster",
+    "search_keywords": "международный таразский университет имени шерхана муртазы | мту | 223",
+    "short_name": "МТУ"
+  },
+  {
+    "id": 108,
+    "full_name": "Академия физической культуры и массового спорта",
+    "university_code": "527",
+    "website": null,
+    "total_students": null,
+    "grant_students": null,
+    "paid_students": null,
+    "military_chair": null,
+    "has_dorm": null,
+    "contacts_raw": null,
+    "source_url": "pdf:2025_data.pdf:appendix_roster",
+    "search_keywords": "академия физической культуры и массового спорта | афкмс | 527",
+    "short_name": "АФКМС"
+  },
+  {
+    "id": 109,
+    "full_name": "Казахский национальный университет водного хозяйства и ирригации",
+    "university_code": "529",
+    "website": null,
+    "total_students": 1538,
+    "grant_students": 1154,
+    "paid_students": 384,
+    "military_chair": null,
+    "has_dorm": null,
+    "contacts_raw": [
+      "Жамбылская область | Тараз"
+    ],
+    "source_url": "https://univision.kz/univ/125-mezhdunarodnyy-transportno-gumanitarnyy-universitet/",
+    "search_keywords": "казахский национальный университет водного хозяйства и ирригации | кнувхи | 529",
+    "short_name": "КНУВХИ"
+  }
+]

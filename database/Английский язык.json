@@ -1,0 +1,65 @@
+{
+  "unt_exam_schema_version": "2025_2026",
+  "subjects": [
+    {
+      "subject_id": "eng",
+      "subject_name_kz": "Ағылшын тілі",
+      "subject_name_ru": "Английский язык",
+      "questions": [
+        {
+          "question_id": "eng_single_001",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Тиісті етістік формасын қойыңыз: She ___ to school every day.",
+          "question_text_ru": "Вставьте нужную форму глагола: She ___ to school every day.",
+          "options_kz": [
+            "go",
+            "has gone",
+            "went",
+            "goes"
+          ],
+          "options_ru": [
+            "go",
+            "has gone",
+            "went",
+            "goes"
+          ],
+          "correct_answers_indices": [
+            3
+          ]
+        }
+      ],
+      "context_clusters": [
+        {
+          "cluster_id": "ctx_eng_001",
+          "format": "context_based",
+          "stimulus_kz": "English is a West Germanic language that originated from the Anglo-Frisian languages brought to Britain in the mid 5th to 7th centuries AD by Anglo-Saxon migrants from what is now northwest Germany, southern Denmark and the Netherlands.",
+          "stimulus_ru": "Английский — западногерманский язык, происходящий от англо-фризских языков, принесенных в Британию в середине V–VII веков н. э. англосаксонскими мигрантами с территорий, которые сейчас являются северо-западом Германии, югом Дании и Нидерландами.",
+          "child_questions": [
+            {
+              "question_id": "ctx_eng_001_q1",
+              "max_points": 1,
+              "question_text_kz": "Ағылшын тілі қай тілдер тобына жатады?",
+              "question_text_ru": "К какой языковой группе относится английский язык?",
+              "options_kz": [
+                "Romance",
+                "West Germanic",
+                "Slavic",
+                "Celtic"
+              ],
+              "options_ru": [
+                "Romance",
+                "West Germanic",
+                "Slavic",
+                "Celtic"
+              ],
+              "correct_answers_indices": [
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

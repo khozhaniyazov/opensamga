@@ -1,0 +1,1018 @@
+[
+  {
+    "id": 255,
+    "group_code": "B001",
+    "group_name": "Педагогика и психология",
+    "unt_subjects": "Биология и География",
+    "url": "https://univision.kz/edu-program/group/B001-pedagogika-i-psihologiya.html",
+    "search_keywords": "B001, Педагогика и психология, Биология и География"
+  },
+  {
+    "id": 256,
+    "group_code": "B002",
+    "group_name": "Дошкольное обучение и воспитание",
+    "unt_subjects": "Биология и География",
+    "url": "https://univision.kz/edu-program/group/B002-doshkolnoe-obuchenie-i-vospitanie.html",
+    "search_keywords": "B002, Дошкольное обучение и воспитание, Биология и География"
+  },
+  {
+    "id": 257,
+    "group_code": "B003",
+    "group_name": "Педагогика и методика начального обучения",
+    "unt_subjects": "Биология и География",
+    "url": "https://univision.kz/edu-program/group/B003-pedagogika-i-metodika-nachalnogo-obucheniya.html",
+    "search_keywords": "B003, Педагогика и методика начального обучения, Биология и География"
+  },
+  {
+    "id": 258,
+    "group_code": "B004",
+    "group_name": "Подготовка учителей начальной военной подготовки",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B004-podgotovka-uchiteley-nachalnoy-voennoy-podgotovki.html",
+    "search_keywords": "B004, Подготовка учителей начальной военной подготовки, Творческий экзамен и Творческий экзамен"
+  },
+  {
+    "id": 259,
+    "group_code": "B005",
+    "group_name": "Подготовка учителей физической культуры",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B005-podgotovka-uchiteley-fizicheskoy-kultury.html",
+    "search_keywords": "B005, Подготовка учителей физической культуры, Творческий экзамен и Творческий экзамен"
+  },
+  {
+    "id": 260,
+    "group_code": "B006",
+    "group_name": "Подготовка учителей музыки",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B006-podgotovka-uchiteley-muzyki.html",
+    "search_keywords": "B006, Подготовка учителей музыки, Творческий экзамен и Творческий экзамен"
+  },
+  {
+    "id": 261,
+    "group_code": "B007",
+    "group_name": "Подготовка учителей художественного труда и черчения",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B007-podgotovka-uchiteley-hudozhestvennogo-truda-i-chercheniya.html",
+    "search_keywords": "B007, Подготовка учителей художественного труда и черчения, Творческий экзамен и Творческий экзамен"
+  },
+  {
+    "id": 262,
+    "group_code": "B008",
+    "group_name": "Подготовка учителей основы права и экономики",
+    "unt_subjects": "Всемирная история и География",
+    "url": "https://univision.kz/edu-program/group/B008-podgotovka-uchiteley-osnovy-prava-i-ekonomiki.html",
+    "search_keywords": "B008, Подготовка учителей основы права и экономики, Всемирная история и География"
+  },
+  {
+    "id": 263,
+    "group_code": "B009",
+    "group_name": "Подготовка учителей математики",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B009-podgotovka-uchiteley-matematiki.html",
+    "search_keywords": "B009, Подготовка учителей математики, Математика и Физика"
+  },
+  {
+    "id": 264,
+    "group_code": "B010",
+    "group_name": "Подготовка учителей физики",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B010-podgotovka-uchiteley-fiziki.html",
+    "search_keywords": "B010, Подготовка учителей физики, Математика и Физика"
+  },
+  {
+    "id": 265,
+    "group_code": "B011",
+    "group_name": "Подготовка учителей информатики",
+    "unt_subjects": "Математика и Информатика",
+    "url": "https://univision.kz/edu-program/group/B011-podgotovka-uchiteley-informatiki.html",
+    "search_keywords": "B011, Подготовка учителей информатики, Математика и Информатика"
+  },
+  {
+    "id": 266,
+    "group_code": "B012",
+    "group_name": "Подготовка учителей химии",
+    "unt_subjects": "Биология и Химия",
+    "url": "https://univision.kz/edu-program/group/B012-podgotovka-uchiteley-himii.html",
+    "search_keywords": "B012, Подготовка учителей химии, Биология и Химия"
+  },
+  {
+    "id": 267,
+    "group_code": "B013",
+    "group_name": "Подготовка учителей биологии",
+    "unt_subjects": "Биология и Химия",
+    "url": "https://univision.kz/edu-program/group/B013-podgotovka-uchiteley-biologii.html",
+    "search_keywords": "B013, Подготовка учителей биологии, Биология и Химия"
+  },
+  {
+    "id": 268,
+    "group_code": "B014",
+    "group_name": "Подготовка учителей географии",
+    "unt_subjects": "Всемирная история и География",
+    "url": "https://univision.kz/edu-program/group/B014-podgotovka-uchiteley-geografii.html",
+    "search_keywords": "B014, Подготовка учителей географии, Всемирная история и География"
+  },
+  {
+    "id": 269,
+    "group_code": "B015",
+    "group_name": "Подготовка учителей по гуманитарным предметам",
+    "unt_subjects": "Всемирная история и География",
+    "url": "https://univision.kz/edu-program/group/B015-podgotovka-uchiteley-po-gumanitarnym-predmetam.html",
+    "search_keywords": "B015, Подготовка учителей по гуманитарным предметам, Всемирная история и География"
+  },
+  {
+    "id": 270,
+    "group_code": "B016",
+    "group_name": "Подготовка учителей казахского языка и литературы",
+    "unt_subjects": "Казахский язык и Казахская литература",
+    "url": "https://univision.kz/edu-program/group/B016-podgotovka-uchiteley-kazahskogo-yazyka-i-literatury.html",
+    "search_keywords": "B016, Подготовка учителей казахского языка и литературы, Казахский язык и Казахская литература"
+  },
+  {
+    "id": 271,
+    "group_code": "B017",
+    "group_name": "Подготовка учителей русского языка и литературы",
+    "unt_subjects": "Русский язык и Русская литература",
+    "url": "https://univision.kz/edu-program/group/B017-podgotovka-uchiteley-russkogo-yazyka-i-literatury.html",
+    "search_keywords": "B017, Подготовка учителей русского языка и литературы, Русский язык и Русская литература"
+  },
+  {
+    "id": 272,
+    "group_code": "B018",
+    "group_name": "Подготовка учителей иностранного языка",
+    "unt_subjects": "Иностранный язык и Всемирная история",
+    "url": "https://univision.kz/edu-program/group/B018-podgotovka-uchiteley-inostrannogo-yazyka.html",
+    "search_keywords": "B018, Подготовка учителей иностранного языка, Иностранный язык и Всемирная история"
+  },
+  {
+    "id": 273,
+    "group_code": "B019",
+    "group_name": "Подготовка cоциальных педагогов",
+    "unt_subjects": "Биология и География",
+    "url": "https://univision.kz/edu-program/group/B019-c.html",
+    "search_keywords": "B019, Подготовка cоциальных педагогов, Биология и География"
+  },
+  {
+    "id": 274,
+    "group_code": "B020",
+    "group_name": "Специальная педагогика",
+    "unt_subjects": "Биология и География",
+    "url": "https://univision.kz/edu-program/group/B020-spetsialnaya-pedagogika.html",
+    "search_keywords": "B020, Специальная педагогика, Биология и География"
+  },
+  {
+    "id": 275,
+    "group_code": "B021",
+    "group_name": "Исполнительское искусство",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B021-ispolnitelskoe-iskusstvo.html",
+    "search_keywords": "B021, Исполнительское искусство, Творческий экзамен и Творческий экзамен"
+  },
+  {
+    "id": 276,
+    "group_code": "B022",
+    "group_name": "Музыковедение",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B022-muzykovedenie.html",
+    "search_keywords": "B022, Музыковедение, Творческий экзамен и Творческий экзамен"
+  },
+  {
+    "id": 277,
+    "group_code": "B023",
+    "group_name": "Режиссура, арт-менеджмент",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B023-rezissura-art-menedzment-2.html",
+    "search_keywords": "B023, Режиссура, арт-менеджмент, Творческий экзамен и Творческий экзамен"
+  },
+  {
+    "id": 278,
+    "group_code": "B024",
+    "group_name": "Искусствоведение",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B024-iskusstvovedenie.html",
+    "search_keywords": "B024, Искусствоведение, Творческий экзамен и Творческий экзамен"
+  },
+  {
+    "id": 279,
+    "group_code": "B025",
+    "group_name": "Дирижирование",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B025-dirizirovanie.html",
+    "search_keywords": "B025, Дирижирование, Творческий экзамен и Творческий экзамен"
+  },
+  {
+    "id": 280,
+    "group_code": "B026",
+    "group_name": "Композиция",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B026-kompozitsiya.html",
+    "search_keywords": "B026, Композиция, Творческий экзамен и Творческий экзамен"
+  },
+  {
+    "id": 281,
+    "group_code": "B027",
+    "group_name": "Театральное искусство",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B027-teatralnoe-iskusstvo.html",
+    "search_keywords": "B027, Театральное искусство, Творческий экзамен и Творческий экзамен"
+  },
+  {
+    "id": 282,
+    "group_code": "B028",
+    "group_name": "Хореография",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B028-horeografiya.html",
+    "search_keywords": "B028, Хореография, Творческий экзамен и Творческий экзамен"
+  },
+  {
+    "id": 283,
+    "group_code": "B029",
+    "group_name": "Аудиовизуальные средства и медиа производство",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B029-audiovizualnye-sredstva-i-media-proizvodstvo.html",
+    "search_keywords": "B029, Аудиовизуальные средства и медиа производство, Творческий экзамен и Творческий экзамен"
+  },
+  {
+    "id": 284,
+    "group_code": "B030",
+    "group_name": "Изобразительное искусство",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B030-izobrazitelnoe-iskusstvo.html",
+    "search_keywords": "B030, Изобразительное искусство, Творческий экзамен и Творческий экзамен"
+  },
+  {
+    "id": 285,
+    "group_code": "B031",
+    "group_name": "Мода, дизайн",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B031-moda-dizayn.html",
+    "search_keywords": "B031, Мода, дизайн, Творческий экзамен и Творческий экзамен"
+  },
+  {
+    "id": 286,
+    "group_code": "B032",
+    "group_name": "Философия и этика",
+    "unt_subjects": "Всемирная история и География",
+    "url": "https://univision.kz/edu-program/group/B032-filosofiya-i-etika.html",
+    "search_keywords": "B032, Философия и этика, Всемирная история и География"
+  },
+  {
+    "id": 287,
+    "group_code": "B033",
+    "group_name": "Религия и теология",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B033-religiya-i-teologiya.html",
+    "search_keywords": "B033, Религия и теология, Творческий экзамен и Творческий экзамен"
+  },
+  {
+    "id": 288,
+    "group_code": "B034",
+    "group_name": "История",
+    "unt_subjects": "Всемирная история и География",
+    "url": "https://univision.kz/edu-program/group/B034-istoria.html",
+    "search_keywords": "B034, История, Всемирная история и География"
+  },
+  {
+    "id": 289,
+    "group_code": "B035",
+    "group_name": "Тюркология",
+    "unt_subjects": "Иностранный язык и Всемирная история",
+    "url": "https://univision.kz/edu-program/group/B035-turkologia.html",
+    "search_keywords": "B035, Тюркология, Иностранный язык и Всемирная история"
+  },
+  {
+    "id": 290,
+    "group_code": "B036",
+    "group_name": "Переводческое дело",
+    "unt_subjects": "Иностранный язык и Всемирная история",
+    "url": "https://univision.kz/edu-program/group/B036-perevodcheskoe-delo.html",
+    "search_keywords": "B036, Переводческое дело, Иностранный язык и Всемирная история"
+  },
+  {
+    "id": 291,
+    "group_code": "B037",
+    "group_name": "Филология",
+    "unt_subjects": "Казахский/Русский язык и Казахская/Русская литература",
+    "url": "https://univision.kz/edu-program/group/B037-filologiya.html",
+    "search_keywords": "B037, Филология, Казахский/Русский язык и Казахская/Русская литература"
+  },
+  {
+    "id": 292,
+    "group_code": "B038",
+    "group_name": "Социология",
+    "unt_subjects": "Математика и География",
+    "url": "https://univision.kz/edu-program/group/B038-sotsiologiya.html",
+    "search_keywords": "B038, Социология, Математика и География"
+  },
+  {
+    "id": 293,
+    "group_code": "B039",
+    "group_name": "Культурология",
+    "unt_subjects": "Иностранный язык и Всемирная история",
+    "url": "https://univision.kz/edu-program/group/B039-kulturologiya.html",
+    "search_keywords": "B039, Культурология, Иностранный язык и Всемирная история"
+  },
+  {
+    "id": 294,
+    "group_code": "B040",
+    "group_name": "Политология",
+    "unt_subjects": "Иностранный язык и Всемирная история",
+    "url": "https://univision.kz/edu-program/group/B040-politologiya.html",
+    "search_keywords": "B040, Политология, Иностранный язык и Всемирная история"
+  },
+  {
+    "id": 295,
+    "group_code": "B041",
+    "group_name": "Психология",
+    "unt_subjects": "Биология и География",
+    "url": "https://univision.kz/edu-program/group/B041-psihologiya.html",
+    "search_keywords": "B041, Психология, Биология и География"
+  },
+  {
+    "id": 296,
+    "group_code": "B042",
+    "group_name": "Журналистика и репортерское дело",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B042-zhurnalistika-i-reporterskoe-delo.html",
+    "search_keywords": "B042, Журналистика и репортерское дело, Творческий экзамен и Творческий экзамен"
+  },
+  {
+    "id": 297,
+    "group_code": "B043",
+    "group_name": "Библиотечное дело, обработка информации и архивное дело",
+    "unt_subjects": "Казахский/Русский язык и Казахская/Русская литература",
+    "url": "https://univision.kz/edu-program/group/B043-bibliotechnoe-delo-obrabotka-informatsii-i-arhivnoe-delo.html",
+    "search_keywords": "B043, Библиотечное дело, обработка информации и архивное дело, Казахский/Русский язык и Казахская/Русская литература"
+  },
+  {
+    "id": 298,
+    "group_code": "B044",
+    "group_name": "Менеджмент и управление",
+    "unt_subjects": "Математика и География",
+    "url": "https://univision.kz/edu-program/group/B044-menedzhment-i-upravlenie.html",
+    "search_keywords": "B044, Менеджмент и управление, Математика и География, management, менеджмент, business, бизнес, управление"
+  },
+  {
+    "id": 299,
+    "group_code": "B045",
+    "group_name": "Аудит и налогообложение",
+    "unt_subjects": "Математика и География",
+    "url": "https://univision.kz/edu-program/group/B045-audit-i-nalogooblozhenie.html",
+    "search_keywords": "B045, Аудит и налогообложение, Математика и География, audit, аудит, accounting, бухгалтер, финансы"
+  },
+  {
+    "id": 300,
+    "group_code": "B046",
+    "group_name": "Финансы, экономика, банковское и страховое дело",
+    "unt_subjects": "Математика и География",
+    "url": "https://univision.kz/edu-program/group/B046-finansy-ekonomika-bankovskoe-i-strahovoe-delo.html",
+    "search_keywords": "B046, Финансы, экономика, банковское и страховое дело, Математика и География, finance, финансы, банк, investment, деньги"
+  },
+  {
+    "id": 301,
+    "group_code": "B047",
+    "group_name": "Маркетинг и реклама",
+    "unt_subjects": "Математика и География",
+    "url": "https://univision.kz/edu-program/group/B047-marketing-i-reklama.html",
+    "search_keywords": "B047, Маркетинг и реклама, Математика и География"
+  },
+  {
+    "id": 302,
+    "group_code": "B048",
+    "group_name": "Трудовые навыки",
+    "unt_subjects": "Математика и География",
+    "url": "https://univision.kz/edu-program/group/B048-trudovye-navyki.html",
+    "search_keywords": "B048, Трудовые навыки, Математика и География"
+  },
+  {
+    "id": 303,
+    "group_code": "B049",
+    "group_name": "Право",
+    "unt_subjects": "Всемирная история и Основы права",
+    "url": "https://univision.kz/edu-program/group/B049-pravo.html",
+    "search_keywords": "B049, Право, Всемирная история и Основы права, law, юрист, lawyer, legal"
+  },
+  {
+    "id": 304,
+    "group_code": "B050",
+    "group_name": "Биологические и смежные науки",
+    "unt_subjects": "Биология и Химия",
+    "url": "https://univision.kz/edu-program/group/B050-biologicheskie-i-smezhnye-nauki.html",
+    "search_keywords": "B050, Биологические и смежные науки, Биология и Химия"
+  },
+  {
+    "id": 305,
+    "group_code": "B051",
+    "group_name": "Окружающая среда",
+    "unt_subjects": "Биология и География",
+    "url": "https://univision.kz/edu-program/group/B051-okruzhayushchaya-sreda.html",
+    "search_keywords": "B051, Окружающая среда, Биология и География"
+  },
+  {
+    "id": 306,
+    "group_code": "B052",
+    "group_name": "Наука о земле",
+    "unt_subjects": "Математика и География",
+    "url": "https://univision.kz/edu-program/group/B052-nauka-o-zemle.html",
+    "search_keywords": "B052, Наука о земле, Математика и География"
+  },
+  {
+    "id": 307,
+    "group_code": "B053",
+    "group_name": "Химия",
+    "unt_subjects": "Биология и Химия",
+    "url": "https://univision.kz/edu-program/group/B053-himiya.html",
+    "search_keywords": "B053, Химия, Биология и Химия"
+  },
+  {
+    "id": 308,
+    "group_code": "B054",
+    "group_name": "Физика",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B054-fizika.html",
+    "search_keywords": "B054, Физика, Математика и Физика"
+  },
+  {
+    "id": 309,
+    "group_code": "B055",
+    "group_name": "Математика и статистика",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B055-matematika-i-statistika.html",
+    "search_keywords": "B055, Математика и статистика, Математика и Физика"
+  },
+  {
+    "id": 310,
+    "group_code": "B056",
+    "group_name": "Механика",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B056-mehanika.html",
+    "search_keywords": "B056, Механика, Математика и Физика"
+  },
+  {
+    "id": 311,
+    "group_code": "B057",
+    "group_name": "Информационные технологии",
+    "unt_subjects": "Математика и Информатика",
+    "url": "https://univision.kz/edu-program/group/B057-informatsionnye-tehnologii.html",
+    "search_keywords": "B057, Информационные технологии, Математика и Информатика, it, айти, ит, программирование, developer, software, computer science"
+  },
+  {
+    "id": 312,
+    "group_code": "B058",
+    "group_name": "Информационная безопасность",
+    "unt_subjects": "Математика и Информатика",
+    "url": "https://univision.kz/edu-program/group/B058-informatsionnaya-bezopasnost.html",
+    "search_keywords": "B058, Информационная безопасность, Математика и Информатика, cybersecurity, кибербезопасность, security, infosec"
+  },
+  {
+    "id": 313,
+    "group_code": "B059",
+    "group_name": "Коммуникации и коммуникационные технологии",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B059-kommunikatsii-i-kommunikatsionnye-tehnologii.html",
+    "search_keywords": "B059, Коммуникации и коммуникационные технологии, Математика и Физика"
+  },
+  {
+    "id": 314,
+    "group_code": "B060",
+    "group_name": "Химическая инженерия и процессы",
+    "unt_subjects": "Химия и Физика",
+    "url": "https://univision.kz/edu-program/group/B060-himicheskaya-inzheneriya-i-protsessy.html",
+    "search_keywords": "B060, Химическая инженерия и процессы, Химия и Физика, chemical, химическая инженерия, chemistry, нефть, газ"
+  },
+  {
+    "id": 315,
+    "group_code": "B061",
+    "group_name": "Материаловедение и технологии",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B061-materialovedenie-i-tehnologii.html",
+    "search_keywords": "B061, Материаловедение и технологии, Математика и Физика, mechanical, механика, машиностроение, engineer"
+  },
+  {
+    "id": 316,
+    "group_code": "B062",
+    "group_name": "Электротехника и энергетика",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B062-elektrotehnika-i-energetika.html",
+    "search_keywords": "B062, Электротехника и энергетика, Математика и Физика"
+  },
+  {
+    "id": 317,
+    "group_code": "B063",
+    "group_name": "Электротехника и автоматизация",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B063-elektrotehnika-i-avtomatizatsiya.html",
+    "search_keywords": "B063, Электротехника и автоматизация, Математика и Физика, construction, строительство, civil, архитектура"
+  },
+  {
+    "id": 318,
+    "group_code": "B064",
+    "group_name": "Механика и металлообработка",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B064-mehanika-i-metalloobrabotka.html",
+    "search_keywords": "B064, Механика и металлообработка, Математика и Физика"
+  },
+  {
+    "id": 319,
+    "group_code": "B065",
+    "group_name": "Транспортная техника и технологии",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B065-transportnaa-tehnika-i-tehnologii.html",
+    "search_keywords": "B065, Транспортная техника и технологии, Математика и Физика"
+  },
+  {
+    "id": 320,
+    "group_code": "B066",
+    "group_name": "Морской транспорт и технологии",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B066-morskoy-transport-i-tehnologii.html",
+    "search_keywords": "B066, Морской транспорт и технологии, Математика и Физика"
+  },
+  {
+    "id": 321,
+    "group_code": "B067",
+    "group_name": "Воздушный транспорт и технологии",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B067-vozdushnyy-transport-i-tehnologii.html",
+    "search_keywords": "B067, Воздушный транспорт и технологии, Математика и Физика"
+  },
+  {
+    "id": 322,
+    "group_code": "B068",
+    "group_name": "Производство продуктов питания",
+    "unt_subjects": "Биология и Химия",
+    "url": "https://univision.kz/edu-program/group/B068-proizvodstvo-produktov-pitaniya.html",
+    "search_keywords": "B068, Производство продуктов питания, Биология и Химия"
+  },
+  {
+    "id": 323,
+    "group_code": "B069",
+    "group_name": "Производство материалов (стекло, бумага, пластик, дерево)",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B069-proizvodstvo-materialov-steklo-bumaga-plastik-derevo.html",
+    "search_keywords": "B069, Производство материалов (стекло, бумага, пластик, дерево), Математика и Физика"
+  },
+  {
+    "id": 324,
+    "group_code": "B070",
+    "group_name": "Текстиль: одежда, обувь и кожаные изделия",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B070-tekstil-odezhda-obuv-i-kozhanye-izdeliya.html",
+    "search_keywords": "B070, Текстиль: одежда, обувь и кожаные изделия, Математика и Физика, architecture, архитектура, design, дизайн"
+  },
+  {
+    "id": 325,
+    "group_code": "B071",
+    "group_name": "Горное дело и добыча полезных ископаемых",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B071-gornoe-delo-i-dobycha-poleznyh-iskopaemyh.html",
+    "search_keywords": "B071, Горное дело и добыча полезных ископаемых, Математика и Физика"
+  },
+  {
+    "id": 326,
+    "group_code": "B072",
+    "group_name": "Технология фармацевтического производства",
+    "unt_subjects": "Биология и Химия",
+    "url": "https://univision.kz/edu-program/group/B072-tehnologiya-farmatsevticheskogo-proizvodstva.html",
+    "search_keywords": "B072, Технология фармацевтического производства, Биология и Химия"
+  },
+  {
+    "id": 327,
+    "group_code": "B073",
+    "group_name": "Архитектура",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B073-arhitektura.html",
+    "search_keywords": "B073, Архитектура, Творческий экзамен и Творческий экзамен"
+  },
+  {
+    "id": 328,
+    "group_code": "B074",
+    "group_name": "Градостроительство, строительные работы и гражданское строительство",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B074-gradostroitelstvo-stroitelnye-raboty-i-grazhdanskoe-stroitelstvo.html",
+    "search_keywords": "B074, Градостроительство, строительные работы и гражданское строительство, Математика и Физика"
+  },
+  {
+    "id": 329,
+    "group_code": "B075",
+    "group_name": "Кадастр и землеустройство",
+    "unt_subjects": "Математика и География",
+    "url": "https://univision.kz/edu-program/group/B075-kadastr-i-zemleustroystvo.html",
+    "search_keywords": "B075, Кадастр и землеустройство, Математика и География"
+  },
+  {
+    "id": 330,
+    "group_code": "B076",
+    "group_name": "Стандартизация, сертификация и метрология (по отраслям)",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B076-standartizatsiya-sertifikatsiya-i-metrologiya-po-otraslyam.html",
+    "search_keywords": "B076, Стандартизация, сертификация и метрология (по отраслям), Математика и Физика"
+  },
+  {
+    "id": 331,
+    "group_code": "B077",
+    "group_name": "Растениеводство",
+    "unt_subjects": "Биология и Химия",
+    "url": "https://univision.kz/edu-program/group/B077-rastenievodstvo.html",
+    "search_keywords": "B077, Растениеводство, Биология и Химия"
+  },
+  {
+    "id": 332,
+    "group_code": "B078",
+    "group_name": "Животноводство",
+    "unt_subjects": "Биология и Химия",
+    "url": "https://univision.kz/edu-program/group/B078-zhivotnovodstvo.html",
+    "search_keywords": "B078, Животноводство, Биология и Химия"
+  },
+  {
+    "id": 333,
+    "group_code": "B079",
+    "group_name": "Лесное хозяйство",
+    "unt_subjects": "Биология и География",
+    "url": "https://univision.kz/edu-program/group/B079-lesnoe-hozyaystvo.html",
+    "search_keywords": "B079, Лесное хозяйство, Биология и География"
+  },
+  {
+    "id": 334,
+    "group_code": "B080",
+    "group_name": "Рыбное хозяйство",
+    "unt_subjects": "Биология и Химия",
+    "url": "https://univision.kz/edu-program/group/B080-rybnoe-hozyaystvo.html",
+    "search_keywords": "B080, Рыбное хозяйство, Биология и Химия"
+  },
+  {
+    "id": 335,
+    "group_code": "B082",
+    "group_name": "Водные ресурсы и водопользования",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B082-vodnye-resursy-i-vodopolzovaniya.html",
+    "search_keywords": "B082, Водные ресурсы и водопользования, Математика и Физика"
+  },
+  {
+    "id": 336,
+    "group_code": "B083",
+    "group_name": "Ветеринария",
+    "unt_subjects": "Биология и Химия",
+    "url": "https://univision.kz/edu-program/group/B083-veterinariya.html",
+    "search_keywords": "B083, Ветеринария, Биология и Химия"
+  },
+  {
+    "id": 337,
+    "group_code": "B084",
+    "group_name": "Сестринское дело",
+    "unt_subjects": "Биология и Химия",
+    "url": "https://univision.kz/edu-program/group/B084-sestrinskoe-delo.html",
+    "search_keywords": "B084, Сестринское дело, Биология и Химия"
+  },
+  {
+    "id": 338,
+    "group_code": "B085",
+    "group_name": "Фармация",
+    "unt_subjects": "Биология и Химия",
+    "url": "https://univision.kz/edu-program/group/B085-farmatsiya.html",
+    "search_keywords": "B085, Фармация, Биология и Химия"
+  },
+  {
+    "id": 339,
+    "group_code": "B086",
+    "group_name": "Общая медицина",
+    "unt_subjects": "Биология и Химия",
+    "url": "https://univision.kz/edu-program/group/B086-obshchaya-meditsina.html",
+    "search_keywords": "B086, Общая медицина, Биология и Химия"
+  },
+  {
+    "id": 340,
+    "group_code": "B087",
+    "group_name": "Стоматология",
+    "unt_subjects": "Биология и Химия",
+    "url": "https://univision.kz/edu-program/group/B087-stomatologiya.html",
+    "search_keywords": "B087, Стоматология, Биология и Химия"
+  },
+  {
+    "id": 341,
+    "group_code": "B088",
+    "group_name": "Педиатрия",
+    "unt_subjects": "Биология и Химия",
+    "url": "https://univision.kz/edu-program/group/B088-pediatriya.html",
+    "search_keywords": "B088, Педиатрия, Биология и Химия"
+  },
+  {
+    "id": 342,
+    "group_code": "B089",
+    "group_name": "Общественное здоровье",
+    "unt_subjects": "Биология и Химия",
+    "url": "https://univision.kz/edu-program/group/B089-obsestvennoe-zdorove.html",
+    "search_keywords": "B089, Общественное здоровье, Биология и Химия"
+  },
+  {
+    "id": 343,
+    "group_code": "B090",
+    "group_name": "Социальная работа",
+    "unt_subjects": "Биология и География",
+    "url": "https://univision.kz/edu-program/group/B090-sotsialnaya-rabota.html",
+    "search_keywords": "B090, Социальная работа, Биология и География"
+  },
+  {
+    "id": 344,
+    "group_code": "B091",
+    "group_name": "Туризм",
+    "unt_subjects": "География и Иностранный язык",
+    "url": "https://univision.kz/edu-program/group/B091-turizm.html",
+    "search_keywords": "B091, Туризм, География и Иностранный язык"
+  },
+  {
+    "id": 345,
+    "group_code": "B092",
+    "group_name": "Досуг",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B092-dosug.html",
+    "search_keywords": "B092, Досуг, Творческий экзамен и Творческий экзамен"
+  },
+  {
+    "id": 346,
+    "group_code": "B093",
+    "group_name": "Ресторанное дело и гостиничный бизнес",
+    "unt_subjects": "География и Иностранный язык",
+    "url": "https://univision.kz/edu-program/group/B093-restorannoe-delo-i-gostinichnyy-biznes.html",
+    "search_keywords": "B093, Ресторанное дело и гостиничный бизнес, География и Иностранный язык"
+  },
+  {
+    "id": 347,
+    "group_code": "B094",
+    "group_name": "Санитарно-профилактические мероприятия",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B094-sanitarno-profilakticheskie-meropriyatiya.html",
+    "search_keywords": "B094, Санитарно-профилактические мероприятия, Математика и Физика"
+  },
+  {
+    "id": 348,
+    "group_code": "B095",
+    "group_name": "Транспортные услуги",
+    "unt_subjects": "Математика и География",
+    "url": "https://univision.kz/edu-program/group/B095-transportnye-uslugi.html",
+    "search_keywords": "B095, Транспортные услуги, Математика и География"
+  },
+  {
+    "id": 349,
+    "group_code": "B096",
+    "group_name": "Правоохранительная деятельность",
+    "unt_subjects": "Всемирная история и Основы права",
+    "url": "https://univision.kz/edu-program/group/B096-pravoohranitelnaya-deyatelnost.html",
+    "search_keywords": "B096, Правоохранительная деятельность, Всемирная история и Основы права"
+  },
+  {
+    "id": 350,
+    "group_code": "B099",
+    "group_name": "Инструментальное исполнительство",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B099-instrumentalnoe-ispolnitelstvo-2.html",
+    "search_keywords": "B099, Инструментальное исполнительство, Unknown"
+  },
+  {
+    "id": 351,
+    "group_code": "B100",
+    "group_name": "Вокальное искусство",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B100-vokalnoe-iskusstvo-2.html",
+    "search_keywords": "B100, Вокальное искусство, Unknown"
+  },
+  {
+    "id": 352,
+    "group_code": "B101",
+    "group_name": "Традиционное музыкальное искусство",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B101-tradicionnoe-muzykalnoe-iskusstvo.html",
+    "search_keywords": "B101, Традиционное музыкальное искусство, Unknown"
+  },
+  {
+    "id": 353,
+    "group_code": "B102",
+    "group_name": "Искусство эстрады",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B102-iskusstvo-estrady-2.html",
+    "search_keywords": "B102, Искусство эстрады, Unknown"
+  },
+  {
+    "id": 354,
+    "group_code": "B103",
+    "group_name": "Режиссура кино и ТВ",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B103-rezissura-kino-i-tv.html",
+    "search_keywords": "B103, Режиссура кино и ТВ, Unknown"
+  },
+  {
+    "id": 355,
+    "group_code": "B104",
+    "group_name": "Режиссура сценических искусств и цирка",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B104-rezissura-sceniceskih-iskusstv-i-cirka.html",
+    "search_keywords": "B104, Режиссура сценических искусств и цирка, Unknown"
+  },
+  {
+    "id": 356,
+    "group_code": "B105",
+    "group_name": "Режиссура анимации",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B105-rezissura-animacii.html",
+    "search_keywords": "B105, Режиссура анимации, Unknown"
+  },
+  {
+    "id": 357,
+    "group_code": "B106",
+    "group_name": "Операторское и фото искусство",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B106-operatorskoe-i-foto-iskusstvo.html",
+    "search_keywords": "B106, Операторское и фото искусство, Unknown"
+  },
+  {
+    "id": 358,
+    "group_code": "B107",
+    "group_name": "Медиаискусство и цифровые технологии",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B107-mediaiskusstvo-i-cifrovye-tehnologii.html",
+    "search_keywords": "B107, Медиаискусство и цифровые технологии, Unknown"
+  },
+  {
+    "id": 359,
+    "group_code": "B108",
+    "group_name": "Сценография",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B108-scenografia-2.html",
+    "search_keywords": "B108, Сценография, Unknown"
+  },
+  {
+    "id": 360,
+    "group_code": "B109",
+    "group_name": "Декоративное искусство",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B109-dekorativnoe-iskusstvo-2.html",
+    "search_keywords": "B109, Декоративное искусство, Unknown"
+  },
+  {
+    "id": 361,
+    "group_code": "B110",
+    "group_name": "Фэшн дизайн",
+    "unt_subjects": "Творческий экзамен и Творческий экзамен",
+    "url": "https://univision.kz/edu-program/group/B110-fesn-dizajn.html",
+    "search_keywords": "B110, Фэшн дизайн, Unknown"
+  },
+  {
+    "id": 362,
+    "group_code": "B126",
+    "group_name": "Транспортное строительство",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B126-transportnoe-stroitelstvo-2.html",
+    "search_keywords": "B126, Транспортное строительство, Unknown"
+  },
+  {
+    "id": 363,
+    "group_code": "B134",
+    "group_name": "Археология и этнология",
+    "unt_subjects": "Всемирная история и География",
+    "url": "https://univision.kz/edu-program/group/B134-arheologia-i-etnologia.html",
+    "search_keywords": "B134, Археология и этнология, Всемирная история и География"
+  },
+  {
+    "id": 364,
+    "group_code": "B135",
+    "group_name": "Востоковедение",
+    "unt_subjects": "Иностранный язык и Всемирная история",
+    "url": "https://univision.kz/edu-program/group/B135-vostokovedenie-2.html",
+    "search_keywords": "B135, Востоковедение, Иностранный язык и Всемирная история"
+  },
+  {
+    "id": 365,
+    "group_code": "B140",
+    "group_name": "Международные отношения и дипломатия",
+    "unt_subjects": "Иностранный язык и Всемирная история",
+    "url": "https://univision.kz/edu-program/group/B140-mezhdunarodnye-otnosheniya-i-diplomatiya.html",
+    "search_keywords": "B140, Международные отношения и дипломатия, Иностранный язык и Всемирная история"
+  },
+  {
+    "id": 366,
+    "group_code": "B145",
+    "group_name": "Государственный аудит",
+    "unt_subjects": "Математика и География",
+    "url": "https://univision.kz/edu-program/group/B145-gosudarstvennyj-audit-2.html",
+    "search_keywords": "B145, Государственный аудит, Математика и География"
+  },
+  {
+    "id": 367,
+    "group_code": "B157",
+    "group_name": "Математическое и компьютерное моделирование",
+    "unt_subjects": "Математика и Информатика",
+    "url": "https://univision.kz/edu-program/group/B157-matematicheskoe-i-kompyuternoe-modelirovanie.html",
+    "search_keywords": "B157, Математическое и компьютерное моделирование, Unknown"
+  },
+  {
+    "id": 368,
+    "group_code": "B158",
+    "group_name": "Криптология",
+    "unt_subjects": "Математика и Информатика",
+    "url": "https://univision.kz/edu-program/group/B158-kriptologia-2.html",
+    "search_keywords": "B158, Криптология, Математика и Информатика"
+  },
+  {
+    "id": 369,
+    "group_code": "B162",
+    "group_name": "Теплоэнергетика",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B162-teploenergetika.html",
+    "search_keywords": "B162, Теплоэнергетика, Unknown"
+  },
+  {
+    "id": 370,
+    "group_code": "B164",
+    "group_name": "Приборостроение",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B164-priborostroenie.html",
+    "search_keywords": "B164, Приборостроение, Unknown"
+  },
+  {
+    "id": 371,
+    "group_code": "B165",
+    "group_name": "Магистральные сети и инфраструктура",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B165-magistralnye-seti-i-infrastruktura.html",
+    "search_keywords": "B165, Магистральные сети и инфраструктура, Unknown"
+  },
+  {
+    "id": 372,
+    "group_code": "B166",
+    "group_name": "Транспортные сооружения",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B166-transportnye-sooruzenia.html",
+    "search_keywords": "B166, Транспортные сооружения, Unknown"
+  },
+  {
+    "id": 373,
+    "group_code": "B167",
+    "group_name": "Летная эксплуатация летательных аппаратов и двигателей",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B167-letnaya-ehkspluataciya-letatelnyh-apparatov-i-dvigatelej.html",
+    "search_keywords": "B167, Летная эксплуатация летательных аппаратов и двигателей, Математика и Физика"
+  },
+  {
+    "id": 374,
+    "group_code": "B171",
+    "group_name": "Металлургия",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B171-metallurgiya.html",
+    "search_keywords": "B171, Металлургия, Unknown"
+  },
+  {
+    "id": 375,
+    "group_code": "B172",
+    "group_name": "Обработка материалов давлением",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B172-obrabotka-materialov-davleniem.html",
+    "search_keywords": "B172, Обработка материалов давлением, Unknown"
+  },
+  {
+    "id": 376,
+    "group_code": "B173",
+    "group_name": "Гидромелиорация",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B173-gidromelioracia-2.html",
+    "search_keywords": "B173, Гидромелиорация, Unknown"
+  },
+  {
+    "id": 377,
+    "group_code": "B174",
+    "group_name": "Геодезия и картография",
+    "unt_subjects": "Математика и География",
+    "url": "https://univision.kz/edu-program/group/B174-geodeziya-i-kartografiya.html",
+    "search_keywords": "B174, Геодезия и картография, Unknown"
+  },
+  {
+    "id": 378,
+    "group_code": "B175",
+    "group_name": "Водоснабжение и водоотведение",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B175-vodosnabzenie-i-vodootvedenie.html",
+    "search_keywords": "B175, Водоснабжение и водоотведение, Unknown"
+  },
+  {
+    "id": 379,
+    "group_code": "B176",
+    "group_name": "Гидротехническое строительство и управление водными ресурсами",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B176-gidrotehniceskoe-stroitelstvo-i-upravlenie-vodnymi-resursami.html",
+    "search_keywords": "B176, Гидротехническое строительство и управление водными ресурсами, Unknown"
+  },
+  {
+    "id": 380,
+    "group_code": "B183",
+    "group_name": "Агроинженерия",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B183-agroinzheneriya.html",
+    "search_keywords": "B183, Агроинженерия, Математика и Физика"
+  },
+  {
+    "id": 381,
+    "group_code": "B271",
+    "group_name": "Нефтегазовое дело",
+    "unt_subjects": "Математика и Физика",
+    "url": "https://univision.kz/edu-program/group/B271-neftegazovoe-delo.html",
+    "search_keywords": "B271, Нефтегазовое дело, Unknown"
+  }
+]

@@ -1,203 +1,223 @@
-# opensamga
+# OpenSamga
 
-> UNT / ҰБТ preparation platform for Kazakhstani high-school students.
-> Grounded AI tutor, verified practice bank, university & grant strategy.
-> Released MIT. No active maintainer.
+OpenSamga is an MIT-licensed UNT / ҰБТ preparation platform for
+Kazakhstani high-school students. It combines a React web client,
+FastAPI backend, PostgreSQL + pgvector retrieval, an AI tutor agent,
+practice-bank workflows, and university / grant-planning tools.
 
-This is the open-source snapshot of **Samga.ai** — an exam-prep stack
-originally built as a private commercial product for 10–11 grade
-students in Kazakhstan preparing for the ЕНТ (RU) / ҰБТ (KZ)
-university-entrance exam. The code is now MIT-licensed so anyone can
-self-host it, fork it, study it, or build on top of it.
+This repository includes the application code plus a compact seed dataset
+so a fresh local install can exercise the main product flows without
+starting from an empty database.
 
-## Status
+## What Is Included
 
-- **License:** MIT (see [`LICENSE`](LICENSE)).
-- **Maintenance:** none. The original author is no longer actively
-  shipping. Issues and pull requests may or may not be reviewed.
-- **Origin:** lifted from a private monorepo at a specific
-  point in time. CHANGELOG / git history are not preserved here; this
-  is a single-commit snapshot.
-- **Datasets:** the proprietary scraped question banks, library PDFs,
-  and university-data JSONs are **not** shipped. You'll need to bring
-  your own data to make the end-to-end product work. See
-  ["Data you'll have to bring yourself"](#data-youll-have-to-bring-yourself).
-
-## What's in the box
-
-| Layer | Stack | Path |
+| Area | What it does | Main paths |
 |---|---|---|
-| Backend | FastAPI · SQLAlchemy 2 async · asyncpg · pgvector · Alembic | `backend/` |
-| Frontend | React 18 · Vite 6 · TypeScript · Tailwind · Radix UI | `frontend/` |
-| AI | OpenAI / Qwen (DashScope) / Moonshot (Kimi) — function-calling agent loop | `backend/app/services/chat/` |
-| Auth | JWT access + refresh, bcrypt, admin-gated routes | `backend/app/routers/auth.py` |
-| Retrieval | pgvector + embedding pipeline + citation guard | `backend/app/services/ai_orchestrator.py` |
-| Observability | Python logging with structured fields; per-provider HTTP client registry | `backend/app/logging_config.py` |
-| Tests | pytest (backend) · vitest (frontend) · Playwright + axe (E2E / a11y) | `backend/tests/`, `frontend/src/**/__tests__/`, `frontend/tests/` |
+| Web app | Student-facing React interface, auth screens, dashboard, chat, exams, practice, library, strategy tools | `frontend/src/app/` |
+| API | FastAPI app, routers, auth, quotas, billing hooks, admin/data endpoints | `backend/app/` |
+| AI tutor | Function-calling chat loop, tool registry, provider failover, OCR helpers, prompt and response shaping | `backend/app/services/chat/` |
+| Retrieval | pgvector-backed textbook search, citation handling, RAG query logging | `backend/app/services/ai_orchestrator.py`, `backend/app/services/library_retrieval.py` |
+| Practice | Mock questions, weak-topic mode, mistake review, exam attempts, scoring utilities | `backend/app/routers/practice.py`, `backend/app/routers/exams.py`, `backend/app/services/gap_analyzer.py` |
+| University strategy | Major matching, grant-probability helpers, retake-guide parsing, profile-based planning | `backend/app/routers/strategy.py`, `backend/app/services/strategy_service.py` |
+| Database | SQLAlchemy models and Alembic migrations for the public schema | `backend/app/models.py`, `backend/alembic/` |
+| Seed data | Exam questions, universities, grant thresholds, major groups, knowledge graphs, min-score references | `database/`, `backend/data/` |
+| Tests | Backend pytest suites, frontend Vitest tests, public Playwright smoke/a11y/RAG-eval surfaces | `backend/tests/`, `frontend/src/**/__tests__/`, `frontend/tests/` |
 
-## Local dev quick start
+## Included Data
 
-Both stacks share one PostgreSQL database with the pgvector extension.
+The public seed set is intentionally small enough to keep in git while
+still making the app usable after setup:
+
+- 297 file-backed bilingual exam questions across 15 subject files in
+  `database/`, expanded by built-in backfill rows to 442 seeded exam
+  questions.
+- 684 exact-answer `mock_questions` rows derived from the seed exam set
+  for the chat/practice-bank path.
+- 107 university-detail records in `database/university_details.json`.
+- 4,098 acceptance-score rows in `database/acceptance_scores.json`.
+- 6,216 historical grant-threshold rows in
+  `database/historical_grant_thresholds.json`.
+- 1,915 university/program rows in `database/university_data.json`.
+- 127 major-group records in `database/major_groups.json`.
+- Math, chemistry, and physics knowledge graphs in `backend/data/`.
+- 1,021 university/program min-score references in
+  `backend/data/univision_min_scores_2025.json`.
+- A small opportunities CSV in `backend/data/sample_opportunities.csv`.
+
+These files are enough to seed the exam engine, university picker,
+strategy surfaces, and local knowledge-graph helpers.
+
+## What Is Not Included
+
+The repository still excludes data that should not be committed directly:
+
+- Raw textbook PDFs and scanned book assets.
+- Full production database dumps.
+- Runtime uploads, caches, generated embeddings, logs, and local `.env`
+  files.
+- Any deployment-specific secrets or credentials.
+
+The scraper and ingestion scripts remain available under
+`backend/scripts/` for teams that want to build a larger corpus from
+their own licensed or public-domain sources.
+
+## Tech Stack
+
+| Layer | Stack |
+|---|---|
+| Backend | FastAPI, SQLAlchemy 2 async, asyncpg, Alembic, pgvector |
+| Frontend | React 18, Vite 6, TypeScript, Tailwind, Radix UI |
+| Database | PostgreSQL 16+ with `vector` extension |
+| AI providers | OpenAI-compatible APIs, DashScope/Qwen, Moonshot/Kimi, MiniMax failover hooks |
+| Testing | pytest, Vitest, Testing Library, Playwright, axe-core |
+
+## Local Setup
 
 ### Prerequisites
 
-- Python 3.11+ (CI is pinned to 3.11; 3.12 also works)
-- Node.js 20+ (pinned via `.nvmrc`)
-- PostgreSQL 16+ with the `pgvector` extension installed
-  (`CREATE EXTENSION vector;`)
+- Python 3.11+
+- Node.js 20+
+- PostgreSQL 16+
+- `pgvector` installed in the target database:
+
+```sql
+CREATE EXTENSION IF NOT EXISTS vector;
+```
 
 ### Backend
 
 ```bash
 cd backend
 python -m venv .venv
-.venv\Scripts\activate      # or `source .venv/bin/activate`
+.venv\Scripts\activate      # Windows
+# source .venv/bin/activate # macOS/Linux
 pip install -r requirements.txt
-cp .env.docker.example .env  # fill in OPENAI_API_KEY etc.
+cp .env.docker.example .env
 alembic upgrade head
+python scripts/seed_questions.py --commit
+python scripts/seed_universities.py --commit
 uvicorn app.main:app --reload --port 8001
 ```
 
-> Note: `requirements.txt` covers the runtime; for tests install
-> `pytest pytest-asyncio pytest-cov` separately (matches CI).
+Fill `.env` before starting the server. At minimum you need
+`DATABASE_URL`, `SECRET_KEY`, and whichever AI-provider keys you want to
+use.
 
 ### Frontend
 
 ```bash
 cd frontend
 npm install
-npm run dev                 # Vite on :5174, proxies /api → :8001
+npm run dev
 ```
 
-### Tests
-
-```bash
-cd backend  && pytest
-cd frontend && npm test -- --run      # vitest
-cd frontend && npx playwright test    # E2E (needs backend + frontend running)
-```
+The Vite dev server runs on `http://localhost:5174` and proxies `/api`
+to the backend on `http://localhost:8001`.
 
 ## Configuration
 
-Secrets are **never** hardcoded. Everything that needs a key reads it
-from `os.environ`. The canonical template is
-[`backend/.env.docker.example`](backend/.env.docker.example). Notable
-variables:
+The canonical backend template is
+[`backend/.env.docker.example`](backend/.env.docker.example). Important
+settings include:
 
-| Variable | What for |
+| Variable | Purpose |
 |---|---|
-| `OPENAI_API_KEY` | Fallback chat / OCR (chat.py, convert_scanned_book.py, openai_failover.py) |
-| `OPENAI_BASE_URL` | Optional; defaults to DashScope's OpenAI-compatible endpoint. Set to `https://api.openai.com/v1` if you want to use a real OpenAI key. |
-| `OPENAI_MODEL` | Defaults to `qwen-max` (DashScope). Switch to `gpt-4o-mini` etc. when pointing at OpenAI. |
-| `DASHSCOPE_API_KEY` | Qwen / Alibaba chat backend (used by OCR + reranker) |
-| `EMBEDDING_API_KEY` / `EMBEDDING_BASE_URL` | Optional override for the embedding provider; defaults to DashScope. |
-| `MINIMAX_API_KEY` / `MINIMAX_BASE_URL` | Optional MiniMax backend used by the failover chain. |
-| `DATABASE_URL` | `postgresql+asyncpg://user:pass@host:5432/db` |
-| `SECRET_KEY` | JWT signing — **must** be set in production |
-| `ALLOWED_ORIGINS` / `ALLOWED_HOSTS` | Comma-separated. CORS rejects `*` in production. |
-| `BILLING_WEBHOOK_SECRET` | HMAC for billing provider webhooks |
-| `TESTING_KZ_SCHEDULE_URL` | Optional override for the retake-schedule scraper target |
-| `RAG_ADMIN_EMAILS` | Comma-separated allowlist for the admin / data-confidence dashboard. |
+| `DATABASE_URL` | Async SQLAlchemy database URL, for example `postgresql+asyncpg://user:pass@localhost:5432/opensamga` |
+| `SECRET_KEY` | JWT signing key. Must be changed outside local development. |
+| `OPENAI_API_KEY` | OpenAI-compatible fallback for chat/OCR/provider failover |
+| `OPENAI_BASE_URL` | Optional OpenAI-compatible endpoint override |
+| `OPENAI_MODEL` | Default chat model name |
+| `DASHSCOPE_API_KEY` | Qwen/DashScope provider key |
+| `KIMI_KEY` | Moonshot/Kimi provider key |
+| `MINIMAX_API_KEY` | Optional MiniMax provider key |
+| `EMBEDDING_API_KEY` | Embedding provider key |
+| `ALLOWED_ORIGINS` | JSON or comma-separated list of allowed frontend origins |
+| `ALLOWED_HOSTS` | JSON or comma-separated list of allowed hosts |
+| `BILLING_WEBHOOK_SECRET` | HMAC secret for billing webhook verification |
+| `RAG_ADMIN_EMAILS` | Comma-separated admin allowlist for RAG/data dashboards |
+| `RATE_LIMIT_ENABLED` | Enables SlowAPI route limits when set for deployed environments |
 
-The backend refuses to start in `ENVIRONMENT=production` if the
-default dev secret is still in place — see `validate_settings()` in
-`backend/app/config.py`.
+The backend validates production settings at startup and rejects unsafe
+defaults such as the development JWT secret.
 
-## Architecture at a glance
+## Database Notes
 
-```
-frontend/ (Vite dev server :5174)
-    │  /api/*  (proxied)
-    ▼
-backend/  (uvicorn :8001)
-    │
-    ├── routers/              HTTP surface (FastAPI)
-    ├── services/             business logic
-    │   ├── chat/             agent loop, tool registry, prompts
-    │   ├── ai_orchestrator   RAG + citation guard
-    │   ├── gap_analyzer      weak-topic / practice clustering
-    │   ├── strategy_service  university / grant planning
-    │   └── retake_guide      NCT schedule fetcher + parser
-    ├── dependencies/         FastAPI dependencies (auth, quotas)
-    ├── migrations/           Alembic revisions
-    └── utils/                logging, HTTP client registry, crypto
+Fresh public deployments should use Alembic:
+
+```bash
+cd backend
+alembic upgrade head
+python scripts/seed_questions.py --commit
+python scripts/seed_universities.py --commit
 ```
 
-The AI layer is a **function-calling agent loop** (not a LangChain
-wrapper). The model is given a registry of tools (`consult_library`,
-`get_dream_university_progress`, `get_weak_topics`, …), the loop calls
-them, persists the call/result parts into the conversation, and
-streams the final text back to the browser via SSE.
+The public migrations include compatibility bootstrap logic for a new
+empty database, including `pgvector` support and raw RAG helper tables
+that are not represented as SQLAlchemy models.
 
-## Data you'll have to bring yourself
+`seed_questions.py` loads `database/<subject>.json` into
+`exam_questions`. `seed_universities.py` loads university details, major
+groups, acceptance scores, historical grant thresholds, and
+university/program rows from the same `database/` directory.
 
-The private product shipped with a curated dataset of:
+For local integration tests, set `TEST_DATABASE_URL` to a disposable
+PostgreSQL database with `vector` enabled.
 
-- ~15,000 UNT practice questions (RU + KZ) sourced from third-party
-  providers — **not included** for copyright reasons.
-- Per-subject textbook PDFs with OCR-extracted Markdown — not
-  included.
-- A curated list of Kazakhstani universities, majors, cut-off scores,
-  and grant data — **not included**.
+## Tests
 
-To run the full product you'll need to populate:
+Backend:
 
-- `mock_questions` (see `backend/app/models.py`)
-- `library_books` / `library_chunks`
-- `universities` / `grants_2024` / `major_groups`
-- pgvector embeddings for chunks + questions
+```bash
+cd backend
+ruff check .
+ruff format --check .
+pytest
+pytest -m integration
+```
 
-The ingestion scripts under `backend/scripts/` (`ingest_sdamgia.py`,
-`ingest_egovreader.py`, `synthesize_mock_questions.py`,
-`qwen_ingest.py`, …) are preserved as examples of how the original
-pipeline worked. They assume files under an `UNT_DATASET_RAW` /
-`UNT_DATASET_CONVERTED` path (env-driven).
+Frontend:
 
-## What was deliberately dropped from this public snapshot
+```bash
+cd frontend
+npm run typecheck
+npm run typecheck:test
+npm run lint
+npm test -- --run
+npm run build
+```
 
-The public tree is a **curated subset** of the private monorepo. The
-following surfaces were removed before release and do not appear in
-git history on this repo:
+Public browser checks:
 
-- Internal planning docs, investor docs, `CHANGELOG.md` (300+ tagged
-  ships), session memos, and the agent working notes.
-- A private telemetry console module (`app/services/telemetry_console/`).
-  The main application keeps no-op stubs; if you want telemetry, wire
-  your own OTel / Sentry client into the places that check
-  `TELEMETRY_AVAILABLE`.
-- Scraped question banks (`database/` RU/KZ JSONs) and scanned library
-  content (`library/` textbook PDFs + scrapers). If you need the full
-  dataset for research or non-commercial use, email
-  [saparbayevskii@gmail.com](mailto:saparbayevskii@gmail.com).
-- Per-session contract-pin tests tied to internal workflow
-  (`test_v342_*`, `test_v343_*`, `test_v357_*`, `test_v440_*`,
-  `test_v460_*`). The general-purpose tests (auth, chat, billing,
-  gap-analyzer, retake-guide, strategy, universities, etc.) are
-  preserved.
-- Private Playwright suite (`e2e-tests/`). The public Playwright
-  surface under `frontend/tests/` is kept.
+```bash
+cd frontend
+npx playwright test --config tests/smoke/playwright.config.ts
+npx playwright test --config tests/a11y/a11y.config.ts --grep "public"
+```
 
-## Contributing
+## Repository Boundaries
 
-This is a released-as-is snapshot with no active maintainer. If you
-fork and improve something, that's great — you own your fork under
-MIT. Upstream PRs may sit unreviewed indefinitely.
+This public tree is intentionally smaller than the deployed product. The
+following are not part of this repository:
 
-If you want to report a security issue, see [`SECURITY.md`](SECURITY.md).
+- Raw scanned textbook assets and generated OCR outputs.
+- Private telemetry console implementation.
+- Internal planning, investor, and operating documents.
+- Private Playwright suites for hosted-product-only flows.
+- Deployment-specific secrets, environment files, and production data.
 
-## Trademark
+The remaining code is intended to be useful for study, self-hosting,
+forking, and building adjacent UNT / ҰБТ education tools.
 
-"Samga" and the Samga.ai wordmark are not part of this MIT grant. If
-you fork and deploy, please rename and use your own branding.
+## Security
 
-## Credits
+Do not commit `.env` files, API keys, private datasets, or production
+credentials. See [`SECURITY.md`](SECURITY.md) for vulnerability-reporting
+guidance.
 
-Built by Zhanserik Khozhaniyazov between 2025 and 2026 as a private
-commercial product, released MIT in 2026.
+## License And Branding
 
----
+Code in this repository is released under the MIT license. See
+[`LICENSE`](LICENSE).
 
-**Disclaimer:** this code was written for a specific deployment
-targeting Kazakhstani high-school students. It contains Russian and
-Kazakh copy throughout the UI and system prompts. English UI strings
-exist but coverage varies.
+The Samga.ai name, logo, and hosted-service branding are not included in
+the MIT grant. Forks and deployments should use their own branding.

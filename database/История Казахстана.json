@@ -1,0 +1,452 @@
+{
+  "unt_exam_schema_version": "2025_2026",
+  "subjects": [
+    {
+      "subject_id": "core_history_01",
+      "subject_name_kz": "Қазақстан тарихы",
+      "subject_name_ru": "История Казахстана",
+      "questions": [
+        {
+          "question_id": "hist_single_001",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "«Алтын адам» табылған қорған:",
+          "question_text_ru": "Курган, в котором был найден «Золотой человек»:",
+          "options_kz": [
+            "Берел",
+            "Есік",
+            "Шілікті",
+            "Тасмола"
+          ],
+          "options_ru": [
+            "Берель",
+            "Иссык",
+            "Шиликтин",
+            "Тасмола"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "hist_single_002",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Қазақ хандығының негізін қалаған хандар:",
+          "question_text_ru": "Ханы, основавшие Казахское ханство:",
+          "options_kz": [
+            "Қасым мен Хақназар",
+            "Тәуке мен Абылай",
+            "Керей мен Жәнібек",
+            "Жошы мен Шағатай"
+          ],
+          "options_ru": [
+            "Касым и Хакназар",
+            "Тауке и Абылай",
+            "Керей и Жанибек",
+            "Джучи и Чагатай"
+          ],
+          "correct_answers_indices": [
+            2
+          ]
+        },
+        {
+          "question_id": "hist_single_003",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Қазақ хандығының құрылған жылы:",
+          "question_text_ru": "Год образования Казахского ханства:",
+          "options_kz": [
+            "1511 жыл",
+            "1428 жыл",
+            "1368 жыл",
+            "1465 жыл"
+          ],
+          "options_ru": [
+            "1511 год",
+            "1428 год",
+            "1368 год",
+            "1465 год"
+          ],
+          "correct_answers_indices": [
+            3
+          ]
+        },
+        {
+          "question_id": "hist_single_004",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Түркі қағанатының құрылған жылы:",
+          "question_text_ru": "Год образования Тюркского каганата:",
+          "options_kz": [
+            "552 жыл",
+            "603 жыл",
+            "704 жыл",
+            "756 жыл"
+          ],
+          "options_ru": [
+            "552 год",
+            "603 год",
+            "704 год",
+            "756 год"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "hist_single_005",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Алаш партиясы қашан құрылды?",
+          "question_text_ru": "Когда была образована партия Алаш?",
+          "options_kz": [
+            "1905 жылы",
+            "1917 жылы",
+            "1920 жылы",
+            "1936 жылы"
+          ],
+          "options_ru": [
+            "в 1905 году",
+            "в 1917 году",
+            "в 1920 году",
+            "в 1936 году"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "hist_single_006",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Қожа Ахмет Ясауи кесенесі кімнің бұйрығымен салынды?",
+          "question_text_ru": "По чьему приказу был построен мавзолей Ходжи Ахмеда Ясави?",
+          "options_kz": [
+            "Шыңғыс ханның",
+            "Қасым ханның",
+            "Әмір Темірдің",
+            "Өзбек ханның"
+          ],
+          "options_ru": [
+            "Чингисхана",
+            "Касым хана",
+            "Эмира Тимура",
+            "Узбек хана"
+          ],
+          "correct_answers_indices": [
+            2
+          ]
+        },
+        {
+          "question_id": "hist_single_007",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Орбұлақ шайқасы өткен жыл:",
+          "question_text_ru": "Год Орбулакской битвы:",
+          "options_kz": [
+            "1729 жыл",
+            "1726 жыл",
+            "1652 жыл",
+            "1643 жыл"
+          ],
+          "options_ru": [
+            "1729 год",
+            "1726 год",
+            "1652 год",
+            "1643 год"
+          ],
+          "correct_answers_indices": [
+            3
+          ]
+        },
+        {
+          "question_id": "hist_single_008",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Қазақ АКСР-інің алғашқы астанасы:",
+          "question_text_ru": "Первая столица Казахской АССР:",
+          "options_kz": [
+            "Орынбор",
+            "Қызылорда",
+            "Алматы",
+            "Ақмешіт"
+          ],
+          "options_ru": [
+            "Оренбург",
+            "Кызылорда",
+            "Алматы",
+            "Ак-Мечеть"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "hist_single_009",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Кенесары Қасымұлы бастаған ұлт-азаттық көтеріліс болған жылдар:",
+          "question_text_ru": "Годы национально-освободительного восстания под руководством Кенесары Касымова:",
+          "options_kz": [
+            "1783-1797 жылдар",
+            "1837-1847 жылдар",
+            "1836-1838 жылдар",
+            "1916 жыл"
+          ],
+          "options_ru": [
+            "1783-1797 годы",
+            "1837-1847 годы",
+            "1836-1838 годы",
+            "1916 год"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "hist_single_010",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Үйсіндердің астанасы:",
+          "question_text_ru": "Столица усуней:",
+          "options_kz": [
+            "Суяб",
+            "Баласағұн",
+            "Чигучен (Қызыл Аңғар)",
+            "Сығанақ"
+          ],
+          "options_ru": [
+            "Суяб",
+            "Баласагун",
+            "Чигучен",
+            "Сыганак"
+          ],
+          "correct_answers_indices": [
+            2
+          ]
+        },
+        {
+          "question_id": "hist_single_011",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Қазақстанның Тәуелсіздігі жарияланған күн:",
+          "question_text_ru": "День провозглашения Независимости Казахстана:",
+          "options_kz": [
+            "1990 жылғы 25 қазан",
+            "1992 жылғы 4 маусым",
+            "1993 жылғы 15 қараша",
+            "1991 жылғы 16 желтоқсан"
+          ],
+          "options_ru": [
+            "25 октября 1990 года",
+            "4 июня 1992 года",
+            "15 ноября 1993 года",
+            "16 декабря 1991 года"
+          ],
+          "correct_answers_indices": [
+            3
+          ]
+        },
+        {
+          "question_id": "hist_single_012",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Абылай хан барлық үш жүздің ханы болып жарияланған жыл:",
+          "question_text_ru": "Год, когда Абылай хан был провозглашен ханом всех трех жузов:",
+          "options_kz": [
+            "1771 жыл",
+            "1729 жыл",
+            "1781 жыл",
+            "1711 жыл"
+          ],
+          "options_ru": [
+            "1771 год",
+            "1729 год",
+            "1781 год",
+            "1711 год"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "hist_single_013",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Қазақстан Ғылым академиясының тұңғыш президенті:",
+          "question_text_ru": "Первый президент Академии наук Казахстана:",
+          "options_kz": [
+            "Мұхтар Әуезов",
+            "Қаныш Сәтбаев",
+            "Әлкей Марғұлан",
+            "Шоқан Уәлиханов"
+          ],
+          "options_ru": [
+            "Мухтар Ауэзов",
+            "Каныш Сатпаев",
+            "Алькей Маргулан",
+            "Чокан Валиханов"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "hist_single_014",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "«Құтты білік» еңбегінің авторы:",
+          "question_text_ru": "Автор труда «Кутадгу билик» (Благодатное знание):",
+          "options_kz": [
+            "Махмұд Қашғари",
+            "Ахмет Иүгнеки",
+            "Жүсіп Баласағұни",
+            "Әбу Насыр әл-Фараби"
+          ],
+          "options_ru": [
+            "Махмуд Кашгари",
+            "Ахмед Югнеки",
+            "Юсуф Баласагуни",
+            "Абу Наср аль-Фараби"
+          ],
+          "correct_answers_indices": [
+            2
+          ]
+        },
+        {
+          "question_id": "hist_single_015",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "1916 жылғы ұлт-азаттық көтерілістің Торғайдағы басшысы:",
+          "question_text_ru": "Руководитель национально-освободительного восстания 1916 года в Торгайском центре:",
+          "options_kz": [
+            "Сырым Датұлы",
+            "Исатай Тайманұлы",
+            "Махамбет Өтемісұлы",
+            "Амангелді Иманов"
+          ],
+          "options_ru": [
+            "Сырым Датов",
+            "Исатай Тайманов",
+            "Махамбет Утемисов",
+            "Амангельды Иманов"
+          ],
+          "correct_answers_indices": [
+            3
+          ]
+        },
+        {
+          "question_id": "hist_single_016",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Ежелгі ғұндардың билеушісі қалай аталды?",
+          "question_text_ru": "Как назывался правитель у древних гуннов?",
+          "options_kz": [
+            "Шаньюй",
+            "Қаған",
+            "Гурхан",
+            "Патеси"
+          ],
+          "options_ru": [
+            "Шаньюй",
+            "Каган",
+            "Гурхан",
+            "Патеси"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "hist_single_017",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Аңырақай шайқасы қай жылы болды?",
+          "question_text_ru": "В каком году произошла Анракайская битва?",
+          "options_kz": [
+            "1726 жыл",
+            "1729 (1730) жыл",
+            "1643 жыл",
+            "1718 жыл"
+          ],
+          "options_ru": [
+            "1726 год",
+            "1729 (1730) год",
+            "1643 год",
+            "1718 год"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "hist_single_018",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Қарлұқ қағанатының өмір сүрген мерзімі:",
+          "question_text_ru": "Время существования Карлукского каганата:",
+          "options_kz": [
+            "704-756 жылдар",
+            "603-704 жылдар",
+            "756-940 жылдар",
+            "552-603 жылдар"
+          ],
+          "options_ru": [
+            "704-756 годы",
+            "603-704 годы",
+            "756-940 годы",
+            "552-603 годы"
+          ],
+          "correct_answers_indices": [
+            2
+          ]
+        },
+        {
+          "question_id": "hist_single_019",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "1986 жылғы Желтоқсан оқиғасы қай қалада болды?",
+          "question_text_ru": "В каком городе произошли Декабрьские события 1986 года?",
+          "options_kz": [
+            "Астана",
+            "Қарағанды",
+            "Шымкент",
+            "Алматы"
+          ],
+          "options_ru": [
+            "Астана",
+            "Караганда",
+            "Шымкент",
+            "Алматы"
+          ],
+          "correct_answers_indices": [
+            3
+          ]
+        },
+        {
+          "question_id": "hist_single_020",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "«Қара сөздердің» авторы:",
+          "question_text_ru": "Автор «Слов назидания»:",
+          "options_kz": [
+            "Абай Құнанбайұлы",
+            "Шәкәрім Құдайбердіұлы",
+            "Шоқан Уәлиханов",
+            "Ыбырай Алтынсарин"
+          ],
+          "options_ru": [
+            "Абай Кунанбаев",
+            "Шакарим Кудайбердиев",
+            "Чокан Валиханов",
+            "Ибрай Алтынсарин"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

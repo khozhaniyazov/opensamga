@@ -1,0 +1,967 @@
+{
+  "unt_exam_schema_version": "2025_2026",
+  "subjects": [
+    {
+      "subject_id": "profile_cs_01",
+      "subject_name_kz": "Информатика",
+      "subject_name_ru": "Информатика",
+      "questions": [
+        {
+          "question_id": "cs_single_001",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "$1011_2$ екілік санын ондық санау жүйесіне аударыңыз.",
+          "question_text_ru": "Переведите двоичное число $1011_2$ в десятичную систему счисления.",
+          "options_kz": [
+            "10",
+            "11",
+            "13",
+            "15"
+          ],
+          "options_ru": [
+            "10",
+            "11",
+            "13",
+            "15"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "cs_single_002",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Ақпараттың ең кіші өлшем бірлігі:",
+          "question_text_ru": "Минимальная единица измерения информации:",
+          "options_kz": [
+            "Байт",
+            "Бит",
+            "Кбайт",
+            "Символ"
+          ],
+          "options_ru": [
+            "Байт",
+            "Бит",
+            "Кбайт",
+            "Символ"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "cs_single_003",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Логикалық қосу операциясы қалай аталады?",
+          "question_text_ru": "Как называется операция логического сложения?",
+          "options_kz": [
+            "Дизъюнкция",
+            "Конъюнкция",
+            "Инверсия",
+            "Импликация"
+          ],
+          "options_ru": [
+            "Дизъюнкция",
+            "Конъюнкция",
+            "Инверсия",
+            "Импликация"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "cs_single_004",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Python тілінде цикл құру үшін қолданылатын оператор:",
+          "question_text_ru": "Оператор, используемый для создания цикла в Python:",
+          "options_kz": [
+            "if",
+            "for",
+            "def",
+            "import"
+          ],
+          "options_ru": [
+            "if",
+            "for",
+            "def",
+            "import"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "cs_single_005",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Деректер қорында кестедегі әрбір жазбаны бірегей түрде анықтайтын өріс:",
+          "question_text_ru": "Поле в базе данных, однозначно идентифицирующее каждую запись в таблице:",
+          "options_kz": [
+            "Сыртқы кілт",
+            "Негізгі кілт",
+            "Индекс",
+            "Атрибут"
+          ],
+          "options_ru": [
+            "Внешний ключ",
+            "Первичный ключ",
+            "Индекс",
+            "Атрибут"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "cs_single_006",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Интернет желісіндегі компьютердің бірегей идентификаторы:",
+          "question_text_ru": "Уникальный идентификатор компьютера в сети Интернет:",
+          "options_kz": [
+            "IP-адрес",
+            "URL-мекенжай",
+            "DNS-сервер",
+            "HTML-тег"
+          ],
+          "options_ru": [
+            "IP-адрес",
+            "URL-адрес",
+            "DNS-сервер",
+            "HTML-тег"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "cs_single_007",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Процессордың (CPU) негізгі қызметі:",
+          "question_text_ru": "Основная функция процессора (CPU):",
+          "options_kz": [
+            "Деректерді ұзақ мерзімге сақтау",
+            "Компьютер желісін басқару",
+            "Деректерді өңдеу және командаларды орындау",
+            "Бейнені мониторға шығару"
+          ],
+          "options_ru": [
+            "Долгосрочное хранение данных",
+            "Управление компьютерной сетью",
+            "Обработка данных и выполнение команд",
+            "Вывод изображения на монитор"
+          ],
+          "correct_answers_indices": [
+            2
+          ]
+        },
+        {
+          "question_id": "cs_single_008",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Excel бағдарламасында абсолюттік сілтемені көрсету үшін қандай белгі қолданылады?",
+          "question_text_ru": "Какой знак используется для указания абсолютной ссылки в программе Excel?",
+          "options_kz": [
+            "#",
+            "$",
+            "&",
+            "@"
+          ],
+          "options_ru": [
+            "#",
+            "$",
+            "&",
+            "@"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "cs_single_009",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "HTML құжатында гиперсілтеме жасау үшін қай тег қолданылады?",
+          "question_text_ru": "Какой тег используется для создания гиперссылки в HTML-документе?",
+          "options_kz": [
+            "<a>",
+            "<img>",
+            "<link>",
+            "<href>"
+          ],
+          "options_ru": [
+            "<a>",
+            "<img>",
+            "<link>",
+            "<href>"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "cs_single_010",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Python тіліндегі `print(5 // 2)` кодының нәтижесі қандай болады?",
+          "question_text_ru": "Каким будет результат выполнения кода `print(5 // 2)` в Python?",
+          "options_kz": [
+            "2.5",
+            "2",
+            "1",
+            "3"
+          ],
+          "options_ru": [
+            "2.5",
+            "2",
+            "1",
+            "3"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "cs_single_011",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Жедел жадының (RAM) басты ерекшелігі:",
+          "question_text_ru": "Главная особенность оперативной памяти (RAM):",
+          "options_kz": [
+            "Ақпаратты тұрақты сақтайды",
+            "Энергияға тәуелді емес",
+            "Компьютер өшкенде деректер жойылады",
+            "Оптикалық дискілерде жазылады"
+          ],
+          "options_ru": [
+            "Постоянно хранит информацию",
+            "Энергонезависимая",
+            "Данные стираются при выключении компьютера",
+            "Записывается на оптические диски"
+          ],
+          "correct_answers_indices": [
+            2
+          ]
+        },
+        {
+          "question_id": "cs_single_012",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Блок-схемада шартты тексеру үшін қандай геометриялық фигура қолданылады?",
+          "question_text_ru": "Какая геометрическая фигура используется в блок-схеме для проверки условия?",
+          "options_kz": [
+            "Тіктөртбұрыш",
+            "Овал",
+            "Параллелограмм",
+            "Ромб"
+          ],
+          "options_ru": [
+            "Прямоугольник",
+            "Овал",
+            "Параллелограмм",
+            "Ромб"
+          ],
+          "correct_answers_indices": [
+            3
+          ]
+        },
+        {
+          "question_id": "cs_single_013",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Компьютерлік желілердегі HTTP хаттамасының қызметі қандай?",
+          "question_text_ru": "Какова функция протокола HTTP в компьютерных сетях?",
+          "options_kz": [
+            "Файлдарды тасымалдау",
+            "Веб-парақшаларды тасымалдау",
+            "Электрондық поштаны жіберу",
+            "Компьютерді қашықтан басқару"
+          ],
+          "options_ru": [
+            "Передача файлов",
+            "Передача веб-страниц",
+            "Отправка электронной почты",
+            "Удаленное управление компьютером"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "cs_single_014",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Кестедегі барлық деректерді таңдау үшін қолданылатын SQL сұранысы:",
+          "question_text_ru": "SQL-запрос, используемый для выбора всех данных из таблицы:",
+          "options_kz": [
+            "SELECT * FROM table_name;",
+            "DELETE FROM table_name;",
+            "INSERT INTO table_name;",
+            "DROP TABLE table_name;"
+          ],
+          "options_ru": [
+            "SELECT * FROM table_name;",
+            "DELETE FROM table_name;",
+            "INSERT INTO table_name;",
+            "DROP TABLE table_name;"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "cs_single_015",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Ақпаратты шифрлау және дешифрлау туралы ғылым қалай аталады?",
+          "question_text_ru": "Как называется наука о шифровании и дешифровании информации?",
+          "options_kz": [
+            "Стеганография",
+            "Криптография",
+            "Кибернетика",
+            "Биометрия"
+          ],
+          "options_ru": [
+            "Стеганография",
+            "Криптография",
+            "Кибернетика",
+            "Биометрия"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "cs_single_016",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Python-да тізімнің (list) ұзындығын анықтайтын функция:",
+          "question_text_ru": "Функция для определения длины списка (list) в Python:",
+          "options_kz": [
+            "size()",
+            "length()",
+            "len()",
+            "count()"
+          ],
+          "options_ru": [
+            "size()",
+            "length()",
+            "len()",
+            "count()"
+          ],
+          "correct_answers_indices": [
+            2
+          ]
+        },
+        {
+          "question_id": "cs_single_017",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Операциялық жүйенің қызметіне жатпайды:",
+          "question_text_ru": "Не относится к функциям операционной системы:",
+          "options_kz": [
+            "Құрылғыларды басқару",
+            "Пайдаланушы интерфейсін ұсыну",
+            "Ақпаратты шифрлау",
+            "Ресурстарды бөлу"
+          ],
+          "options_ru": [
+            "Управление устройствами",
+            "Предоставление пользовательского интерфейса",
+            "Шифрование информации",
+            "Распределение ресурсов"
+          ],
+          "correct_answers_indices": [
+            2
+          ]
+        },
+        {
+          "question_id": "cs_single_018",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Кеңістік (3D) модельдеу бағдарламаларына қайсысы жатады?",
+          "question_text_ru": "Какая из программ относится к программам пространственного (3D) моделирования?",
+          "options_kz": [
+            "Microsoft Word",
+            "Blender",
+            "Notepad",
+            "Google Chrome"
+          ],
+          "options_ru": [
+            "Microsoft Word",
+            "Blender",
+            "Блокнот",
+            "Google Chrome"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "cs_single_019",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Бұлттық технологиялардың мысалы ретінде нені атауға болады?",
+          "question_text_ru": "Что можно назвать примером облачных технологий?",
+          "options_kz": [
+            "Локалды калькулятор",
+            "Google Drive",
+            "Пернетақта драйвері",
+            "BIOS баптауы"
+          ],
+          "options_ru": [
+            "Локальный калькулятор",
+            "Google Drive",
+            "Драйвер клавиатуры",
+            "Настройка BIOS"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "cs_single_020",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Тармақталу алгоритмінде қолданылатын негізгі кілттік сөздер:",
+          "question_text_ru": "Основные ключевые слова, используемые в алгоритме ветвления:",
+          "options_kz": [
+            "for және while",
+            "print және input",
+            "if және else",
+            "class және def"
+          ],
+          "options_ru": [
+            "for и while",
+            "print и input",
+            "if и else",
+            "class и def"
+          ],
+          "correct_answers_indices": [
+            2
+          ]
+        },
+        {
+          "question_id": "cs_multi_001",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "Дұрыс IP-адрестерді көрсетіңіз (IPv4):",
+          "question_text_ru": "Укажите правильные IP-адреса (IPv4):",
+          "options_kz": [
+            "192.168.1.1",
+            "256.10.0.1",
+            "10.0.0.255",
+            "127.0.0.1",
+            "192.168.1",
+            "8.8.8.8.8"
+          ],
+          "options_ru": [
+            "192.168.1.1",
+            "256.10.0.1",
+            "10.0.0.255",
+            "127.0.0.1",
+            "192.168.1",
+            "8.8.8.8.8"
+          ],
+          "correct_answers_indices": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "question_id": "cs_multi_002",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "Python тіліндегі деректер типтеріне жатады:",
+          "question_text_ru": "К типам данных в языке Python относятся:",
+          "options_kz": [
+            "integer",
+            "boolean",
+            "float",
+            "character",
+            "string",
+            "real"
+          ],
+          "options_ru": [
+            "integer",
+            "boolean",
+            "float",
+            "character",
+            "string",
+            "real"
+          ],
+          "correct_answers_indices": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "question_id": "cs_multi_003",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "Сыртқы жады (сақтау құрылғылары) түрлерін таңдаңыз:",
+          "question_text_ru": "Выберите виды внешней памяти (устройств хранения):",
+          "options_kz": [
+            "қатты диск",
+            "SSD-жинақтауыш",
+            "флеш-жад",
+            "оптикалық диск",
+            "жедел жады",
+            "процессор кэші"
+          ],
+          "options_ru": [
+            "жесткий диск",
+            "SSD-накопитель",
+            "флеш-память",
+            "оптический диск",
+            "оперативная память",
+            "кэш процессора"
+          ],
+          "correct_answers_indices": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "question_id": "cs_multi_004",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "Көп деңгейлі (объектіге бағытталған) бағдарламалау тілдерін көрсетіңіз:",
+          "question_text_ru": "Укажите языки программирования высокого уровня (объектно-ориентированные):",
+          "options_kz": [
+            "Python",
+            "Java",
+            "C++",
+            "C#",
+            "HTML",
+            "SQL"
+          ],
+          "options_ru": [
+            "Python",
+            "Java",
+            "C++",
+            "C#",
+            "HTML",
+            "SQL"
+          ],
+          "correct_answers_indices": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "question_id": "cs_multi_005",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "Компьютерлік желі топологияларының түрлері:",
+          "question_text_ru": "Виды топологий компьютерных сетей:",
+          "options_kz": [
+            "жұлдызша",
+            "сақина",
+            "шина",
+            "тор",
+            "пиксель",
+            "архив"
+          ],
+          "options_ru": [
+            "звезда",
+            "кольцо",
+            "шина",
+            "ячеистая",
+            "пиксель",
+            "архив"
+          ],
+          "correct_answers_indices": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "question_id": "cs_multi_006",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "Ақпараттық қауіпсіздікке төнетін қауіп-қатер түрлері:",
+          "question_text_ru": "Виды угроз информационной безопасности:",
+          "options_kz": [
+            "компьютерлік вирус",
+            "фишинг",
+            "трояндық бағдарлама",
+            "DDoS-шабуыл",
+            "деректерді резервтік көшіру",
+            "антивирустық тексеру"
+          ],
+          "options_ru": [
+            "компьютерный вирус",
+            "фишинг",
+            "троянская программа",
+            "DDoS-атака",
+            "резервное копирование",
+            "антивирусная проверка"
+          ],
+          "correct_answers_indices": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "question_id": "cs_multi_007",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "Деректер қорын басқару жүйелеріне (ДҚБЖ/СУБД) жатады:",
+          "question_text_ru": "К системам управления базами данных (СУБД) относятся:",
+          "options_kz": [
+            "MySQL",
+            "PostgreSQL",
+            "Oracle Database",
+            "Microsoft Access",
+            "Adobe Photoshop",
+            "Windows Media Player"
+          ],
+          "options_ru": [
+            "MySQL",
+            "PostgreSQL",
+            "Oracle Database",
+            "Microsoft Access",
+            "Adobe Photoshop",
+            "Windows Media Player"
+          ],
+          "correct_answers_indices": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "question_id": "cs_multi_008",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "Python тіліндегі дұрыс айнымалы (variable) атауларын таңдаңыз:",
+          "question_text_ru": "Выберите правильные имена переменных в Python:",
+          "options_kz": [
+            "user_name",
+            "total2",
+            "_count",
+            "1number",
+            "class",
+            "my-name"
+          ],
+          "options_ru": [
+            "user_name",
+            "total2",
+            "_count",
+            "1number",
+            "class",
+            "my-name"
+          ],
+          "correct_answers_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "question_id": "cs_multi_009",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "Веб-парақшаның фронтенд (Frontend) бөлігін жасауға қолданылатын технологиялар:",
+          "question_text_ru": "Технологии, используемые для создания фронтенд (Frontend) части веб-страницы:",
+          "options_kz": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "SQL Server",
+            "PostgreSQL"
+          ],
+          "options_ru": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "SQL Server",
+            "PostgreSQL"
+          ],
+          "correct_answers_indices": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "question_id": "cs_multi_010",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "Бөлшек сандардың форматтарына сәйкес келетін файл кеңейтімдерін (сурет файлдары) табыңыз:",
+          "question_text_ru": "Найдите расширения файлов, соответствующие графическим форматам (файлы изображений):",
+          "options_kz": [
+            ".jpg",
+            ".mp3",
+            ".png",
+            ".docx",
+            ".gif",
+            ".avi"
+          ],
+          "options_ru": [
+            ".jpg",
+            ".mp3",
+            ".png",
+            ".docx",
+            ".gif",
+            ".avi"
+          ],
+          "correct_answers_indices": [
+            0,
+            2,
+            4
+          ]
+        }
+      ],
+      "context_clusters": [
+        {
+          "cluster_id": "ctx_cs_001",
+          "format": "context_based",
+          "stimulus_kz": "Мұғалім оқушыларға Python бағдарламалау тілінде төмендегідей код жазуды тапсырды:\n```python\nnumbers = [5, 6, 7, 8, 3]\ncount = 0\nfor num in numbers:\n    if num > 10:\n        count = count + 1\nprint(count)\n```\nБұл бағдарлама берілген сандар тізімін өңдеп, белгілі бір шартқа сай келетін элементтерді табады.",
+          "stimulus_ru": "Учитель поручил ученикам написать следующий код на языке программирования Python:\n```python\nnumbers = [5, 6, 7, 8, 3]\ncount = 0\nfor num in numbers:\n    if num > 10:\n        count = count + 1\nprint(count)\n```\nЭта программа обрабатывает список заданных чисел и находит элементы, удовлетворяющие определенному условию.",
+          "child_questions": [
+            {
+              "question_id": "ctx_cs_001_q1",
+              "max_points": 1,
+              "question_text_kz": "Бағдарламаның экранға шығаратын нәтижесі қандай?",
+              "question_text_ru": "Каков результат вывода программы на экран?",
+              "options_kz": [
+                "2",
+                "3",
+                "5",
+                "12"
+              ],
+              "options_ru": [
+                "2",
+                "3",
+                "5",
+                "12"
+              ],
+              "correct_answers_indices": [
+                0
+              ]
+            },
+            {
+              "question_id": "ctx_cs_001_q2",
+              "max_points": 1,
+              "question_text_kz": "Бұл кодта `numbers` айнымалысы деректердің қай типіне жатады?",
+              "question_text_ru": "К какому типу данных относится переменная `numbers` в этом коде?",
+              "options_kz": [
+                "бүтін сан (int)",
+                "жол (str)",
+                "тізім (list)",
+                "сөздік (dict)"
+              ],
+              "options_ru": [
+                "целое число (int)",
+                "строка (str)",
+                "список (list)",
+                "словарь (dict)"
+              ],
+              "correct_answers_indices": [
+                2
+              ]
+            },
+            {
+              "question_id": "ctx_cs_001_q3",
+              "max_points": 1,
+              "question_text_kz": "Кодтағы `num > 10` шарты не үшін қолданылады?",
+              "question_text_ru": "Для чего используется условие `num > 10` в коде?",
+              "options_kz": [
+                "Тізімдегі 10-нан кіші сандарды санау үшін",
+                "Тізімдегі 10-нан үлкен сандарды санау үшін",
+                "Тізімдегі элементтердің жалпы санын табу үшін",
+                "Тізімнен 10 санын өшіру үшін"
+              ],
+              "options_ru": [
+                "Для подсчета чисел меньше 10 в списке",
+                "Для подсчета чисел больше 10 в списке",
+                "Для нахождения общего количества элементов в списке",
+                "Для удаления числа 10 из списка"
+              ],
+              "correct_answers_indices": [
+                1
+              ]
+            },
+            {
+              "question_id": "ctx_cs_001_q4",
+              "max_points": 1,
+              "question_text_kz": "Егер `numbers` тізіміне тағы бір `15` санын қосу керек болса, қай әдіс (method) қолданылады?",
+              "question_text_ru": "Если в список `numbers` нужно добавить еще одно число `15`, какой метод (method) используется?",
+              "options_kz": [
+                "numbers.add(15)",
+                "numbers.insert(15)",
+                "numbers.append(15)",
+                "numbers.push(15)"
+              ],
+              "options_ru": [
+                "numbers.add(15)",
+                "numbers.insert(15)",
+                "numbers.append(15)",
+                "numbers.push(15)"
+              ],
+              "correct_answers_indices": [
+                2
+              ]
+            },
+            {
+              "question_id": "ctx_cs_001_q5",
+              "max_points": 1,
+              "question_text_kz": "Осы бағдарламада `for` циклі неше рет қайталанады (орындалады)?",
+              "question_text_ru": "Сколько раз повторится (выполнится) цикл `for` в этой программе?",
+              "options_kz": [
+                "2",
+                "4",
+                "5",
+                "6"
+              ],
+              "options_ru": [
+                "2",
+                "4",
+                "5",
+                "6"
+              ],
+              "correct_answers_indices": [
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "cluster_id": "ctx_cs_002",
+          "format": "context_based",
+          "stimulus_kz": "Оқушылар мектеп кітапханасының деректер қорын (SQL) жасады. «Books» атты кестеде келесідей өрістер бар: `BookID` (Кітаптың нөмірі), `Title` (Атауы), `Author` (Авторы), `Year` (Шыққан жылы), `Price` (Бағасы). Кестеде барлығы 500 кітаптың дерегі тіркелген.",
+          "stimulus_ru": "Ученики создали базу данных (SQL) школьной библиотеки. Таблица с именем «Books» содержит следующие поля: `BookID` (Номер книги), `Title` (Название), `Author` (Автор), `Year` (Год издания), `Price` (Цена). В таблице зарегистрированы данные о 500 книгах.",
+          "child_questions": [
+            {
+              "question_id": "ctx_cs_002_q1",
+              "max_points": 1,
+              "question_text_kz": "Осы дерекқордан кітаптар туралы жалпы ақпарат алу үшін қандай оператор қолданылады?",
+              "question_text_ru": "Какой оператор используется для получения общей информации о книгах из этой базы данных?",
+              "options_kz": [
+                "INSERT",
+                "SELECT",
+                "UPDATE",
+                "DELETE"
+              ],
+              "options_ru": [
+                "INSERT",
+                "SELECT",
+                "UPDATE",
+                "DELETE"
+              ],
+              "correct_answers_indices": [
+                1
+              ]
+            },
+            {
+              "question_id": "ctx_cs_002_q2",
+              "max_points": 1,
+              "question_text_kz": "2020 жылы шыққан барлық кітаптарды шығару үшін қандай SQL сұранысы қолданылады?",
+              "question_text_ru": "Какой SQL-запрос используется для вывода всех книг, изданных в 2020 году?",
+              "options_kz": [
+                "SELECT * FROM Books WHERE Year = 2020;",
+                "SELECT Year FROM Books WHERE Price = 2020;",
+                "DELETE FROM Books WHERE Year = 2020;",
+                "INSERT INTO Books VALUES (2020);"
+              ],
+              "options_ru": [
+                "SELECT * FROM Books WHERE Year = 2020;",
+                "SELECT Year FROM Books WHERE Price = 2020;",
+                "DELETE FROM Books WHERE Year = 2020;",
+                "INSERT INTO Books VALUES (2020);"
+              ],
+              "correct_answers_indices": [
+                0
+              ]
+            },
+            {
+              "question_id": "ctx_cs_002_q3",
+              "max_points": 1,
+              "question_text_kz": "Жаңа кітапты кестеге қосу үшін қай оператор қолданылады?",
+              "question_text_ru": "Какой оператор используется для добавления новой книги в таблицу?",
+              "options_kz": [
+                "SELECT",
+                "UPDATE",
+                "INSERT",
+                "DELETE"
+              ],
+              "options_ru": [
+                "SELECT",
+                "UPDATE",
+                "INSERT",
+                "DELETE"
+              ],
+              "correct_answers_indices": [
+                2
+              ]
+            },
+            {
+              "question_id": "ctx_cs_002_q4",
+              "max_points": 1,
+              "question_text_kz": "Кітаптарды бағасы бойынша өсу ретімен сұрыптау үшін сұранысқа қандай кілттік сөз қосылады?",
+              "question_text_ru": "Какое ключевое слово добавляется к запросу для сортировки книг по цене в порядке возрастания?",
+              "options_kz": [
+                "WHERE",
+                "ORDER BY",
+                "GROUP BY",
+                "DELETE"
+              ],
+              "options_ru": [
+                "WHERE",
+                "ORDER BY",
+                "GROUP BY",
+                "DELETE"
+              ],
+              "correct_answers_indices": [
+                1
+              ]
+            },
+            {
+              "question_id": "ctx_cs_002_q5",
+              "max_points": 1,
+              "question_text_kz": "Егер `Price` өрісінде сандық мәндер сақталса, дерекқорды құрған кезде бұл өріске қандай деректер типін (Data Type) тағайындау керек?",
+              "question_text_ru": "Если в поле `Price` хранятся числовые значения, какой тип данных (Data Type) следует назначить этому полю при создании базы данных?",
+              "options_kz": [
+                "TEXT",
+                "DATE",
+                "NUMBER",
+                "BOOLEAN"
+              ],
+              "options_ru": [
+                "TEXT",
+                "DATE",
+                "NUMBER",
+                "BOOLEAN"
+              ],
+              "correct_answers_indices": [
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

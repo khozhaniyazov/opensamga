@@ -1,0 +1,956 @@
+{
+  "unt_exam_schema_version": "2025_2026",
+  "subjects": [
+    {
+      "subject_id": "profile_math_01",
+      "subject_name_kz": "Математика",
+      "subject_name_ru": "Математика",
+      "questions": [
+        {
+          "question_id": "math_single_001",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Теңдеуді шешіңіз: $\\sqrt{x-2} = 3$",
+          "question_text_ru": "Решите уравнение: $\\sqrt{x-2} = 3$",
+          "options_kz": [
+            "11",
+            "9",
+            "7",
+            "5"
+          ],
+          "options_ru": [
+            "11",
+            "9",
+            "7",
+            "5"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "math_single_002",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Өрнектің мәнін табыңыз: $\\log_3(81)$",
+          "question_text_ru": "Найдите значение выражения: $\\log_3(81)$",
+          "options_kz": [
+            "4",
+            "3",
+            "9",
+            "27"
+          ],
+          "options_ru": [
+            "4",
+            "3",
+            "9",
+            "27"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "math_single_003",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Есептеңіз: $\\sin(30^\\circ)$",
+          "question_text_ru": "Вычислите: $\\sin(30^\\circ)$",
+          "options_kz": [
+            "0.5",
+            "1",
+            "0",
+            "0.25"
+          ],
+          "options_ru": [
+            "0.5",
+            "1",
+            "0",
+            "0.25"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "math_single_004",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "$f(x) = x^4$ функциясының туындысын табыңыз.",
+          "question_text_ru": "Найдите производную функции $f(x) = x^4$.",
+          "options_kz": [
+            "$4x^3$",
+            "$x^3$",
+            "$4x^5$",
+            "$3x^4$"
+          ],
+          "options_ru": [
+            "$4x^3$",
+            "$x^3$",
+            "$4x^5$",
+            "$3x^4$"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "math_single_005",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Анықталмаған интегралды табыңыз: $\\int 2x dx$",
+          "question_text_ru": "Найдите неопределенный интеграл: $\\int 2x dx$",
+          "options_kz": [
+            "$x^2 + C$",
+            "$2x^2 + C$",
+            "$x + C$",
+            "$2 + C$"
+          ],
+          "options_ru": [
+            "$x^2 + C$",
+            "$2x^2 + C$",
+            "$x + C$",
+            "$2 + C$"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "math_single_006",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Теңдеулер жүйесін шешіп, $x \\cdot y$ мәнін табыңыз: $x+y=5$ және $x-y=1$.",
+          "question_text_ru": "Решите систему уравнений и найдите значение $x \\cdot y$: $x+y=5$ и $x-y=1$.",
+          "options_kz": [
+            "6",
+            "5",
+            "4",
+            "3"
+          ],
+          "options_ru": [
+            "6",
+            "5",
+            "4",
+            "3"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "math_single_007",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Теңсіздікті шешіңіз: $2x - 4 > 0$",
+          "question_text_ru": "Решите неравенство: $2x - 4 > 0$",
+          "options_kz": [
+            "$x > 2$",
+            "$x < 2$",
+            "$x > 4$",
+            "$x < -2$"
+          ],
+          "options_ru": [
+            "$x > 2$",
+            "$x < 2$",
+            "$x > 4$",
+            "$x < -2$"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "math_single_008",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Табаны 10, ал оған түсірілген биіктігі 5 болатын үшбұрыштың ауданын табыңыз.",
+          "question_text_ru": "Найдите площадь треугольника, основание которого равно 10, а проведенная к нему высота равна 5.",
+          "options_kz": [
+            "25",
+            "50",
+            "15",
+            "10"
+          ],
+          "options_ru": [
+            "25",
+            "50",
+            "15",
+            "10"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "math_single_009",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Қыры 3 болатын кубтың көлемін табыңыз.",
+          "question_text_ru": "Найдите объем куба с ребром 3.",
+          "options_kz": [
+            "27",
+            "9",
+            "18",
+            "36"
+          ],
+          "options_ru": [
+            "27",
+            "9",
+            "18",
+            "36"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "math_single_010",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Ойын сүйегі бір рет лақтырылды. Жұп сан түсу ықтималдығы қандай?",
+          "question_text_ru": "Игральная кость брошена один раз. Какова вероятность выпадения четного числа?",
+          "options_kz": [
+            "0.5",
+            "0.25",
+            "0.6",
+            "1"
+          ],
+          "options_ru": [
+            "0.5",
+            "0.25",
+            "0.6",
+            "1"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "math_single_011",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Арифметикалық прогрессияда $a_1=2$ және $d=3$. Бесінші мүшесін ($a_5$) табыңыз.",
+          "question_text_ru": "В арифметической прогрессии $a_1=2$ и $d=3$. Найдите пятый член ($a_5$).",
+          "options_kz": [
+            "14",
+            "11",
+            "17",
+            "15"
+          ],
+          "options_ru": [
+            "14",
+            "11",
+            "17",
+            "15"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "math_single_012",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Векторлардың скаляр көбейтіндісін табыңыз: $\\vec{a}(1, 2)$ және $\\vec{b}(3, 4)$.",
+          "question_text_ru": "Найдите скалярное произведение векторов: $\\vec{a}(1, 2)$ и $\\vec{b}(3, 4)$.",
+          "options_kz": [
+            "11",
+            "10",
+            "14",
+            "7"
+          ],
+          "options_ru": [
+            "11",
+            "10",
+            "14",
+            "7"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "math_single_013",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Есептеңіз: $i^2$ (мұндағы $i$ — жорамал бірлік).",
+          "question_text_ru": "Вычислите: $i^2$ (где $i$ — мнимая единица).",
+          "options_kz": [
+            "-1",
+            "1",
+            "0",
+            "2"
+          ],
+          "options_ru": [
+            "-1",
+            "1",
+            "0",
+            "2"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "math_single_014",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Көрсеткіштік теңдеуді шешіңіз: $2^x = 16$",
+          "question_text_ru": "Решите показательное уравнение: $2^x = 16$",
+          "options_kz": [
+            "4",
+            "8",
+            "5",
+            "3"
+          ],
+          "options_ru": [
+            "4",
+            "8",
+            "5",
+            "3"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "math_single_015",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Бөлшек-рационал теңсіздікті шешіңіз: $\\frac{x-1}{x+2} \\le 0$",
+          "question_text_ru": "Решите дробно-рациональное неравенство: $\\frac{x-1}{x+2} \\le 0$",
+          "options_kz": [
+            "(-2, 1]",
+            "[-2, 1]",
+            "(-2, 1)",
+            "[-2, 1)"
+          ],
+          "options_ru": [
+            "(-2, 1]",
+            "[-2, 1]",
+            "(-2, 1)",
+            "[-2, 1)"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "math_single_016",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Шеңбердің радиусын табыңыз: $x^2 + y^2 = 16$",
+          "question_text_ru": "Найдите радиус окружности: $x^2 + y^2 = 16$",
+          "options_kz": [
+            "4",
+            "16",
+            "8",
+            "2"
+          ],
+          "options_ru": [
+            "4",
+            "16",
+            "8",
+            "2"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "math_single_017",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Матрицаның анықтауышын есептеңіз: $\\begin{vmatrix} 2 & 3 \\\\ 1 & 4 \\end{vmatrix}$",
+          "question_text_ru": "Вычислите определитель матрицы: $\\begin{vmatrix} 2 & 3 \\\\ 1 & 4 \\end{vmatrix}$",
+          "options_kz": [
+            "5",
+            "11",
+            "8",
+            "7"
+          ],
+          "options_ru": [
+            "5",
+            "11",
+            "8",
+            "7"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "math_single_018",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Мәнін табыңыз: $\\tan(\\pi/4)$",
+          "question_text_ru": "Найдите значение: $\\tan(\\pi/4)$",
+          "options_kz": [
+            "1",
+            "0",
+            "-1",
+            "0.5"
+          ],
+          "options_ru": [
+            "1",
+            "0",
+            "-1",
+            "0.5"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "math_single_019",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Шекті есептеңіз: $\\lim_{x \\to 0} \\frac{\\sin(x)}{x}$",
+          "question_text_ru": "Вычислите предел: $\\lim_{x \\to 0} \\frac{\\sin(x)}{x}$",
+          "options_kz": [
+            "1",
+            "0",
+            "-1",
+            "2"
+          ],
+          "options_ru": [
+            "1",
+            "0",
+            "-1",
+            "2"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "math_single_020",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Пифагор теоремасын пайдаланып, $x$-ті табыңыз: $3^2 + 4^2 = x^2$ ($x > 0$).",
+          "question_text_ru": "Используя теорему Пифагора, найдите $x$: $3^2 + 4^2 = x^2$ ($x > 0$).",
+          "options_kz": [
+            "5",
+            "7",
+            "25",
+            "12"
+          ],
+          "options_ru": [
+            "5",
+            "7",
+            "25",
+            "12"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "math_multi_001",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "Теңдеудің түбірлерін табыңыз: $x^2 - 7x + 10 = 0$",
+          "question_text_ru": "Найдите корни уравнения: $x^2 - 7x + 10 = 0$",
+          "options_kz": [
+            "2",
+            "5",
+            "-2",
+            "-5",
+            "1",
+            "10"
+          ],
+          "options_ru": [
+            "2",
+            "5",
+            "-2",
+            "-5",
+            "1",
+            "10"
+          ],
+          "correct_answers_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "question_id": "math_multi_002",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "Төмендегілердің ішінен жұп функцияларды көрсетіңіз:",
+          "question_text_ru": "Укажите четные функции из нижеперечисленных:",
+          "options_kz": [
+            "$y=x^2$",
+            "$y=\\cos(x)$",
+            "$y=|x|$",
+            "$y=\\sin(x)$",
+            "$y=x^3$",
+            "$y=2^x$"
+          ],
+          "options_ru": [
+            "$y=x^2$",
+            "$y=\\cos(x)$",
+            "$y=|x|$",
+            "$y=\\sin(x)$",
+            "$y=x^3$",
+            "$y=2^x$"
+          ],
+          "correct_answers_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "question_id": "math_multi_003",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "Мәні $1$-ге тең өрнектерді табыңыз:",
+          "question_text_ru": "Найдите выражения, значение которых равно $1$:",
+          "options_kz": [
+            "$\\sin^2(x)+\\cos^2(x)$",
+            "$\\tan(\\pi/4)$",
+            "$\\log_2(2)$",
+            "$\\sin(\\pi)$",
+            "0",
+            "0.5"
+          ],
+          "options_ru": [
+            "$\\sin^2(x)+\\cos^2(x)$",
+            "$\\tan(\\pi/4)$",
+            "$\\log_2(2)$",
+            "$\\sin(\\pi)$",
+            "0",
+            "0.5"
+          ],
+          "correct_answers_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "question_id": "math_multi_004",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "Ромбтың қасиеттерін көрсетіңіз:",
+          "question_text_ru": "Укажите свойства ромба:",
+          "options_kz": [
+            "Диагональдары өзара перпендикуляр",
+            "Барлық қабырғалары тең",
+            "Диагональдары бұрыштарының биссектрисасы болады",
+            "Диагональдары тең",
+            "Барлық бұрыштары тік",
+            "Кез келген шеңберге іштей сызуға болады"
+          ],
+          "options_ru": [
+            "Диагонали взаимно перпендикулярны",
+            "Все стороны равны",
+            "Диагонали являются биссектрисами его углов",
+            "Диагонали равны",
+            "Все углы прямые",
+            "Можно вписать в любую окружность"
+          ],
+          "correct_answers_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "question_id": "math_multi_005",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "Модульдік теңдеудің шешімдерін табыңыз: $|x| = 5$",
+          "question_text_ru": "Найдите решения модульного уравнения: $|x| = 5$",
+          "options_kz": [
+            "5",
+            "-5",
+            "0",
+            "25",
+            "-25",
+            "10"
+          ],
+          "options_ru": [
+            "5",
+            "-5",
+            "0",
+            "25",
+            "-25",
+            "10"
+          ],
+          "correct_answers_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "question_id": "math_multi_006",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "Арифметикалық прогрессия $a_n = 2n+1$ формуласымен берілген. Дұрыс тұжырымдарды табыңыз:",
+          "question_text_ru": "Арифметическая прогрессия задана формулой $a_n = 2n+1$. Найдите верные утверждения:",
+          "options_kz": [
+            "$a_1=3$",
+            "$d=2$",
+            "$a_{10}=21$",
+            "$a_2=6$",
+            "$d=1$",
+            "$a_5=10$"
+          ],
+          "options_ru": [
+            "$a_1=3$",
+            "$d=2$",
+            "$a_{10}=21$",
+            "$a_2=6$",
+            "$d=1$",
+            "$a_5=10$"
+          ],
+          "correct_answers_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "question_id": "math_multi_007",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "$x^2 - 9$ көпмүшесінің көбейткіштерін көрсетіңіз:",
+          "question_text_ru": "Укажите множители многочлена $x^2 - 9$:",
+          "options_kz": [
+            "$x-3$",
+            "$x+3$",
+            "$x-9$",
+            "$x+9$",
+            "$x^2+3$",
+            "$x$"
+          ],
+          "options_ru": [
+            "$x-3$",
+            "$x+3$",
+            "$x-9$",
+            "$x+9$",
+            "$x^2+3$",
+            "$x$"
+          ],
+          "correct_answers_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "question_id": "math_multi_008",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "Қай өрнектердің туындысы $\\cos(x)$-ке тең?",
+          "question_text_ru": "Производная каких выражений равна $\\cos(x)$?",
+          "options_kz": [
+            "$(\\sin(x))'$",
+            "$(-\\cos(x))'$",
+            "$(\\sin(x)+5)'$",
+            "$(\\cos(x))'$",
+            "$(-\\sin(x))'$",
+            "$(\\tan(x))'$"
+          ],
+          "options_ru": [
+            "$(\\sin(x))'$",
+            "$(-\\cos(x))'$",
+            "$(\\sin(x)+5)'$",
+            "$(\\cos(x))'$",
+            "$(-\\sin(x))'$",
+            "$(\\tan(x))'$"
+          ],
+          "correct_answers_indices": [
+            0,
+            2
+          ]
+        },
+        {
+          "question_id": "math_multi_009",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "Ықтималдық $P(A)$ үшін мүмкін болатын мәндерді көрсетіңіз:",
+          "question_text_ru": "Укажите возможные значения для вероятности $P(A)$:",
+          "options_kz": [
+            "0",
+            "0.5",
+            "1",
+            "-0.5",
+            "1.5",
+            "2"
+          ],
+          "options_ru": [
+            "0",
+            "0.5",
+            "1",
+            "-0.5",
+            "1.5",
+            "2"
+          ],
+          "correct_answers_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "question_id": "math_multi_010",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "Төмендегі сандардың ішінен жай сандарды көрсетіңіз:",
+          "question_text_ru": "Укажите простые числа из нижеперечисленных:",
+          "options_kz": [
+            "2",
+            "3",
+            "5",
+            "4",
+            "6",
+            "9"
+          ],
+          "options_ru": [
+            "2",
+            "3",
+            "5",
+            "4",
+            "6",
+            "9"
+          ],
+          "correct_answers_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "context_clusters": [
+        {
+          "cluster_id": "ctx_math_001",
+          "format": "context_based",
+          "stimulus_kz": "Бассейн тікбұрышты параллелепипед пішінді. Оның ұзындығы 10 метр, ені 5 метр, тереңдігі 2 метр. Бассейн ернеуінен 0.5 метр төмен деңгейге дейін сумен толтырылған.",
+          "stimulus_ru": "Бассейн имеет форму прямоугольного параллелепипеда. Его длина 10 метров, ширина 5 метров, глубина 2 метра. Бассейн заполнен водой на 0.5 метра ниже верхнего края.",
+          "child_questions": [
+            {
+              "question_id": "ctx_m001_q1",
+              "max_points": 1,
+              "question_text_kz": "Бассейннің толық көлемі қандай?",
+              "question_text_ru": "Каков полный объем бассейна?",
+              "options_kz": [
+                "100",
+                "50",
+                "150",
+                "200"
+              ],
+              "options_ru": [
+                "100",
+                "50",
+                "150",
+                "200"
+              ],
+              "correct_answers_indices": [
+                0
+              ]
+            },
+            {
+              "question_id": "ctx_m001_q2",
+              "max_points": 1,
+              "question_text_kz": "Бассейн табанының ауданы қандай?",
+              "question_text_ru": "Какова площадь дна бассейна?",
+              "options_kz": [
+                "50",
+                "20",
+                "100",
+                "25"
+              ],
+              "options_ru": [
+                "50",
+                "20",
+                "100",
+                "25"
+              ],
+              "correct_answers_indices": [
+                0
+              ]
+            },
+            {
+              "question_id": "ctx_m001_q3",
+              "max_points": 1,
+              "question_text_kz": "Бассейндегі судың көлемі қандай?",
+              "question_text_ru": "Каков объем воды в бассейне?",
+              "options_kz": [
+                "75",
+                "100",
+                "50",
+                "85"
+              ],
+              "options_ru": [
+                "75",
+                "100",
+                "50",
+                "85"
+              ],
+              "correct_answers_indices": [
+                0
+              ]
+            },
+            {
+              "question_id": "ctx_m001_q4",
+              "max_points": 1,
+              "question_text_kz": "Бассейннің табаны мен 4 қабырғасын қаптау үшін қанша ауданға кафель қажет?",
+              "question_text_ru": "Какая площадь кафеля потребуется для облицовки дна и 4 стен бассейна?",
+              "options_kz": [
+                "110",
+                "50",
+                "150",
+                "100"
+              ],
+              "options_ru": [
+                "110",
+                "50",
+                "150",
+                "100"
+              ],
+              "correct_answers_indices": [
+                0
+              ]
+            },
+            {
+              "question_id": "ctx_m001_q5",
+              "max_points": 1,
+              "question_text_kz": "Егер 1 куб метр судың құны 200 теңге болса, бассейндегі судың жалпы құны қанша?",
+              "question_text_ru": "Если стоимость 1 кубического метра воды составляет 200 тенге, какова общая стоимость воды в бассейне?",
+              "options_kz": [
+                "15000",
+                "20000",
+                "10000",
+                "12000"
+              ],
+              "options_ru": [
+                "15000",
+                "20000",
+                "10000",
+                "12000"
+              ],
+              "correct_answers_indices": [
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "cluster_id": "ctx_math_002",
+          "format": "context_based",
+          "stimulus_kz": "Клиент банкке 10% жылдық күрделі мөлшерлемемен (compound interest) 500000 теңге салды.",
+          "stimulus_ru": "Клиент положил в банк 500000 тенге под 10% годовых (сложный процент).",
+          "child_questions": [
+            {
+              "question_id": "ctx_m002_q1",
+              "max_points": 1,
+              "question_text_kz": "Бір жылдан кейін шоттағы сома қандай болады?",
+              "question_text_ru": "Какой будет сумма на счету через один год?",
+              "options_kz": [
+                "550000",
+                "510000",
+                "600000",
+                "505000"
+              ],
+              "options_ru": [
+                "550000",
+                "510000",
+                "600000",
+                "505000"
+              ],
+              "correct_answers_indices": [
+                0
+              ]
+            },
+            {
+              "question_id": "ctx_m002_q2",
+              "max_points": 1,
+              "question_text_kz": "Екі жылдан кейін шоттағы сома қандай болады?",
+              "question_text_ru": "Какой будет сумма на счету через два года?",
+              "options_kz": [
+                "605000",
+                "600000",
+                "610000",
+                "650000"
+              ],
+              "options_ru": [
+                "605000",
+                "600000",
+                "610000",
+                "650000"
+              ],
+              "correct_answers_indices": [
+                0
+              ]
+            },
+            {
+              "question_id": "ctx_m002_q3",
+              "max_points": 1,
+              "question_text_kz": "Екі жыл ішінде клиент қанша таза пайда (пайыз) табады?",
+              "question_text_ru": "Какую чистую прибыль (в виде процентов) получит клиент за два года?",
+              "options_kz": [
+                "105000",
+                "100000",
+                "110000",
+                "50000"
+              ],
+              "options_ru": [
+                "105000",
+                "100000",
+                "110000",
+                "50000"
+              ],
+              "correct_answers_indices": [
+                0
+              ]
+            },
+            {
+              "question_id": "ctx_m002_q4",
+              "max_points": 1,
+              "question_text_kz": "Екі жылдан соң бастапқы салынған депозит қандай коэффициентке көбейеді?",
+              "question_text_ru": "На какой коэффициент умножится первоначальный депозит через два года?",
+              "options_kz": [
+                "1.21",
+                "1.2",
+                "1.1",
+                "1.31"
+              ],
+              "options_ru": [
+                "1.21",
+                "1.2",
+                "1.1",
+                "1.31"
+              ],
+              "correct_answers_indices": [
+                0
+              ]
+            },
+            {
+              "question_id": "ctx_m002_q5",
+              "max_points": 1,
+              "question_text_kz": "Егер банк күрделі емес, жай пайызбен (simple interest) есептегенде, екі жылдан кейінгі сома қандай болар еді?",
+              "question_text_ru": "Если бы банк начислял не сложный, а простой процент, какой была бы сумма через два года?",
+              "options_kz": [
+                "600000",
+                "605000",
+                "550000",
+                "610000"
+              ],
+              "options_ru": [
+                "600000",
+                "605000",
+                "550000",
+                "610000"
+              ],
+              "correct_answers_indices": [
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

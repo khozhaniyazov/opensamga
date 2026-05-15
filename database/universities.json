@@ -1,0 +1,134 @@
+[
+  {
+    "university_code": "NU_NARXOZ",
+    "full_name": "Университет Нархоз",
+    "search_keywords": "narhoz, нархоз, narhuaz, экономика, бизнес",
+    "website": "https://www.narhoz.kz",
+    "total_students": 15000,
+    "grant_students": 1200,
+    "paid_students": 13800,
+    "has_dorm": "Да",
+    "contacts_raw": {"phone": "+7 (727) 377-44-44", "email": "info@narhoz.kz"}
+  },
+  {
+    "university_code": "KazNU",
+    "full_name": "Казахский национальный университет имени аль-Фараби",
+    "search_keywords": "kaznu, казну, аль-фараби, алматы, КазНУ",
+    "website": "https://www.kaznu.kz",
+    "total_students": 25000,
+    "grant_students": 3500,
+    "paid_students": 21500,
+    "has_dorm": "Да",
+    "contacts_raw": {"phone": "+7 (727) 377-33-33", "email": "info@kaznu.kz"}
+  },
+  {
+    "university_code": "KBTU",
+    "full_name": "Казахстанско-Британский технический университет",
+    "search_keywords": "kbtu, кбту, british, технический, алматы",
+    "website": "https://www.kbtu.kz",
+    "total_students": 6000,
+    "grant_students": 800,
+    "paid_students": 5200,
+    "has_dorm": "Да",
+    "contacts_raw": {"phone": "+7 (727) 357-55-55", "email": "info@kbtu.kz"}
+  },
+  {
+    "university_code": "SDU",
+    "full_name": "Университет имени Сулеймана Демиреля",
+    "search_keywords": "sdu, сду, demirel, демирель, касклен, kaskelen",
+    "website": "https://sdu.edu.kz",
+    "total_students": 14000,
+    "grant_students": 1800,
+    "paid_students": 12200,
+    "has_dorm": "Да",
+    "contacts_raw": {"phone": "+7 (727) 307-95-95", "email": "info@sdu.edu.kz"}
+  },
+  {
+    "university_code": "ENU",
+    "full_name": "Евразийский национальный университет имени Л.Н. Гумилева",
+    "search_keywords": "enu, ену, гумилев, ну-астана, астана, astana",
+    "website": "https://www.enu.kz",
+    "total_students": 22000,
+    "grant_students": 3000,
+    "paid_students": 19000,
+    "has_dorm": "Да",
+    "contacts_raw": {"phone": "+7 (7172) 77-00-77", "email": "info@enu.kz"}
+  },
+  {
+    "university_code": "KazATU",
+    "full_name": "Казахский агротехнический университет имени С. Сейфуллина",
+    "search_keywords": "kazatu, казату, сейфуллин, агро, сельское хозяйство, астана",
+    "website": "https://www.kazatu.kz",
+    "total_students": 18000,
+    "grant_students": 2500,
+    "paid_students": 15500,
+    "has_dorm": "Да",
+    "contacts_raw": {"phone": "+7 (7172) 55-55-55", "email": "info@kazatu.kz"}
+  },
+  {
+    "university_code": "KazGASA",
+    "full_name": "Казахская головная архитектурно-строительная академия",
+    "search_keywords": "kazgasa, кагаса, архитектура, строительство, алматы",
+    "website": "https://www.kazgasa.kz",
+    "total_students": 8000,
+    "grant_students": 600,
+    "paid_students": 7400,
+    "has_dorm": "Нет",
+    "contacts_raw": {"phone": "+7 (727) 395-55-55", "email": "info@kazgasa.kz"}
+  },
+  {
+    "university_code": "KazNMU",
+    "full_name": "Казахский национальный медицинский университет",
+    "search_keywords": "kaznmu, казнму, медицина, медицинский, алматы, врач",
+    "website": "https://www.kaznmu.kz",
+    "total_students": 12000,
+    "grant_students": 1500,
+    "paid_students": 10500,
+    "has_dorm": "Да",
+    "contacts_raw": {"phone": "+7 (727) 292-00-00", "email": "info@kaznmu.kz"}
+  },
+  {
+    "university_code": "AITU",
+    "full_name": "Алматинский университет энергетики и связи",
+    "search_keywords": "aitu, аиту, энергетика, связь, телеком, алматы",
+    "website": "https://www.aues.kz",
+    "total_students": 9000,
+    "grant_students": 700,
+    "paid_students": 8300,
+    "has_dorm": "Да",
+    "contacts_raw": {"phone": "+7 (727) 377-18-18", "email": "info@aues.kz"}
+  },
+  {
+    "university_code": "KazUPE",
+    "full_name": "Казахский университет путей сообщения",
+    "search_keywords": "kazupt, казупс, пути сообщения, транспорт, алматы",
+    "website": "https://www.kazups.edu.kz",
+    "total_students": 7000,
+    "grant_students": 500,
+    "paid_students": 6500,
+    "has_dorm": "Нет",
+    "contacts_raw": {"phone": "+7 (727) 294-44-44", "email": "info@kazups.edu.kz"}
+  },
+  {
+    "university_code": "KazUIR",
+    "full_name": "Казахский университет международных отношений и мировых языков",
+    "search_keywords": "kazuir, казуир, мировые языки, международные отношения, алматы",
+    "website": "https://www.kazuir.kz",
+    "total_students": 11000,
+    "grant_students": 1400,
+    "paid_students": 9600,
+    "has_dorm": "Да",
+    "contacts_raw": {"phone": "+7 (727) 233-00-00", "email": "info@kazuir.kz"}
+  },
+  {
+    "university_code": "KazPT",
+    "full_name": "Казахский педагогический университет",
+    "search_keywords": "kazped, казпед, педагогический, образование, алматы",
+    "website": "https://www.kazpu.edu.kz",
+    "total_students": 13000,
+    "grant_students": 2000,
+    "paid_students": 11000,
+    "has_dorm": "Да",
+    "contacts_raw": {"phone": "+7 (727) 233-00-00", "email": "info@kazpu.edu.kz"}
+  }
+]

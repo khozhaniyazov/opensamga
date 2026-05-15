@@ -1,0 +1,564 @@
+{
+  "unt_exam_schema_version": "2025_2026",
+  "subjects": [
+    {
+      "subject_id": "profile_physics_01",
+      "subject_name_kz": "Физика",
+      "subject_name_ru": "Физика",
+      "questions": [
+        {
+          "question_id": "phys_single_001",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Ньютонның екінші заңының формуласы:",
+          "question_text_ru": "Формула второго закона Ньютона:",
+          "options_kz": [
+            "$F = G\\frac{m_1 m_2}{r^2}$",
+            "$F = ma$",
+            "$F = -kx$",
+            "$F = \\mu N$"
+          ],
+          "options_ru": [
+            "$F = G\\frac{m_1 m_2}{r^2}$",
+            "$F = ma$",
+            "$F = -kx$",
+            "$F = \\mu N$"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "phys_single_002",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Кинетикалық энергияны есептейтін өрнек:",
+          "question_text_ru": "Выражение для вычисления кинетической энергии:",
+          "options_kz": [
+            "$E = mgh$",
+            "$E = \\frac{kx^2}{2}$",
+            "$E = \\frac{mv^2}{2}$",
+            "$E = mc^2$"
+          ],
+          "options_ru": [
+            "$E = mgh$",
+            "$E = \\frac{kx^2}{2}$",
+            "$E = \\frac{mv^2}{2}$",
+            "$E = mc^2$"
+          ],
+          "correct_answers_indices": [
+            2
+          ]
+        },
+        {
+          "question_id": "phys_single_003",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Ом заңы тізбек бөлігі үшін қалай жазылады?",
+          "question_text_ru": "Как записывается закон Ома для участка цепи?",
+          "options_kz": [
+            "$I = \\frac{U}{R}$",
+            "$P = UI$",
+            "$R = \\rho\\frac{l}{S}$",
+            "$Q = I^2Rt$"
+          ],
+          "options_ru": [
+            "$I = \\frac{U}{R}$",
+            "$P = UI$",
+            "$R = \\rho\\frac{l}{S}$",
+            "$Q = I^2Rt$"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "phys_single_004",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Идеал газ күйінің теңдеуі (Менделеев-Клапейрон теңдеуі):",
+          "question_text_ru": "Уравнение состояния идеального газа (уравнение Менделеева-Клапейрона):",
+          "options_kz": [
+            "$pV = const$",
+            "$pV = \\nu RT$",
+            "$Q = cm\\Delta T$",
+            "$F = kx$"
+          ],
+          "options_ru": [
+            "$pV = const$",
+            "$pV = \\nu RT$",
+            "$Q = cm\\Delta T$",
+            "$F = kx$"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "phys_single_005",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Математикалық маятниктің тербеліс периодының формуласы:",
+          "question_text_ru": "Формула периода колебаний математического маятника:",
+          "options_kz": [
+            "$T = 2\\pi\\sqrt{\\frac{m}{k}}$",
+            "$T = \\frac{1}{\\nu}$",
+            "$T = 2\\pi\\sqrt{\\frac{l}{g}}$",
+            "$T = \\frac{2\\pi r}{v}$"
+          ],
+          "options_ru": [
+            "$T = 2\\pi\\sqrt{\\frac{m}{k}}$",
+            "$T = \\frac{1}{\\nu}$",
+            "$T = 2\\pi\\sqrt{\\frac{l}{g}}$",
+            "$T = \\frac{2\\pi r}{v}$"
+          ],
+          "correct_answers_indices": [
+            2
+          ]
+        },
+        {
+          "question_id": "phys_single_006",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Вакуумдегі жарық жылдамдығы шамамен неге тең?",
+          "question_text_ru": "Чему примерно равна скорость света в вакууме?",
+          "options_kz": [
+            "$3 \\cdot 10^5$ м/с",
+            "$3 \\cdot 10^8$ м/с",
+            "$3 \\cdot 10^6$ м/с",
+            "$3 \\cdot 10^9$ м/с"
+          ],
+          "options_ru": [
+            "$3 \\cdot 10^5$ м/с",
+            "$3 \\cdot 10^8$ м/с",
+            "$3 \\cdot 10^6$ м/с",
+            "$3 \\cdot 10^9$ м/с"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "phys_single_007",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Күш моментінің өлшем бірлігі:",
+          "question_text_ru": "Единица измерения момента силы:",
+          "options_kz": [
+            "Н",
+            "Дж",
+            "Н$\\cdot$м",
+            "Вт"
+          ],
+          "options_ru": [
+            "Н",
+            "Дж",
+            "Н$\\cdot$м",
+            "Вт"
+          ],
+          "correct_answers_indices": [
+            2
+          ]
+        },
+        {
+          "question_id": "phys_single_008",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Архимед күшін есептейтін формула:",
+          "question_text_ru": "Формула для вычисления силы Архимеда:",
+          "options_kz": [
+            "$F_A = \\rho gV$",
+            "$F = ma$",
+            "$P = mg$",
+            "$F = kx$"
+          ],
+          "options_ru": [
+            "$F_A = \\rho gV$",
+            "$F = ma$",
+            "$P = mg$",
+            "$F = kx$"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "phys_single_009",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Электр сыйымдылығының өлшем бірлігі:",
+          "question_text_ru": "Единица измерения электроемкости:",
+          "options_kz": [
+            "Генри (Гн)",
+            "Вольт (В)",
+            "Фарада (Ф)",
+            "Кулон (Кл)"
+          ],
+          "options_ru": [
+            "Генри (Гн)",
+            "Вольт (В)",
+            "Фарад (Ф)",
+            "Кулон (Кл)"
+          ],
+          "correct_answers_indices": [
+            2
+          ]
+        },
+        {
+          "question_id": "phys_single_010",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Фотоэффект үшін Эйнштейн теңдеуі:",
+          "question_text_ru": "Уравнение Эйнштейна для фотоэффекта:",
+          "options_kz": [
+            "$E = mc^2$",
+            "$h\\nu = A + \\frac{mv^2}{2}$",
+            "$p = \\frac{h}{\\lambda}$",
+            "$\\lambda = \\frac{h}{mv}$"
+          ],
+          "options_ru": [
+            "$E = mc^2$",
+            "$h\\nu = A + \\frac{mv^2}{2}$",
+            "$p = \\frac{h}{\\lambda}$",
+            "$\\lambda = \\frac{h}{mv}$"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "phys_single_011",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Массасы $2$ кг дене $5$ м/с жылдамдықпен қозғалады. Оның импульсі қандай?",
+          "question_text_ru": "Тело массой $2$ кг движется со скоростью $5$ м/с. Каков его импульс?",
+          "options_kz": [
+            "10 кг$\\cdot$м/с",
+            "2.5 кг$\\cdot$м/с",
+            "25 кг$\\cdot$м/с",
+            "7 кг$\\cdot$м/с"
+          ],
+          "options_ru": [
+            "10 кг$\\cdot$м/с",
+            "2.5 кг$\\cdot$м/с",
+            "25 кг$\\cdot$м/с",
+            "7 кг$\\cdot$м/с"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "phys_single_012",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Кедергілері $R_1=3$ Ом және $R_2=6$ Ом екі резистор параллель жалғанған. Жалпы кедергіні табыңыз.",
+          "question_text_ru": "Два резистора с сопротивлениями $R_1=3$ Ом и $R_2=6$ Ом соединены параллельно. Найдите общее сопротивление.",
+          "options_kz": [
+            "9 Ом",
+            "2 Ом",
+            "0.5 Ом",
+            "18 Ом"
+          ],
+          "options_ru": [
+            "9 Ом",
+            "2 Ом",
+            "0.5 Ом",
+            "18 Ом"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "phys_single_013",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Тогы бар өткізгішке магнит өрісі тарапынан әсер ететін күш қалай аталады?",
+          "question_text_ru": "Как называется сила, действующая со стороны магнитного поля на проводник с током?",
+          "options_kz": [
+            "Лоренц күші",
+            "Ампер күші",
+            "Кулон күші",
+            "Тартылыс күші"
+          ],
+          "options_ru": [
+            "Сила Лоренца",
+            "Сила Ампера",
+            "Сила Кулона",
+            "Сила тяготения"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "phys_single_014",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Альфа-бөлшек дегеніміз не?",
+          "question_text_ru": "Что такое альфа-частица?",
+          "options_kz": [
+            "Электрон",
+            "Сутегі атомының ядросы",
+            "Гелий атомының ядросы",
+            "Позитрон"
+          ],
+          "options_ru": [
+            "Электрон",
+            "Ядро атома водорода",
+            "Ядро атома гелия",
+            "Позитрон"
+          ],
+          "correct_answers_indices": [
+            2
+          ]
+        },
+        {
+          "question_id": "phys_single_015",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Изобаралық процесс кезінде қандай макроскопиялық параметр тұрақты болып қалады?",
+          "question_text_ru": "Какой макроскопический параметр остается постоянным при изобарном процессе?",
+          "options_kz": [
+            "Көлем",
+            "Қысым",
+            "Температура",
+            "Зат мөлшері"
+          ],
+          "options_ru": [
+            "Объем",
+            "Давление",
+            "Температура",
+            "Количество вещества"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "phys_single_016",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Линзаның оптикалық күші $D = 2$ дптр. Оның фокус аралығы қандай?",
+          "question_text_ru": "Оптическая сила линзы $D = 2$ дптр. Каково ее фокусное расстояние?",
+          "options_kz": [
+            "2 м",
+            "0.5 м",
+            "1 м",
+            "0.2 м"
+          ],
+          "options_ru": [
+            "2 м",
+            "0.5 м",
+            "1 м",
+            "0.2 м"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "phys_single_017",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Меншікті жылу сыйымдылығының өлшем бірлігі:",
+          "question_text_ru": "Единица измерения удельной теплоемкости:",
+          "options_kz": [
+            "Дж/кг",
+            "Дж/(кг$\\cdot$К)",
+            "Дж/К",
+            "Дж/моль"
+          ],
+          "options_ru": [
+            "Дж/кг",
+            "Дж/(кг$\\cdot$К)",
+            "Дж/К",
+            "Дж/моль"
+          ],
+          "correct_answers_indices": [
+            1
+          ]
+        },
+        {
+          "question_id": "phys_single_018",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Трансформатор қандай құбылысқа негізделіп жұмыс істейді?",
+          "question_text_ru": "На каком явлении основана работа трансформатора?",
+          "options_kz": [
+            "Электростатикалық индукция",
+            "Фотоэффект",
+            "Электромагниттік индукция",
+            "Термоэлектрондық эмиссия"
+          ],
+          "options_ru": [
+            "Электростатическая индукция",
+            "Фотоэффект",
+            "Электромагнитная индукция",
+            "Термоэлектронная эмиссия"
+          ],
+          "correct_answers_indices": [
+            2
+          ]
+        },
+        {
+          "question_id": "phys_single_019",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Егер серіппенің қатаңдығын $2$ есе арттырса, серпімділік күшінің потенциалдық энергиясы (созылуы тұрақты болғанда) қалай өзгереді?",
+          "question_text_ru": "Как изменится потенциальная энергия силы упругости, если жесткость пружины увеличить в $2$ раза (при неизменном удлинении)?",
+          "options_kz": [
+            "2 есе артады",
+            "4 есе артады",
+            "2 есе кемиді",
+            "Өзгермейді"
+          ],
+          "options_ru": [
+            "Увеличится в 2 раза",
+            "Увеличится в 4 раза",
+            "Уменьшится в 2 раза",
+            "Не изменится"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "phys_single_020",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Толқын ұзындығы, жылдамдық және жиілік арасындағы байланыс формуласы:",
+          "question_text_ru": "Формула связи между длиной волны, скоростью и частотой:",
+          "options_kz": [
+            "$v = \\lambda \\nu$",
+            "$\\lambda = v \\nu$",
+            "$\\nu = v \\lambda$",
+            "$v = \\frac{\\nu}{\\lambda}$"
+          ],
+          "options_ru": [
+            "$v = \\lambda \\nu$",
+            "$\\lambda = v \\nu$",
+            "$\\nu = v \\lambda$",
+            "$v = \\frac{\\nu}{\\lambda}$"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "phys_multi_001",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "Төмендегілердің ішінен векторлық физикалық шамаларды көрсетіңіз:",
+          "question_text_ru": "Укажите векторные физические величины из перечисленных ниже:",
+          "options_kz": [
+            "Күш",
+            "Масса",
+            "Жылдамдық",
+            "Уақыт",
+            "Энергия",
+            "Үдеу"
+          ],
+          "options_ru": [
+            "Сила",
+            "Масса",
+            "Скорость",
+            "Время",
+            "Энергия",
+            "Ускорение"
+          ],
+          "correct_answers_indices": [
+            0,
+            2,
+            5
+          ]
+        },
+        {
+          "question_id": "phys_multi_002",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "Идеал газдың изопроцестеріне жататындар:",
+          "question_text_ru": "К изопроцессам идеального газа относятся:",
+          "options_kz": [
+            "Изотермиялық",
+            "Адиабаталық",
+            "Изобаралық",
+            "Изохоралық",
+            "Изотоптық",
+            "Изомерлік"
+          ],
+          "options_ru": [
+            "Изотермический",
+            "Адиабатный",
+            "Изобарный",
+            "Изохорный",
+            "Изотопный",
+            "Изомерный"
+          ],
+          "correct_answers_indices": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "question_id": "phys_multi_003",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "Механикалық электромагниттік емес толқындардың түрлері:",
+          "question_text_ru": "Виды механических (не электромагнитных) волн:",
+          "options_kz": [
+            "Көлденең толқындар",
+            "Радиотолқындар",
+            "Бойлық толқындар",
+            "Рентген сәулелері",
+            "Дыбыс толқындары",
+            "Микротолқындар"
+          ],
+          "options_ru": [
+            "Поперечные волны",
+            "Радиоволны",
+            "Продольные волны",
+            "Рентгеновские лучи",
+            "Звуковые волны",
+            "Микроволны"
+          ],
+          "correct_answers_indices": [
+            0,
+            2,
+            4
+          ]
+        },
+        {
+          "question_id": "phys_multi_004",
+          "format": "multiple_choice",
+          "max_points": 2,
+          "question_text_kz": "Электромагниттік спектрге кіретін сәулелену түрлері:",
+          "question_text_ru": "Виды излучений, входящие в электромагнитный спектр:",
+          "options_kz": [
+            "Альфа-сәулелену",
+            "Инфрақызыл сәулелену",
+            "Бета-сәулелену",
+            "Ультракүлгін сәулелену",
+            "Катод сәулелері",
+            "Көрінетін жарық"
+          ],
+          "options_ru": [
+            "Альфа-излучение",
+            "Инфракрасное излучение",
+            "Бета-излучение",
+            "Ультрафиолетовое излучение",
+            "Катодные лучи",
+            "Видимый свет"
+          ],
+          "correct_answers_indices": [
+            1,
+            3,
+            5
+          ]
+        }
+      ]
+    }
+  ]
+}

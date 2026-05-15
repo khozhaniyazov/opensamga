@@ -1,0 +1,56 @@
+{
+  "unt_exam_schema_version": "2025_2026",
+  "subjects": [
+    {
+      "subject_id": "profile_rus_01",
+      "subject_name_kz": "Орыс тілі",
+      "subject_name_ru": "Русский язык",
+      "questions": [
+        {
+          "question_id": "rus_single_001",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Фонетика раздел науки о языке, изучающий:",
+          "question_text_ru": "Фонетика раздел науки о языке, изучающий:",
+          "options_kz": [
+            "звуки речи",
+            "части речи",
+            "строение предложений",
+            "значения слов"
+          ],
+          "options_ru": [
+            "звуки речи",
+            "части речи",
+            "строение предложений",
+            "значения слов"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        },
+        {
+          "question_id": "rus_single_002",
+          "format": "single_choice",
+          "max_points": 1,
+          "question_text_kz": "Укажите слово, в котором ударение падает на первый слог:",
+          "question_text_ru": "Укажите слово, в котором ударение падает на первый слог:",
+          "options_kz": [
+            "торты",
+            "звонит",
+            "договор",
+            "каталог"
+          ],
+          "options_ru": [
+            "торты",
+            "звонит",
+            "договор",
+            "каталог"
+          ],
+          "correct_answers_indices": [
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}
