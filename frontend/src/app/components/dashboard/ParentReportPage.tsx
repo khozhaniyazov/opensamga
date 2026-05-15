@@ -251,7 +251,7 @@ export default function ParentReportPage() {
                     <a
                       href={parentReportShareUrl(row.token)}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="rounded border border-zinc-300 dark:border-zinc-700 px-2 py-1"
                     >
                       {s.open}

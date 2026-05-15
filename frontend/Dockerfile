@@ -8,7 +8,14 @@ COPY package*.json ./
 RUN npm ci
 COPY . ./
 
-ARG VITE_API_URL=http://localhost:8001
+# opensamga round-3 (2026-05-15) audit: NO default for VITE_API_URL.
+# `vite build` substitutes `import.meta.env.VITE_API_URL` at compile
+# time; baking `http://localhost:8001` shipped a JS bundle that called
+# the *visitor's* localhost when they hit a deploy that forgot to pass
+# `--build-arg VITE_API_URL=…`. Empty string defaults to a same-origin
+# call (handled by `import.meta.env.VITE_API_URL ?? ""` on the client),
+# which is what nginx_frontend.conf assumes anyway.
+ARG VITE_API_URL=
 ENV VITE_API_URL=$VITE_API_URL
 RUN npm run build
 

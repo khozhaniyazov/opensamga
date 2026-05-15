@@ -644,7 +644,6 @@ async def resolve_report(
 # =============================================================================
 
 import re
-import shutil
 from pathlib import Path
 
 from fastapi import BackgroundTasks, File, Form, UploadFile
@@ -652,6 +651,27 @@ from fastapi import BackgroundTasks, File, Form, UploadFile
 from ..constants.subjects import normalize_subject_name
 from ..models import LibraryUploadJob, UploadJobStatus
 from ..services.admin_upload_service import process_background_upload
+
+# opensamga round-3 (2026-05-15) audit hardened the admin library upload:
+#   * Hard size cap (200 MiB) so a compromised admin token cannot fill
+#     disk with a single chunked POST.
+#   * Magic-byte verification — file MUST start with `%PDF-` before we
+#     persist a single byte beyond the first chunk. Defends against an
+#     attacker who labels an arbitrary blob as `application/pdf`.
+#   * Filename always sanitized — even when the user supplies a `title`
+#     the regex did not cover the no-title branch, which let the raw
+#     ``file.filename`` flow into the path join.
+MAX_LIBRARY_PDF_BYTES = 200 * 1024 * 1024
+_PDF_MAGIC = b"%PDF-"
+
+
+def _sanitize_library_filename(raw: str) -> str:
+    """Lowercased ASCII/Cyrillic-letter-only stem + `.pdf` extension."""
+    stem = re.sub(r"[^a-zA-Z0-9_\-а-яА-ЯёЁІіҢңҒғҮүҰұҚқӨөҺһ]", "_", raw.strip())
+    stem = re.sub(r"_+", "_", stem).strip("_").lower()
+    if not stem:
+        stem = "upload"
+    return f"{stem}.pdf"
 
 
 @router.post("/library/upload")
@@ -665,16 +685,11 @@ async def upload_library_book(
     admin: User = Depends(require_admin),
 ):
     """Upload a scanned book and start the OCR/Ingestion pipeline."""
-    # 1. Determine filename
-    if title and title.strip():
-        # Clean title to create safe filename (e.g. "Biology 11 P3" -> "biology_11_p3.pdf")
-        clean_name = re.sub(r"[^a-zA-Z0-9_\-а-яА-ЯёЁІіҢңҒғҮүҰұҚқӨөҺһ]", "_", title.strip())
-        clean_name = re.sub(r"_+", "_", clean_name).lower()
-        filename = f"{clean_name}.pdf"
-    else:
-        filename = file.filename
+    # 1. Determine filename — always sanitized.
+    raw_name = title.strip() if title and title.strip() else (file.filename or "upload")
+    filename = _sanitize_library_filename(raw_name)
 
-    # 2. Save file to disk
+    # 2. Save file to disk with streaming size cap + magic-byte check.
     canonical_subject = normalize_subject_name(subject)
     backend_dir = Path(__file__).resolve().parent.parent.parent
     raw_library_dir = (
@@ -683,8 +698,42 @@ async def upload_library_book(
     raw_library_dir.mkdir(parents=True, exist_ok=True)
 
     file_path = raw_library_dir / filename
-    with open(file_path, "wb") as buffer:
-        shutil.copyfileobj(file.file, buffer)
+    bytes_written = 0
+    first_chunk = True
+    try:
+        with open(file_path, "wb") as buffer:
+            while True:
+                chunk = await file.read(256 * 1024)
+                if not chunk:
+                    break
+                if first_chunk:
+                    if not chunk.startswith(_PDF_MAGIC):
+                        buffer.close()
+                        file_path.unlink(missing_ok=True)
+                        raise HTTPException(
+                            status_code=415,
+                            detail="Uploaded file is not a PDF (missing %PDF- magic).",
+                        )
+                    first_chunk = False
+                bytes_written += len(chunk)
+                if bytes_written > MAX_LIBRARY_PDF_BYTES:
+                    buffer.close()
+                    file_path.unlink(missing_ok=True)
+                    raise HTTPException(
+                        status_code=413,
+                        detail=f"PDF exceeds {MAX_LIBRARY_PDF_BYTES // (1024 * 1024)} MiB cap.",
+                    )
+                buffer.write(chunk)
+    except HTTPException:
+        raise
+    except Exception as exc:
+        file_path.unlink(missing_ok=True)
+        logger.exception(
+            "library upload save failed admin_id=%s path=%s",
+            admin.id,
+            file_path,
+        )
+        raise HTTPException(status_code=500, detail="Failed to save uploaded PDF.") from exc
 
     # 3. Track job in DB
     job = LibraryUploadJob(

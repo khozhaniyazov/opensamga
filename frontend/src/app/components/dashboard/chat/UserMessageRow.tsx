@@ -82,6 +82,15 @@ export function UserMessageRow({
           <ReactMarkdown
             remarkPlugins={[remarkGfm, remarkMath]}
             rehypePlugins={[rehypeKatex]}
+            // round-3 audit: pin urlTransform; never trust react-markdown
+            // default for user-supplied content.
+            urlTransform={(u) =>
+              u.startsWith("#") ||
+              u.startsWith("/") ||
+              /^(https?|mailto|tel):/i.test(u)
+                ? u
+                : ""
+            }
           >
             {text}
           </ReactMarkdown>

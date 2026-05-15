@@ -486,6 +486,17 @@ export function AssistantMessage({
     );
   };
   const componentsBase = { ...markdownComponents, table: tableOverride };
+  // opensamga round-3 (2026-05-15) audit: explicit react-markdown
+  // urlTransform — keeps `http(s)://`, `mailto:`, `tel:`, same-page
+  // anchors, absolute paths; rejects everything else (notably
+  // `javascript:` and `data:text/html,…`). Pinning explicitly means a
+  // future major-version bump or an inadvertent `rehype-raw` add cannot
+  // silently re-open XSS.
+  const safeMarkdownUrl = (url: string): string => {
+    if (!url) return "";
+    if (url.startsWith("#") || url.startsWith("/")) return url;
+    return /^(https?|mailto|tel):/i.test(url) ? url : "";
+  };
   const componentsWithFollowUp =
     onAskFollowUp != null
       ? {
@@ -537,6 +548,7 @@ export function AssistantMessage({
           remarkPlugins={[remarkGfm, remarkMath]}
           rehypePlugins={[rehypeKatex]}
           components={componentsWithFollowUp}
+          urlTransform={safeMarkdownUrl}
         >
           {text || "..."}
         </ReactMarkdown>
@@ -554,6 +566,7 @@ export function AssistantMessage({
           remarkPlugins={[remarkGfm, remarkMath]}
           rehypePlugins={[rehypeKatex]}
           components={componentsWithFollowUp}
+          urlTransform={safeMarkdownUrl}
         >
           {joined}
         </ReactMarkdown>
@@ -593,6 +606,7 @@ export function AssistantMessage({
           remarkPlugins={[remarkGfm, remarkMath]}
           rehypePlugins={[rehypeKatex]}
           components={componentsWithFollowUp}
+          urlTransform={safeMarkdownUrl}
         >
           {proseText || "..."}
         </ReactMarkdown>
@@ -615,6 +629,7 @@ export function AssistantMessage({
               remarkPlugins={[remarkGfm, remarkMath]}
               rehypePlugins={[rehypeKatex]}
               components={componentsWithFollowUp}
+              urlTransform={safeMarkdownUrl}
             >
               {seg.text}
             </ReactMarkdown>

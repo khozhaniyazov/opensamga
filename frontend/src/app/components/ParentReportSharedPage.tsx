@@ -96,7 +96,7 @@ export default function ParentReportSharedPage() {
             <a
               href={htmlUrl}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="rounded border border-zinc-300 px-2 py-1"
             >
               {lang === "kz" ? "Басып шығаруға дайын" : "Версия для печати"}
@@ -104,7 +104,7 @@ export default function ParentReportSharedPage() {
             <a
               href={pdfUrl}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="rounded border border-zinc-300 px-2 py-1"
             >
               PDF

@@ -229,7 +229,7 @@ export function CitationChip({ citation, bookId }: Props) {
         ref={anchorRef as React.RefObject<HTMLAnchorElement>}
         href={href}
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         onMouseEnter={handleEnter}
         onMouseLeave={handleLeave}
         onFocus={handleEnter}

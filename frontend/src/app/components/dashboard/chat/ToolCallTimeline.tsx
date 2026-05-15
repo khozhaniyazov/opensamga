@@ -646,6 +646,13 @@ export function ToolCallTimeline({
                                             <ReactMarkdown
                                               remarkPlugins={[remarkMath]}
                                               rehypePlugins={[rehypeKatex]}
+                                              urlTransform={(u) =>
+                                                u.startsWith("#") ||
+                                                u.startsWith("/") ||
+                                                /^(https?|mailto|tel):/i.test(u)
+                                                  ? u
+                                                  : ""
+                                              }
                                             >
                                               {unescapeLibraryContent(
                                                 c.content || "",

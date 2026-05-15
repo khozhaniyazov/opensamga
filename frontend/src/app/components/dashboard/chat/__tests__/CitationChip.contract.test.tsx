@@ -61,11 +61,14 @@ afterEach(() => {
 });
 
 describe("CitationChip — linked branch (bookId resolved)", () => {
-  it("renders an anchor with target=_blank + rel=noreferrer", () => {
+  it("renders an anchor with target=_blank + rel=noopener noreferrer", () => {
     renderChip({ bookId: 7 });
     const link = screen.getByRole("link");
     expect(link).toHaveAttribute("target", "_blank");
-    expect(link).toHaveAttribute("rel", "noreferrer");
+    // round-3 audit: standardized to `noopener noreferrer`; modern browsers
+    // imply noopener when noreferrer is set, but be explicit for older UAs
+    // and to make the audit one-grep verifiable.
+    expect(link).toHaveAttribute("rel", "noopener noreferrer");
     expect(link).toHaveAttribute("href");
     expect(link.getAttribute("href")).toMatch(/\b7\b/);
     expect(link.getAttribute("href")).toMatch(/\b42\b/);

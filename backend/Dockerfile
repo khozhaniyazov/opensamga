@@ -25,10 +25,11 @@ COPY . /app/
 RUN mkdir -p /app/uploads
 
 # Run migrations then start server.
-CMD ["sh", "-c", "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8000"]
+# Port 8001 matches README + vite.config.ts + nginx_frontend.conf upstream.
+CMD ["sh", "-c", "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8001"]
 
-# Container-level healthcheck — hits the new /health shim (s15).
+# Container-level healthcheck — hits the /health shim (s15).
 HEALTHCHECK --interval=30s --timeout=5s --start-period=30s --retries=3 \
-    CMD curl -fsS http://localhost:8000/health || exit 1
+    CMD curl -fsS http://localhost:8001/health || exit 1
 
-EXPOSE 8000
+EXPOSE 8001

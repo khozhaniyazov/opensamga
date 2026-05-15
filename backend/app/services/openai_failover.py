@@ -12,7 +12,6 @@ from openai import (
     APIError,
     AsyncOpenAI,
     AuthenticationError,
-    BadRequestError,
     OpenAI,
     RateLimitError,
 )
@@ -49,24 +48,29 @@ if env_key:
         "api_key": env_key,
     }
 
-DEFAULT_FAILOVER_MODELS = [
-    {
-        "id": os.getenv("FAILOVER_MODEL_1_ID", "gpt-5.2"),
-        "base_url": os.getenv("FAILOVER_MODEL_1_URL", "https://zjuapi.com/v1/"),
-        "api_key": os.getenv("FAILOVER_MODEL_1_KEY", ""),
-    },
-    {
-        "id": os.getenv("FAILOVER_MODEL_2_ID", "gpt-5.2-codex"),
-        "base_url": os.getenv("FAILOVER_MODEL_2_URL", "https://zjuapi.com/v1/"),
-        "api_key": os.getenv("FAILOVER_MODEL_2_KEY", ""),
-    },
-    {
-        "id": os.getenv("FAILOVER_MODEL_3_ID", "qwen3.5-plus"),
-        "base_url": os.getenv("FAILOVER_MODEL_3_URL", "https://coding.dashscope.aliyuncs.com/v1"),
-        "api_key": os.getenv("FAILOVER_MODEL_3_KEY", ""),
-    },
-]
-DEFAULT_FAILOVER_MODELS = [m for m in DEFAULT_FAILOVER_MODELS if m["api_key"]]
+# opensamga round-3 (2026-05-15) audit removed the third-party URL
+# defaults that previously baked `https://zjuapi.com/v1/` and
+# `https://coding.dashscope.aliyuncs.com/v1` into the failover slots.
+# A deployer who set only `FAILOVER_MODEL_N_KEY` (a real OpenAI key,
+# say) would silently route their traffic to those hosts. Now both URL
+# and key MUST be set explicitly, or the slot is dropped.
+DEFAULT_FAILOVER_MODELS = []
+for _slot in (1, 2, 3):
+    _id = os.getenv(f"FAILOVER_MODEL_{_slot}_ID", "")
+    _url = os.getenv(f"FAILOVER_MODEL_{_slot}_URL", "")
+    _key = os.getenv(f"FAILOVER_MODEL_{_slot}_KEY", "")
+    if _id and _url and _key:
+        DEFAULT_FAILOVER_MODELS.append({"id": _id, "base_url": _url, "api_key": _key})
+    elif _key and not _url:
+        # Loud warning: the most likely misconfiguration is a key set with
+        # no URL. Don't pick a default — it would silently exfiltrate the
+        # key to whatever URL we happened to pick.
+        logger.warning(
+            "FAILOVER_MODEL_%d_KEY is set but FAILOVER_MODEL_%d_URL is empty; "
+            "slot ignored. Set both URL and ID explicitly to enable failover.",
+            _slot,
+            _slot,
+        )
 
 FAILOVER_MODELS = [env_provider] if env_provider else DEFAULT_FAILOVER_MODELS
 
@@ -90,7 +94,7 @@ def _prepare_request_kwargs(kwargs: dict, model_info: dict) -> dict:
 class OpenAIFailoverClient:
     """Drop-in replacement for synchronous OpenAI client with failover."""
 
-    FAILOVER_ERRORS = (RateLimitError, AuthenticationError, APIError, BadRequestError)
+    FAILOVER_ERRORS = (RateLimitError, AuthenticationError, APIError)
 
     def __init__(self, **default_kwargs):
         self.default_kwargs = default_kwargs
@@ -206,7 +210,7 @@ class OpenAIFailoverClient:
 class AsyncOpenAIFailoverClient:
     """Drop-in replacement for Asynchronous OpenAI client with failover."""
 
-    FAILOVER_ERRORS = (RateLimitError, AuthenticationError, APIError, BadRequestError)
+    FAILOVER_ERRORS = (RateLimitError, AuthenticationError, APIError)
 
     def __init__(self, **default_kwargs):
         self.default_kwargs = default_kwargs
